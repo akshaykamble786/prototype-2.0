@@ -8,7 +8,7 @@ const Home = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
         <div className="bg-pink-100 p-6 rounded-lg flex flex-col items-center justify-center">
-          <img className="w-full h-48 object-fill object-center mb-6" src="./assets/pendrive.webp" alt="Product 1" />
+          <img className="w-full h-48 object-fill object-center mb-6" src="./assets/tv.webp" alt="Product 1" />
           <h2 className="text-lg text-gray-900 font-medium title-font mb-4">LG 139 cm 4K Ultra HD Smart LED TV</h2>
           <p className="leading-relaxed text-base mb-4">4K Upscaling & AI Sound </p>
           <p className="text-xl font-bold mb-4">Starting from &#8377; 43,990</p>
@@ -16,7 +16,7 @@ const Home = () => {
         </div>
       
         <div className="bg-yellow-100 p-6 rounded-lg flex flex-col items-center justify-center">
-          <img className="w-full h-48 object-cover object-center mb-6" src="./assets/vivo.webp" alt="Product 2" />
+          <img className="w-full h-48 object-cover object-center mb-6" src="./assets/nothinh.webp" alt="Product 2" />
           <h2 className="text-lg text-gray-900 font-medium title-font mb-4">Dell XPS 13, Ultra Thin</h2>
           <p className="leading-relaxed text-base mb-4">Intel’s latest 12th-gen Alder Lake CPUs</p>
           <p className="text-xl font-bold mb-4">Starting from &#8377; 1,68,899</p>
@@ -37,7 +37,7 @@ const Home = () => {
         <p className="leading-relaxed text-base mb-4">Available in Alpine Green, Sierra Blue, Silver, Gold, and Graphite</p>
         <p className="text-xl font-bold mb-6">&#8377; 58,300 <span className="line-through text-gray-500">&#8377; 49,300</span></p>
         <div className="p-6 h-48 rounded-lg flex flex-col items-center justify-center">
-          <img className="w-full h-48 object-cover object-center mb-6" src='./assets/ac.webp' alt="Product 4" />
+          <img className="w-full h-48 object-cover object-center mb-6" src='./assets/ipad.webp' alt="Product 4" />
         </div>
           <button className="bg-black text-white px-4 py-2 rounded mb-1">Buy Now</button>
       </div>

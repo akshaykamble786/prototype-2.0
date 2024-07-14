@@ -15,49 +15,100 @@ export default function Footer() {
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
                             <ul className="text-gray-500 font-medium">
-                                <li className="mb-4">
+                                <li className="mb-3">
                                     <Link to="/" className="hover:underline">
-                                        Home
+                                            About Shoppiz
+                                    </Link>
+                                </li>
+                                <li className="mb-3">
+                                    <Link to="/" className="hover:underline">
+                                        Privacy Policy
+                                    </Link>
+                                </li>
+                                <li className="mb-3">
+                                    <Link to="/" className="hover:underline">
+                                        Help & Support
+                                    </Link>
+                                </li>
+                                <li className="mb-3">
+                                    <Link to="/" className="hover:underline">
+                                        Terms and Conditions
+                                    </Link>
+                                </li>
+                                <li className="mb-3">
+                                    <Link to="/" className="hover:underline">
+                                        Return Policy
+                                    </Link>
+                                </li>
+                                <li className="mb-3">
+                                    <Link to="/" className="hover:underline">
+                                        E-Waste
                                     </Link>
                                 </li>
                                 <li>
                                     <Link to="/" className="hover:underline">
-                                        About
+                                        Terms of Use
                                     </Link>
                                 </li>
                             </ul>
                         </div>
-                        <div>
+
+                        <div className='ml-4'>
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Follow us</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
-                                    <a
-                                        href="#"
-                                        className="hover:underline"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        Instagram
-                                    </a>
-                                </li>
-                                <li>
                                     <Link to="#" className="hover:underline">
                                         Twitter
                                     </Link>
                                 </li>
+                                <li className="mb-4">
+                                    <Link to="#" className="hover:underline">
+                                        Instagram
+                                    </Link>
+                                </li>
+                                <li> 
+                                    <Link to="#" className="hover:underline">
+                                        Facebook
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h2>
+                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Products</h2>
                             <ul className="text-gray-500 font-medium">
-                                <li className="mb-4">
+                                <li className='mb-3'>
                                     <Link to="#" className="hover:underline">
-                                        Privacy Policy
+                                        Smartphones
                                     </Link>
                                 </li>
-                                <li>
+                                <li className='mb-3'>
                                     <Link to="#" className="hover:underline">
-                                        Terms &amp; Conditions
+                                        Home Appliances
+                                    </Link>
+                                </li>
+                                <li className='mb-3'>
+                                    <Link to="#" className="hover:underline">
+                                        Computers
+                                    </Link>
+                                </li>
+                                <li className='mb-3'>
+                                    <Link to="#" className="hover:underline">
+                                        Tablets
+                                    </Link>
+                                </li>
+                                <li className='mb-3'>
+                                    <Link to="#" className="hover:underline">
+                                        Accessories
+                                    </Link>
+                                </li>
+                                <li className='mb-3'>
+                                    <Link to="#" className="hover:underline">
+                                        Wearables
+                                    </Link>
+                                </li>
+                                <li className='mb-3'>
+                                    <Link to="#" className="hover:underline">
+                                        Cameras
                                     </Link>
                                 </li>
                             </ul>
