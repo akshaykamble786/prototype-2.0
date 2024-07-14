@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import HomeAppliances from './pages/HomeAppliances';
 import Mobile from './pages/Mobile';
 import Gadgets from './pages/Gadgets';
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/gadgets" element={<Gadgets />} />
           </Routes>
         </main>
+        <Footer/>
       </div>
     </Router>
   );
