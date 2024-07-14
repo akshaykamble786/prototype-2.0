@@ -15,9 +15,12 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/mobile" element={<Mobile />} />
+            <Route path="/mobiles" element={<Mobile />} />
             <Route path="/home-appliances" element={<HomeAppliances />} />
             <Route path="/gadgets" element={<Gadgets />} />
+            <Route path="/wishlist" element={<Gadgets />} />
+            <Route path="/cart" element={<Gadgets />} />
+            <Route path="/userprofile" element={<Gadgets />} />
           </Routes>
         </main>
         <Footer/>
