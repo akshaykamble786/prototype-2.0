@@ -4,7 +4,7 @@ import { SearchIcon, ShoppingCartIcon, HeartIcon, UserIcon } from '@heroicons/re
 
 const Navbar = () => {
   return (
-    <nav className="bg-white shadow-xl p-4 flex justify-between items-center">
+    <nav className="bg-white shadow-lg p-4 flex justify-between items-center">
 
       <div className="flex space-x-4 ml-10">
         <Link className="text-xl flex items center font-bold text-gray-800 lg:text-2xl" to="/">
