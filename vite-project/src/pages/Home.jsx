@@ -37,7 +37,9 @@ const Home = () => {
           <h2 className="text-2xl text-gray-900 font-extrabold title-font mb-4">Apple iPhone 13 Pro Max Green</h2>
           <p className="leading-relaxed text-lg mb-4">Available in Alpine Green, Sierra Blue and Silver</p>
           <p className="text-2xl font-extrabold mb-6">&#8377; 58,300 <span className="line-through text-gray-500">&#8377; 49,300</span></p>
-          <button className="bg-black text-white px-6 py-3 w-32 rounded-lg mb-1">Buy Now</button>
+          <button className="bg-black text-white px-6 py-3 w-32 rounded-lg mb-3">Buy Now</button>
+          <button className="bg-green-100 text-black border-2 border-gray-800 border-solid px-3 py-2 w-32 rounded-lg mb-1">Read More</button>
+
         </div>
         <div className="h-full flex items-center justify-center">
           <img className="w-96 h-96 object-cover object-center" src='./assets/igreen.png' alt="Product 4" />

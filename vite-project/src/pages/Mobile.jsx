@@ -2,37 +2,46 @@ import React from 'react';
 import ProductCard from '../components/ProductCard';
 
 const Mobile = () => {
+
+  const product1 = {
+    image: './assets/igreen.png',
+    title: 'iPhone 13 Pro Max',
+   // description: 'A perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods.',
+    price: '1,45,600',
+    colorOptions: ['Green', 'Silver', 'Space Gray', 'Sky Blue', 'Pink'],
+    typeOptions: ['Just the device', 'With AppleCare+']
+  };
+
+  const product2 = {
+    image: './assets/foldp.png',
+    title: 'Samsung Fold 6',
+    //description: 'A perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods',
+    price: '1,69,690',
+    colorOptions: ['Black', 'White'],
+    typeOptions: ['Standard', 'Premium']
+  };
+  
+
   return (
     <>
-      <h1 className="text-2xl font-bold mb-6 text-center mt-6">Mobiles</h1>
-      <div className="container mx-auto px-6 py-8 text-center flex space-x-6 justify-center">
-        <ProductCard
-          img="/assets/tv2.webp"
-          title="Iphone 14 Pro Max"
-          description="dhghghgjdhgjdhgjhajfhasjfgjgjasgjahgjahsgjhasjhash"
-          price="1,23,300"
-        />
-        <ProductCard
-          img="/assets/igreen.png"
-          title="Iphone 14 Pro Max"
-          description="dhghghgjdhgjdhgjhajfhasjfgjgjasgjahgjahsgjhasjhash"
-          price="1,23,300"
-        />
-        <ProductCard
-          img="/assets/foldp.png"
-          title="Iphone 14 Pro Max"
-          description="dhghghgjdhgjdhgjhajfhasjfgjgjasgjahgjahsgjhasjhash"
-          price="1,23,300"
-        />
-        <ProductCard
-          img="/assets/dellxps.png"
-          title="Iphone 14 Pro Max"
-          description="dhghghgjdhgjdhgjhajfhasjfgjgjasgjahgjahsgjhasjhash"
-          price="1,23,300"
-        />
+      <div className="flex flex-wrap">
+        <ProductCard {...product1} />
+        <ProductCard {...product2} />
+        <ProductCard {...product1} />
+        <ProductCard {...product2} />
+        <ProductCard {...product1} />
+        <ProductCard {...product2} />
+        <ProductCard {...product1} />
+        <ProductCard {...product2} />
+        <ProductCard {...product1} />
+        <ProductCard {...product2} />
+        <ProductCard {...product1} />
+        <ProductCard {...product2} />
       </div>
     </>
   );
 };
 
 export default Mobile;
+
+
