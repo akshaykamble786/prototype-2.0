@@ -34,7 +34,7 @@ const Home = () => {
 
       <div className="bg-green-100 p-12 rounded-lg mt-8 flex flex-row items-center justify-between w-full">
         <div className="flex flex-col items-start max-w-md">
-          <h2 className="text-2xl text-gray-900 font-extrabold title-font mb-4">Apple iPhone 13 Pro Max Green</h2>
+          <h2 className="text-3xl text-gray-900 font-extrabold title-font mb-4">Apple iPhone 15 Pro Max</h2>
           <p className="leading-relaxed text-lg mb-4">Available in Alpine Green, Sierra Blue and Silver</p>
           <p className="text-2xl font-extrabold mb-6">&#8377; 58,300 <span className="line-through text-gray-500">&#8377; 49,300</span></p>
           <button className="bg-black text-white px-6 py-3 w-32 rounded-lg mb-3">Buy Now</button>

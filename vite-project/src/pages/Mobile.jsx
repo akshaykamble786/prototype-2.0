@@ -4,98 +4,128 @@ import ProductCard from '../components/ProductCard';
 const Mobile = () => {
 
   const product1 = {
-    image: './assets/i15.png',
+    images: {
+      '#d3d3d3': './assets/i15.png',
+      '#808080': './assets/moto.png',
+      '#ff0000': './assets/vivofold.png',
+      '#0000ff': './assets/oneplus.png',
+    },
     title: 'iPhone 15 Pro Max',
-   // description: 'A perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods.',
-    price: '1,45,600',
-    colorOptions: ['Titanium ', 'Silver', 'Space Gray', 'Sky Blue', 'Pink'],
-    typeOptions: ['Just the device', 'With AppleCare+']
+    price: 134999,
+    colorOptions: ['#d3d3d3', '#808080', '#0000ff', '#ff0000']
   };
-
+  
   const product2 = {
-    image: './assets/foldp.png',
+    images: {
+      '#d3d3d3': './assets/foldp.png',
+      '#808080': './assets/igreen.png',
+      '#0000ff': './assets/oneplus.png',
+      '#ff0000': './assets/vivofold.png'
+    },
     title: 'Samsung Z Fold6',
-    //description: 'A perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods',
-    price: '1,69,690',
-    colorOptions: ['Blue', 'White'],
-    typeOptions: ['Standard', 'Premium']
+    price: 179999,
+    colorOptions: ['#d3d3d3', '#808080', '#0000ff', '#ff0000']
   };
 
   const product3 = {
-    image: './assets/moto.png',
-    title: '  Moto Razr 50 Ultra',
-    //description: 'A perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods',
-    price: '1,19,699',
-    colorOptions: ['Black', 'White'],
-    typeOptions: ['Standard', 'Premium']
+    images: {
+      '#d3d3d3': './assets/gal.png',
+      '#808080': './assets/moto.png',
+      '#0000ff': './assets/oneplus.png',
+      '#ff0000': './assets/vivofold.png'
+    },
+    title: 'Samsung S24 Ultra',
+    price: 119900,
+    colorOptions: ['#d3d3d3', '#808080', '#0000ff', '#ff0000']
   };
 
   const product4 = {
-    image: './assets/pixel.png',
-    title: 'Googel Pixel 8 Pro',
-    //description: 'A perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods',
-    price: '89,990',
-    colorOptions: ['Black', 'White'],
-    typeOptions: ['Standard', 'Premium']
+    images: {
+      '#d3d3d3': './assets/pixel.png',
+      '#808080': './assets/moto.png',
+      '#0000ff': './assets/oneplus.png',
+      '#ff0000': './assets/vivofold.png'
+    },
+    title: 'Google Pixel 8 Pro',
+    price: 89990,
+    colorOptions: ['#d3d3d3', '#808080', '#0000ff', '#ff0000']
   };
 
   const product5 = {
-    image: './assets/gal.png',
-    title: 'Samsung S24 Ultra',
-    //description: 'A perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods',
-    price: '1,79,690',
-    colorOptions: ['Grey', 'White'],
-    typeOptions: ['Standard', 'Premium']
+    images: {
+      '#d3d3d3': './assets/zflip.png',
+      '#808080': './assets/moto.png',
+      '#0000ff': './assets/oneplus.png',
+      '#ff0000': './assets/vivofold.png'
+    },
+    title: 'Samsung Z Flip 4',
+    price: 109999,
+    colorOptions: ['#d3d3d3', '#808080', '#0000ff', '#ff0000']
   };
 
   const product6 = {
-    image: './assets/oppoflip.png',
-    title: 'Oppo Flip N3',
-    //description: 'A perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods',
-    price: '1,69,690',
-    colorOptions: ['Black', 'White'],
-    typeOptions: ['Standard', 'Premium']
+    images: {
+      '#d3d3d3': './assets/oneplus.png',
+      '#808080': './assets/moto.png',
+      '#0000ff': './assets/oneplus.png',
+      '#ff0000': './assets/vivofold.png'
+    },
+    title: 'One Plus 12R',
+    price: 45550,
+    colorOptions: ['#d3d3d3', '#808080', '#0000ff', '#ff0000']
   };
 
   const product7 = {
-    image: './assets/oneplus.png',
-    title: 'One Plus 12R',
-    //description: 'A perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods',
-    price: '55,550',
-    colorOptions: ['Green', 'White'],
-    typeOptions: ['Standard', 'Premium']
+    images: {
+      '#d3d3d3': './assets/moto.png',
+      '#808080': './assets/igreen.png',
+      '#0000ff': './assets/oneplus.png',
+      '#ff0000': './assets/vivofold.png'
+    },
+    title: 'Moto Razr 50 Ultra',
+    price: 99550,
+    colorOptions: ['#d3d3d3', '#808080', '#0000ff', '#ff0000']
   };
 
   const product8 = {
-    image: './assets/zflip.png',
-    title: 'Samsung Z Flip 4',
-    //description: 'A perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods',
-    price: '1,29,690',
-    colorOptions: ['Black', 'White'],
-    typeOptions: ['Standard', 'Premium']
+    images: {
+      '#d3d3d3': './assets/nothing.png',
+      '#808080': './assets/moto.png',
+      '#0000ff': './assets/oneplus.png',
+      '#ff0000': './assets/vivofold.png'
+    },
+    title: 'Nothing Phone 2',
+    price: 35999,
+    colorOptions: ['#d3d3d3', '#808080', '#0000ff', '#ff0000']
   };
 
   const product9 = {
-    image: './assets/nothing.png',
-    title: 'Nothing Phone 2',
-    //description: 'A perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods',
-    price: '32,250',
-    colorOptions: ['Black', 'White'],
-    typeOptions: ['Standard', 'Premium']
+    images: {
+      '#d3d3d3': './assets/vivofold.png',
+      '#808080': './assets/moto.png',
+      '#0000ff': './assets/oneplus.png',
+      '#ff0000': './assets/vivofold.png'
+    },
+    title: 'Vivo X Fold 3',
+    price: 85990,
+    colorOptions: ['#d3d3d3', '#808080', '#0000ff', '#ff0000']
   };
+
   const product10 = {
-    image: './assets/vivofold.png',
-    title: 'Vivo X Fold3',
-    //description: 'A perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods',
-    price: '99,690',
-    colorOptions: ['Black', 'White'],
-    typeOptions: ['Standard', 'Premium']
+    images: {
+      '#d3d3d3': './assets/oppoflip.png',
+      '#808080': './assets/moto.png',
+      '#0000ff': './assets/oneplus.png',
+      '#ff0000': './assets/vivofold.png'
+    },
+    title: 'Oppo Find N3',
+    price: 79559,
+    colorOptions: ['#d3d3d3', '#808080', '#0000ff', '#ff0000']
   };
-  
 
   return (
     <>
-        <h1 className='text-center font-semibold text-4xl m-2 p-4 '>Mobiles</h1> 
+        <h1 className='text-center font-semibold text-3xl m-2 p-4 '>Mobiles</h1> 
       <div className="flex flex-wrap">
         <ProductCard {...product1} />
         <ProductCard {...product2} />

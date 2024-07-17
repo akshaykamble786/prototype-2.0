@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import HomeAppliances from './pages/HomeAppliances';
 import Mobile from './pages/Mobile';
-import Gadgets from './pages/Gadgets';
+import Computing from './pages/Computing';
 import Footer from './components/Footer'
 
 function App() {
@@ -17,11 +17,11 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/mobiles" element={<Mobile />} />
             <Route path="/home-appliances" element={<HomeAppliances />} />
-            <Route path="/computing" element={<Gadgets />} />
-            <Route path="/accessories" element={<Gadgets />} />
-            <Route path="/wishlist" element={<Gadgets />} />
-            <Route path="/cart" element={<Gadgets />} />
-            <Route path="/userprofile" element={<Gadgets />} />
+            <Route path="/computing" element={<Computing />} />
+            <Route path="/accessories" element={<Computing />} />
+            <Route path="/wishlist" element={<Computing />} />
+            <Route path="/cart" element={<Computing />} />
+            <Route path="/userprofile" element={<Computing />} />
           </Routes>
         </main>
         <Footer/>
