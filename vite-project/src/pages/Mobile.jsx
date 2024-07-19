@@ -5,7 +5,7 @@ const Mobile = () => {
 
   const product1 = {
     images: {
-      '#414141': './assets/apple/i15.png',
+      '#414141': './assets/apple/appleNatTitan.png',
       '#DEDBD2': './assets/apple/appleWhiteTitan.png',
       '#273039': './assets/apple/appleBlueTitan.png',
       '#959188': './assets/apple/appleBlackTitan.png',
@@ -17,9 +17,9 @@ const Mobile = () => {
 
   const product2 = {
     images: {
-      '#465066': './assets/samsung/foldp.png',
-      '#7E7E7E': './assets/samsung/zfold6SilverShadow.png',
-      '#E9D6DB': './assets/samsung/zfold6Pink.png',
+      '#465066': './assets/samsung/zfoldNavy.png',
+      '#7E7E7E': './assets/samsung/zfoldSilverShadow.png',
+      '#E9D6DB': './assets/samsung/zfoldPeach.png',
     },
     title: 'Samsung Z Fold6',
     price: 179999,
@@ -28,25 +28,22 @@ const Mobile = () => {
 
   const product3 = {
     images: {
-      '#DDE8D4': './assets/samsung/s24TitanGreen.png',
-      '#CED3E1': './assets/samsung/s24TitanBlue.png',
       '#453F57': './assets/samsung/s24TitanViolet.png',
       '#F0E1B9': './assets/samsung/s24TitanYellow.png',
     },
     title: 'Samsung S24 Ultra',
     price: 119900,
-    colorOptions: ['#DDE8D4', '#CED3E1', '#453F57', '#F0E1B9']
+    colorOptions: ['#453F57', '#F0E1B9']
   };
 
   const product4 = {
     images: {
-      '#252525': './assets/google/pixel.png',
-      '#89BFED': './assets/google/pixelBay.png',
+      '#252525': './assets/google/pixelObsidian.png',
       '#FEDEC9': './assets/google/pixelRose.png'
     },
     title: 'Google Pixel 8 Pro',
     price: 89990,
-    colorOptions: ['#252525', '#89BFED','#FEDEC9']
+    colorOptions: ['#252525', '#FEDEC9']
   };
 
   const product5 = {
@@ -62,7 +59,7 @@ const Mobile = () => {
 
   const product6 = {
     images: {
-      '#2C2D33': './assets/oneplus/oneplus.png',
+      '#2C2D33': './assets/oneplus/oneplusFlowyEmerald.png',
       '#6691B7': './assets/oneplus/oneplusCoolBlue.png',
     },
     title: 'One Plus 12R',
@@ -92,7 +89,7 @@ const Mobile = () => {
 
   const product9 = {
     images: {
-      '#161A20': './assets/vivofold.png',
+      '#161A20': './assets/vivo/vivofold.png',
     },
     title: 'Vivo X Fold3 Pro',
     price: 85990,
