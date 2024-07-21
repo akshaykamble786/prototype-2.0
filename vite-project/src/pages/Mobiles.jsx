@@ -1,7 +1,7 @@
 import React from 'react';
-import ProductCard from '../components/ProductCard';
+import MobileCard from '../components/MobileCard';
 
-const Mobile = () => {
+const Mobiles = () => {
 
   const product1 = {
     images: {
@@ -11,7 +11,7 @@ const Mobile = () => {
       '#959188': './assets/apple/appleBlackTitan.png',
     },
     title: 'iPhone 15 Pro Max',
-    price: 134999,
+    price: 159990,
     colorOptions: ['#414141', '#DEDBD2', '#273039', '#959188']
   };
 
@@ -22,7 +22,7 @@ const Mobile = () => {
       '#E9D6DB': './assets/samsung/zfoldPeach.png',
     },
     title: 'Samsung Z Fold6',
-    price: 179999,
+    price: 164999,
     colorOptions: ['#465066','#7E7E7E', '#E9D6DB']
   };
 
@@ -32,7 +32,7 @@ const Mobile = () => {
       '#F0E1B9': './assets/samsung/s24TitanYellow.png',
     },
     title: 'Samsung S24 Ultra',
-    price: 119900,
+    price: 129999,
     colorOptions: ['#453F57', '#F0E1B9']
   };
 
@@ -42,7 +42,7 @@ const Mobile = () => {
       '#FEDEC9': './assets/google/pixelRose.png'
     },
     title: 'Google Pixel 8 Pro',
-    price: 89990,
+    price: 97999,
     colorOptions: ['#252525', '#FEDEC9']
   };
 
@@ -63,7 +63,7 @@ const Mobile = () => {
       '#6691B7': './assets/oneplus/oneplusCoolBlue.png',
     },
     title: 'One Plus 12R',
-    price: 45550,
+    price: 43999,
     colorOptions: ['#2C2D33', '#6691B7']
   };
 
@@ -73,7 +73,7 @@ const Mobile = () => {
       '#4E5F44': './assets/moto/motoSpringGreen.png',
     },
     title: 'Moto Razr 50 Ultra',
-    price: 99550,
+    price: 89999,
     colorOptions: ['#4E5F44', '#B83964']
   };
 
@@ -83,7 +83,7 @@ const Mobile = () => {
       '#E1E5DD': './assets/nothing/nothingWhite.png',
     },
     title: 'Nothing Phone 2',
-    price: 35999,
+    price: 39999,
     colorOptions: ['#2E363A', '#E1E5DD']
   };
 
@@ -92,7 +92,7 @@ const Mobile = () => {
       '#161A20': './assets/vivo/vivofold.png',
     },
     title: 'Vivo X Fold3 Pro',
-    price: 85990,
+    price: 159999,
     colorOptions: ['#161A20']
   };
 
@@ -102,7 +102,7 @@ const Mobile = () => {
       '#EFE6D2': './assets/oppo/oppoCreamGold.png',
     },
     title: 'Oppo Find N3 Flip',
-    price: 79559,
+    price: 74999,
     colorOptions: ['#2E363A', '#EFE6D2']
   };
 
@@ -114,11 +114,11 @@ const Mobile = () => {
       <h1 className='text-center font-semibold text-3xl m-2 p-4 '>Mobiles</h1>
       <div className="flex flex-wrap">        
         {products.map((product, index) => (
-          <ProductCard key={index} {...product} />
+          <MobileCard key={index} {...product} />
         ))}
       </div>
     </>
   );
 };
 
-export default Mobile;
+export default Mobiles;

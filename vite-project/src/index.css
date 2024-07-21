@@ -4,3 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.custom-gradient {
+    background: linear-gradient(135deg, #13172c, #030825, #4a3f7a, #263b59);
+  }

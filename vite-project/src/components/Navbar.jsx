@@ -13,7 +13,7 @@ const Navbar = () => {
       </div>
 
       <div className="flex-1 flex justify-center space-x-8">
-        <Link to="/" className="text-gray-600 hover:text-gray-950">Home</Link>
+        <Link to="/" className="text-gray-600 hover:text-gray-950">Products</Link>
         <Link to="/mobiles" className="text-gray-600 hover:text-gray-950">Mobiles</Link>
         <Link className="text-gray-600 hover:text-gray-950" to="/home-appliances">Home Appliances</Link>
         <Link className="text-gray-600 hover:text-gray-950" to="/computing">Computing</Link>

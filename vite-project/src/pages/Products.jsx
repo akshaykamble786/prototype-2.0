@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageSlider from '../components/ImageSlider';
 
-const Home = () => {
+const Products = () => {
   return (
     <div className="container mx-auto px-6 py-8 text-center ">
       <ImageSlider />
@@ -24,7 +24,7 @@ const Home = () => {
         </div>
 
         <div className="bg-purple-100 p-6 rounded-lg flex flex-col items-center justify-center">
-          <img className="w-full h-60 object-contain object-center mb-6" src="./assets/samsung/foldp.png" alt="Product 3" />
+          <img className="w-full h-60 object-contain object-center mb-6" src="./assets/samsung/zfoldPeach.png" alt="Product 3" />
           <h2 className="text-lg text-gray-900 font-semibold title-font mb-4">Samsung Galaxy S23 Ultra</h2>
           <p className="leading-relaxed text-base mb-4">Get up to 3% Daily Cash back</p>
           <p className="text-xl font-extrabold mb-4">Starting from &#8377; 1,59,999</p>
@@ -50,4 +50,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Products;
