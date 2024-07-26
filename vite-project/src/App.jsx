@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Products from './pages/Products';
-import HomeAppliances from './pages/HomeAppliances';
+import Appliances from './pages/Appliances';
 import Mobiles from './pages/Mobiles';
 import Computing from './pages/Computing';
 import Footer from './components/Footer'
@@ -16,7 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Products />} />
             <Route path="/mobiles" element={<Mobiles />} />
-            <Route path="/home-appliances" element={<HomeAppliances />} />
+            <Route path="/appliances" element={<Appliances />} />
             <Route path="/computing" element={<Computing />} />
             <Route path="/accessories" element={<Computing />} />
             <Route path="/wishlist" element={<Computing />} />

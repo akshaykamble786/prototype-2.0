@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const MobileCard = ({ images, title, price, colorOptions }) => {
+const ProductCard = ({ images, title, price, colorOptions }) => {
   const [selectedColor, setSelectedColor] = useState(colorOptions[0]);
 
   const handleColorChange = (color) => {
@@ -42,4 +42,4 @@ const MobileCard = ({ images, title, price, colorOptions }) => {
   );
 };
 
-export default MobileCard;
+export default ProductCard;

@@ -1,5 +1,5 @@
 import React from 'react';
-import MobileCard from '../components/MobileCard';
+import ProductCard from '../components/ProductCard'
 
 const Mobiles = () => {
 
@@ -114,7 +114,7 @@ const Mobiles = () => {
       <h1 className='text-center font-semibold text-3xl m-2 p-4 '>Mobiles</h1>
       <div className="flex flex-wrap">        
         {products.map((product, index) => (
-          <MobileCard key={index} {...product} />
+          <ProductCard key={index} {...product} />
         ))}
       </div>
     </>
