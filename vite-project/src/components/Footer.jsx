@@ -8,7 +8,7 @@ export default function Footer() {
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
                         <Link className="text-4xl flex items-center font-bold text-gray-800 lg:text-2xl" to="/">
-                            SHOPPIZ
+                            ELEKTRA
                         </Link>
                     </div>
 
@@ -18,7 +18,7 @@ export default function Footer() {
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-3">
                                     <Link to="/" className="hover:underline">
-                                            About Shoppiz
+                                            About ELEKTRA
                                     </Link>
                                 </li>
                                 <li className="mb-3">
@@ -121,7 +121,7 @@ export default function Footer() {
                 <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <span className="text-sm text-gray-500 sm:text-center">
-                        © 2023 Shoppiz. All Rights Reserved.
+                        © 2023 ELEKTRA. All Rights Reserved.
                     </span>
                     <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
                         <Link to="#" className="text-gray-500 hover:text-gray-900">

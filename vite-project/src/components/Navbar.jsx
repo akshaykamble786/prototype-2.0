@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-lg p-4 flex justify-between items-center z-10 relative">
       <div className="flex space-x-4 ml-10">
         <Link className="text-xl flex items-center font-bold text-gray-800 lg:text-2xl" to="/">
-          SHOPPIZ
+          ELEKTRA
         </Link>
       </div>
 
