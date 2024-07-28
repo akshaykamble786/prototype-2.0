@@ -9,6 +9,11 @@ export default {
       fontFamily: {
         sans: ['Montserrat', 'Helvetica', 'Arial', 'sans-serif'],
       },
+      colors: {
+        'custom-lightblue': '#EDF1FA',
+        'custom-darkblue' : '#0C132B',
+        'custom-darkestblue' : '#131744',
+      },
     },
   },
   plugins: [],
