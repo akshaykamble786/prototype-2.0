@@ -14,6 +14,9 @@ export default {
         'custom-darkblue' : '#0C132B',
         'custom-darkestblue' : '#131744',
       },
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(135deg, #13172c, #030825, #4a3f7a, #263b59)',
+      },
     },
   },
   plugins: [],

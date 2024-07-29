@@ -13,7 +13,9 @@ const Mobiles = () => {
     title: 'iPhone 15 Pro Max',
     price: 159990,
     colorOptions: ['#414141', '#DEDBD2', '#273039', '#959188'],
-    rating : 4.3
+    rating : 4.3,
+    originalPrice : 179990,
+    saleOrNot : true
   };
 
   const product2 = {
@@ -25,7 +27,8 @@ const Mobiles = () => {
     title: 'Samsung Z Fold6',
     price: 164999,
     colorOptions: ['#465066', '#7E7E7E', '#E9D6DB'],
-    rating : 4.4
+    rating : 4.4,
+    originalPrice : 179990
   };
 
   const product3 = {
@@ -36,7 +39,9 @@ const Mobiles = () => {
     title: 'Samsung S24 Ultra',
     price: 129999,
     colorOptions: ['#453F57', '#F0E1B9'],
-    rating : 4.1
+    rating : 4.1,
+    originalPrice : 179990,
+    saleOrNot : true
   };
 
   const product4 = {
@@ -47,7 +52,8 @@ const Mobiles = () => {
     title: 'Google Pixel 8 Pro',
     price: 97999,
     colorOptions: ['#252525', '#FEDEC9'],
-    rating : 4.5
+    rating : 4.5,
+    originalPrice : 179990
   };
 
   const product5 = {
@@ -59,7 +65,8 @@ const Mobiles = () => {
     title: 'Samsung Z Flip6',
     price: 109999,
     colorOptions: ['#FFBC9E', '#CFE9DF', '#CBD7E7'],
-    rating : 4.6
+    rating : 4.6,
+    originalPrice : 179990
   };
 
   const product6 = {
@@ -72,6 +79,7 @@ const Mobiles = () => {
     colorOptions: ['#6C8582', '#6691B7'],
     rating : 4.0,
     originalPrice : 56777,
+    saleOrNot : true
   };
 
   const product7 = {
@@ -82,7 +90,8 @@ const Mobiles = () => {
     title: 'Moto Razr 50 Ultra',
     price: 89999,
     colorOptions: ['#4E5F44', '#B83964'],
-    rating : 4.2
+    rating : 4.2,
+    originalPrice : 179990
   };
 
   const product8 = {
@@ -93,7 +102,9 @@ const Mobiles = () => {
     title: 'Nothing Phone 2',
     price: 39999,
     colorOptions: ['#2E363A', '#E1E5DD'],
-    rating : 4.4
+    rating : 4.4,
+    originalPrice : 179990,
+    saleOrNot : true
   };
 
   const product9 = {
@@ -104,7 +115,7 @@ const Mobiles = () => {
     price: 159999,
     colorOptions: ['#161A20'],
     rating : 4.5,
-    sale:"Sale"
+    originalPrice : 179990
   };
 
   const product10 = {
@@ -115,7 +126,9 @@ const Mobiles = () => {
     title: 'Oppo Find N3 Flip',
     price: 74999,
     colorOptions: ['#2E363A', '#EFE6D2'],
-    rating : 4.7
+    rating : 4.7,
+    originalPrice : 179990,
+    saleOrNot : true
   };
 
   const products = [product1, product2, product3, product4, product5,

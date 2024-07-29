@@ -8,8 +8,8 @@ const ProdCard = ({ colorOptions, images, title }) => {
     };
 
     return (
-        <div className="relative m-10 w-full max-w-xs overflow-hidden rounded-lg bg-gray-200 shadow-md">
-            <div className="h-80 w-80 flex items-center justify-center">
+        <div className="relative m-12 w-full max-w-xs overflow-hidden rounded-lg bg-gray-200 shadow-md">
+            <div className="h-72 w-80 flex items-center justify-center">
                 <img className="max-h-full w-full object-contain hover:scale-105" src={images[selectedColor]} alt={title} />
             </div>
             
