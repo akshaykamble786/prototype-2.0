@@ -17,9 +17,9 @@ const ProductCard = ({
 
   return (
     <div className="relative max-w-sm rounded-xl overflow-hidden shadow-lg bg-gray-200 p-4 m-12 mb-4">
-      <div className="h-72 w-80 flex items-center justify-center">
+      <div className="h-80 w-80 flex items-center justify-center">
         <img
-          className="max-h-full max-w-full object-contain hover:scale-105"
+          className="max-h-full max-w-full object-cover hover:scale-105"
           src={images[selectedColor]}
           alt={title}
         />
