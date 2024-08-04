@@ -4,7 +4,8 @@ import Pordcard from '../components/pordcard';
 const Appliances = () => {
     const approduct1 = {
         images: {
-            '#ff0000': 'https://i.imghippo.com/files/4dDBx1722158230.png'
+            '#ff0000': 'https://i.imghippo.com/files/4dDBx1722158230.png',
+            '#00ff00': 'https://i.imghippo.com/files/d21Iw1722159117.png'
         },
         colorOptions: ['#ff0000', '#00ff00', '#0000ff'],
         title: 'Agaro Vacuum',
@@ -15,9 +16,7 @@ const Appliances = () => {
         saleOrNot : true
     };
     const approduct2 = {
-        images: {
-            '#ff0000': 'https://i.imghippo.com/files/4dDBx1722158230.png'
-        },
+        images: 'https://i.imghippo.com/files/4dDBx1722158230.png',
         // colorOptions: ['#ff0000', '#00ff00', '#0000ff'],
         title: 'Agaro Vacuum',
         originalPrice : 5999,
@@ -35,7 +34,7 @@ const Appliances = () => {
         originalPrice : 5999,
         price : 4999,
         rating : 4.1,
-        reviewAmount : ("87"),
+        reviewAmount : "(87)",
         saleOrNot : false
     };
     const approduct4 = {
@@ -47,7 +46,7 @@ const Appliances = () => {
         originalPrice : 5999,
         price : 4999,
         rating : 4.1,
-        reviewAmount : ("87"),
+        reviewAmount : "(87)",
         saleOrNot : false
     };
     const approduct5 = {
@@ -59,7 +58,7 @@ const Appliances = () => {
         originalPrice : 5999,
         price : 4999,
         rating : 4.1,
-        reviewAmount : ("87"),
+        reviewAmount : "(87)",
         saleOrNot : false
     };
     const approduct6 = {
@@ -71,7 +70,7 @@ const Appliances = () => {
         originalPrice : 5999,
         price : 4999,
         rating : 4.1,
-        reviewAmount : ("87"),
+        reviewAmount : "(87)",
         saleOrNot : false
     };
     const approduct7 = {
@@ -83,7 +82,7 @@ const Appliances = () => {
         originalPrice : 5999,
         price : 4999,
         rating : 4.1,
-        reviewAmount : ("87"),
+        reviewAmount : "(87)",
         saleOrNot : false
     };
     const approduct8 = {
@@ -95,7 +94,7 @@ const Appliances = () => {
         originalPrice : 5999,
         price : 4999,
         rating : 4.1,
-        reviewAmount : ("87"),
+        reviewAmount : "(87)",
         saleOrNot : false
     };
     const approduct9 = {
@@ -107,7 +106,7 @@ const Appliances = () => {
         originalPrice : 5999,
         price : 4999,
         rating : 4.1,
-        reviewAmount : ("87"),
+        reviewAmount : "(87)",
         saleOrNot : false
     };
     const approduct10 = {
@@ -119,7 +118,7 @@ const Appliances = () => {
         originalPrice : 5999,
         price : 4999,
         rating : 4.1,
-        reviewAmount : ("87"),
+        reviewAmount : "(87)",
         saleOrNot : false
     };
 

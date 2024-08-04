@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { useState } from "react";
 
 const Pordcard = ({
@@ -20,8 +20,8 @@ const Pordcard = ({
 
   return (
     <>
-      <div className="relative flex items-center justify-center h-full mb-12">
-        <div className="max-w-sm rounded-lg border border-gray-200 shadow-md bg-white dark:bg-gray-800 dark:border-gray-700">
+      <div className="relative flex items-center justify-center h-full mb-12 shadow-sm">
+        <div className="max-w-sm rounded-xl border border-gray-200 shadow-md bg-white dark:bg-gray-800 dark:border-gray-700">
           <img
             className="rounded-t-lg w-80 h-64 object-contain"
             src={images[selectedColor]}
@@ -79,7 +79,6 @@ const Pordcard = ({
 };
 
 export default Pordcard;
-
 
 
 
