@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { HeartIcon } from "@heroicons/react/outline";
 
 const ProductCard = ({
   images,
@@ -9,30 +10,35 @@ const ProductCard = ({
   rating,
   saleOrNot,
 }) => {
-  const [selectedColor, setSelectedColor] = useState(colorOptions[0]);
+  const [selectedColor, setSelectedColor] = useState(
+    colorOptions.length > 0 ? colorOptions[0] : "default"
+  );
 
   const handleColorChange = (color) => {
     setSelectedColor(color);
   };
 
+  const imageSrc = images[selectedColor] || images;
+
   return (
-    <div className="relative max-w-xs w-96 min-h-[400px] flex flex-col rounded-xl overflow-hidden shadow-lg bg-gray-200 p-4 mx-auto mb-8">
+    <div className="relative max-w-xs w-96 max-h-[500px] flex flex-col rounded-xl overflow-hidden shadow-lg bg-gray-200 p-4 mx-auto mb-8">
       <div className="h-72 w-full flex items-center justify-center overflow-hidden">
         <img
           className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
-          src={images[selectedColor]}
+          src={imageSrc}
           alt={title}
         />
+        <HeartIcon className="h-7 w-7 absolute top-4 right-5"/>
       </div>
 
       {saleOrNot && (
-        <span className="absolute top-4 left-0 w-20 transform -rotate-45 bg-custom-darkestblue text-white text-xs font-semibold px-1 py-1 text-center">
+        <span className="absolute top-4 -left-2 w-20 transform -rotate-45 bg-custom-darkestblue text-white text-xs font-semibold px-1 py-1 text-center">
           SALE
         </span>
       )}
 
       <div className="flex flex-col flex-1 justify-between px-4 py-2">
-        <h2 className="text-lg font-bold text-gray-800 truncate">{title}</h2>
+        <h2 className="text-lg font-bold text-gray-800">{title}</h2>
 
         <div className="mt-2 mb-2 flex items-center space-x-2">
           {[...Array(5)].map((_, i) => (
@@ -76,7 +82,7 @@ const ProductCard = ({
           </div>
           <a
             href="#"
-            className="mt-2 flex items-center justify-center rounded-md bg-custom-darkblue px-4 py-2 text-white text-sm font-medium hover:bg-blue-700 transition-colors duration-300"
+            className="mt-2 flex items-center justify-center rounded-md bg-custom-darkblue px-4 py-2 text-white text-sm font-medium hover:bg-gray-800 transition-colors duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +107,3 @@ const ProductCard = ({
 };
 
 export default ProductCard;
-
-
-
-

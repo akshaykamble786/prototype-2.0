@@ -39,10 +39,6 @@ const Navbar = () => {
           <ShoppingCartIcon className="h-6 w-6" />
         </Link>
 
-        <Link to="/wishlist" className="text-gray-500">
-          <HeartIcon className="h-6 w-6" />
-        </Link>
-
         <Link to="/userprofile" className="text-gray-500">
           <UserIcon className="h-6 w-6 mr-10" />
         </Link>
@@ -59,14 +55,6 @@ const Navbar = () => {
           <Link className="text-gray-600 hover:text-gray-950" to="/appliances">Appliances</Link>
           <Link className="text-gray-600 hover:text-gray-950" to="/computing">Computing</Link>
           <Link className="text-gray-600 hover:text-gray-950" to="/accessories">Accessories</Link>
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="py-1 px-2 rounded-md border border-gray-500"
-            />
-            <SearchIcon className="absolute top-1/2 transform -translate-y-1/2 right-2 h-5 w-5 text-gray-500" />
-          </div>
         </div>
       </div>
     </nav>
