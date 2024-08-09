@@ -6,6 +6,7 @@ import Appliances from './pages/Appliances';
 import Mobiles from './pages/Mobiles';
 import Computing from './pages/Computing';
 import Footer from './components/Footer'
+import Accessories from './pages/Accessories';
 
 function App() {
   return (
@@ -15,13 +16,13 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Products />} />
+            <Route path="/products" element={<Products />} />
             <Route path="/mobiles" element={<Mobiles />} />
             <Route path="/appliances" element={<Appliances />} />
             <Route path="/computing" element={<Computing />} />
-            <Route path="/accessories" element={<Computing />} />
-            <Route path="/wishlist" element={<Computing />} />
-            <Route path="/cart" element={<Computing />} />
-            <Route path="/userprofile" element={<Computing />} />
+            <Route path="/accessories" element={<Accessories />} />
+            <Route path="/cart" element={<Products />} />
+            <Route path="/userprofile" element={<Products />} />
           </Routes>
         </main>
         <Footer/>

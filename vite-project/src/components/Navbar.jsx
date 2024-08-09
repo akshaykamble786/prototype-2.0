@@ -1,28 +1,47 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { SearchIcon, ShoppingCartIcon, HeartIcon, UserIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import {
+  SearchIcon,
+  ShoppingCartIcon,
+  UserIcon,
+  MenuIcon,
+  XIcon,
+} from "@heroicons/react/outline";
 
 const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
     <nav className="bg-white shadow-lg p-4 flex justify-between items-center z-10 relative">
       <div className="flex space-x-4 ml-10">
-        <Link className="text-xl flex items-center font-bold text-gray-800 lg:text-2xl" to="/">
+        <Link
+          className="text-xl flex items-center font-bold text-gray-800 lg:text-2xl"
+          to="/"
+        >
           ELEKTRA
         </Link>
       </div>
 
       <div className="hidden lg:flex flex-1 justify-center space-x-8">
-        <Link to="/" className="text-gray-600 hover:text-gray-950">Products</Link>
-        <Link to="/mobiles" className="text-gray-600 hover:text-gray-950">Mobiles</Link>
-        <Link className="text-gray-600 hover:text-gray-950" to="appliances">Appliances</Link>
-        <Link className="text-gray-600 hover:text-gray-950" to="/computing">Computing</Link>
-        <Link className="text-gray-600 hover:text-gray-950" to="/accessories">Accessories</Link>
+        <Link to="/" className="text-gray-600 hover:text-gray-950">
+          Products
+        </Link>
+        <Link to="/mobiles" className="text-gray-600 hover:text-gray-950">
+          Mobiles
+        </Link>
+        <Link to="/appliances" className="text-gray-600 hover:text-gray-950">
+          Appliances
+        </Link>
+        <Link to="/computing" className="text-gray-600 hover:text-gray-950">
+          Computing
+        </Link>
+        <Link to="/accessories" className="text-gray-600 hover:text-gray-950">
+          Accessories
+        </Link>
       </div>
 
       <div className="flex items-center space-x-10">
@@ -43,20 +62,59 @@ const Navbar = () => {
           <UserIcon className="h-6 w-6 mr-10" />
         </Link>
 
-        <button className="lg:hidden" onClick={toggleMobileMenu}>
-          {isMobileMenuOpen ? <XIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
+        <button
+          className="lg:hidden text-gray-500 focus:outline-none"
+          onClick={toggleMenu}
+        >
+          {isMenuOpen ? (
+            <XIcon className="h-6 w-6" />
+          ) : (
+            <MenuIcon className="h-6 w-6" />
+          )}
         </button>
       </div>
 
-      <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} lg:hidden absolute top-16 left-0 w-full bg-white shadow-lg z-10`}>
-        <div className="flex flex-col items-center space-y-4 py-4">
-          <Link to="/" className="text-gray-600 hover:text-gray-950">Products</Link>
-          <Link to="/mobiles" className="text-gray-600 hover:text-gray-950">Mobiles</Link>
-          <Link className="text-gray-600 hover:text-gray-950" to="/appliances">Appliances</Link>
-          <Link className="text-gray-600 hover:text-gray-950" to="/computing">Computing</Link>
-          <Link className="text-gray-600 hover:text-gray-950" to="/accessories">Accessories</Link>
+      {isMenuOpen && (
+        <div className="lg:hidden absolute top-16 left-0 w-full bg-white shadow-lg z-20">
+          <div className="flex flex-col text-center space-y-4 p-4">
+            <Link
+              to="/"
+              className="text-gray-600 hover:text-gray-950"
+              onClick={toggleMenu}
+            >
+              Products
+            </Link>
+            <Link
+              to="/mobiles"
+              className="text-gray-600 hover:text-gray-950"
+              onClick={toggleMenu}
+            >
+              Mobiles
+            </Link>
+            <Link
+              to="/appliances"
+              className="text-gray-600 hover:text-gray-950"
+              onClick={toggleMenu}
+            >
+              Appliances
+            </Link>
+            <Link
+              to="/computing"
+              className="text-gray-600 hover:text-gray-950"
+              onClick={toggleMenu}
+            >
+              Computing
+            </Link>
+            <Link
+              to="/accessories"
+              className="text-gray-600 hover:text-gray-950"
+              onClick={toggleMenu}
+            >
+              Accessories
+            </Link>
+          </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 };

@@ -41,7 +41,7 @@ const Appliances = () => {
   const approduct5 = {
     images: {
       "#33494F":"https://i.imghippo.com/files/vhGY71722420758.png",
-      "#3B3B3B":"https://i.imghippo.com/files/uyHxl1722938201.png",
+      "#3B3B3B":"https://i.imghippo.com/files/jJjjZ1723197300.png",
     },
     colorOptions:["#33494F","#3B3B3B"],
     title: "Pigeon Healthifry Digital Air Fryer",
