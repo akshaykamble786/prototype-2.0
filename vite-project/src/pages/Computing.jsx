@@ -59,7 +59,7 @@ const Computing = () => {
 
   const computingProduct6 = {
     images: "https://i.imghippo.com/files/EW2ut1723197948.png",
-    title: "Philips SPA9160 2.0CH Multimedia tower speakers",
+    title: "Philips SPA9160 2.0CH Multimedia Tower Speakers",
     price: 25490,
     rating: 4.6,
     originalPrice: 30990,
