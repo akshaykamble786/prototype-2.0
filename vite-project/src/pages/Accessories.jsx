@@ -15,7 +15,7 @@ const Accessories = () => {
     title: "Ringke Silicone Magnetic Samsung Galaxy S24 Ultra Case Cover",
     price: 2843,
     originalPrice: 4500,
-    rating: 4.2,
+    rating: 4.1,
   };
 
   const accessoryProduct3 = {
@@ -23,7 +23,7 @@ const Accessories = () => {
     title: "Apple USB-C to Lightning Cable ",
     price: 1599,
     originalPrice: 2000,
-    rating: 4.2,
+    rating: 4.3,
   };
 
   const accessoryProduct4 = {
@@ -31,7 +31,7 @@ const Accessories = () => {
     title: "Promate 130W Laptop Power Bank (20000mAh)",
     price: 6999,
     originalPrice: 15999,
-    rating: 4.2,
+    rating: 4.9,
     saleOrNot: true,
   };
 
@@ -45,7 +45,7 @@ const Accessories = () => {
     colorOptions: ["#0B0C10", "#E7E7ED", "#4FBCF7"],
     price: 5499,
     originalPrice: 6390,
-    rating: 4.2,
+    rating: 4.7,
   };
 
   const accessoryProduct6 = {
@@ -53,7 +53,7 @@ const Accessories = () => {
     title: "Redragon K556 PRO Wireless RGB Gaming Keyboard",
     price: 5970,
     originalPrice: 7990,
-    rating: 4.2,
+    rating: 4.8,
   };
 
   const accessoryProduct7 = {
@@ -65,7 +65,7 @@ const Accessories = () => {
     price: 16999,
     colorOptions: ["#2E2C2F", "#F0F1F2"],
     originalPrice: 19999,
-    rating: 4.2,
+    rating: 4.0,
   };
 
   const accessoryProduct8 = {
@@ -77,7 +77,7 @@ const Accessories = () => {
     colorOptions: ["#2E2C2F", "#F0F1F2"],
     price: 8495,
     originalPrice: 12495,
-    rating: 4.2,
+    rating: 4.6,
   };
 
   const accessoryProduct9 = {
@@ -85,7 +85,7 @@ const Accessories = () => {
     title: "SARAH ™ Adjustable Refrigerator / Washing Machine Stand",
     price: 3499,
     originalPrice: 5999,
-    rating: 4.2,
+    rating: 4.5,
   };
 
   const accessoryProduct10 = {
@@ -102,7 +102,7 @@ const Accessories = () => {
     title: "TAFTA Heavy Duty Air Conditioner Mounting Brackets",
     price: 566,
     originalPrice: 1599,
-    rating: 4.2,
+    rating: 4.1,
     saleOrNot:true
   };
 
