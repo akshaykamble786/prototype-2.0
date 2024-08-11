@@ -12,26 +12,24 @@ const ImageSlider = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    // centerMode:true,
-    // variableWidth:true,
   };
 
   return (
     <Slider {...settings}>
       <div>
-        <img src="./assets/tv.webp" alt="Slide 1" className="w-full h-96 object-cover" />
+        <img src="https://i.imghippo.com/files/b9FXU1723372102.webp" alt="Slide 1" className="w-full h-auto object-cover object" />
       </div>
       <div>
-        <img src="./assets/oven.webp" alt="Slide 2" className="w-full h-96 object-cover" />
+        <img src="https://i.imghippo.com/files/Kk1lw1723372065.webp" alt="Slide 2" className="w-full h-auto object-cover" />
       </div>
       <div>
-        <img src="./assets/watch.webp" alt="Slide 3" className="w-full h-96 object-cover" />
+        <img src="https://i.imghippo.com/files/Xcmlx1723372135.webp" alt="Slide 3" className="w-full h-auto object-cover" />
       </div>
       <div>
-        <img src="./assets/ipad.webp" alt="Slide 3" className="w-full h-96 object-cover" />
+        <img src="https://i.imghippo.com/files/eImNf1723371931.webp" alt="Slide 3" className="w-full h-auto object-cover" />
       </div>
       <div>
-        <img src="./assets/nothinh.webp" alt="Slide 3" className="w-full h-96 object-cover" />
+        <img src="https://i.imghippo.com/files/cpUKh1723371954.webp" alt="Slide 3" className="w-full h-auto object-cover" />
       </div>
     </Slider>
   );
