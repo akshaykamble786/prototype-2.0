@@ -10,6 +10,7 @@ const Carousel = ({
     iconClassName = "text-slate-900",
     categoryClassName = "text-sm text-slate-900",
     bgClassName = "bg-gray-100",
+    imageClassName = "w-full h-20 object-contain mb-2",
     breakpoints = [
         {
             breakpoint: 1024,
@@ -28,7 +29,7 @@ const Carousel = ({
         {
             breakpoint: 480,
             settings: {
-                slidesToShow: 4,
+                slidesToShow: 2,
                 slidesToScroll: 1,
             }
         }
@@ -77,6 +78,9 @@ const Carousel = ({
                 {categories.map((category, index) => (
                     <div key={index} className="flex justify-center px-1">
                         <div className={`text-white flex flex-col justify-center items-center p-4 ${bgClassName} rounded-lg h-32 border border-black-700`}>
+                        {category.image && (
+                                <img src={category.image} className={imageClassName} alt={`${category.name}`} />
+                            )}
                             <div className={`text-4xl mb-2 ${iconClassName}`}>{category.icon}</div>
                             <p className={categoryClassName}>{category.name}</p>
                         </div>

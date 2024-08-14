@@ -1,7 +1,17 @@
 import React from "react";
 import ImageSlider from "../components/ImageSlider";
 import Carousel from "../components/Carousel";
-import { Home, Tablet, Watch, Speaker, Refrigerator, Headphones, Fan, Microwave, Camera } from "lucide-react";
+import {
+  Home,
+  Tablet,
+  Watch,
+  Speaker,
+  Refrigerator,
+  Headphones,
+  Fan,
+  Microwave,
+  Camera,
+} from "lucide-react";
 
 const Products = () => {
   const electronicsCategories = [
@@ -17,8 +27,34 @@ const Products = () => {
   ];
 
   const brandCategories = [
-    {}
-  ]
+    {
+      image: "./applelogo.png",
+    },
+    {
+      image: "lg.png",
+    },
+    {
+      image: "./samsung.png",
+    },
+    {
+      image: "https://logos-world.net/wp-content/uploads/2020/04/Sony-Logo.png",
+    },
+    {
+      image: "https://upload.wikimedia.org/wikipedia/commons/2/25/Dell_logo.png",
+    },
+    {
+      image: "senn.png",
+    },
+    {
+      image: "cannon.png",
+    },
+    {
+      image: "havells.png",
+    },
+    {
+      image: "https://brandslogos.com/wp-content/uploads/images/large/philips-logo.png",
+    }
+  ];
 
   return (
     <div className="container mx-auto px-4 md:px-6 py-8 text-center">
@@ -65,7 +101,7 @@ const Products = () => {
             Dell XPS 13, Ultra Thin
           </h2>
           <p className="leading-relaxed text-sm sm:text-base mb-2 sm:mb-4">
-            Intel’s latest 12th-gen Alder Lake CPUs
+            Intel's latest 12th-gen Alder Lake CPUs
           </p>
           <p className="text-lg sm:text-xl font-extrabold mb-2 sm:mb-4">
             Starting from &#8377; 1,68,899
@@ -105,7 +141,7 @@ const Products = () => {
             Available in Alpine Green, Sierra Blue and Silver
           </p>
           <p className="text-lg sm:text-2xl font-extrabold mb-4">
-            &#8377; 49,300{" "}
+            &#8377; 49,300
             <span className="line-through text-gray-500">&#8377; 58,300</span>
           </p>
           <button className="bg-black text-white px-4 sm:px-6 py-2 sm:py-3 w-full sm:w-32 rounded-lg mb-3">
@@ -125,6 +161,18 @@ const Products = () => {
         </div>
       </div>
 
+      <div>
+        <h2 className="text-3xl text-left font-medium mt-6">Top Brands</h2>
+        <Carousel
+          categories={brandCategories}
+          slidesToShow={4}
+          slidesToScroll={1}
+          className="bg-white py-4"
+          iconClassName="text-blue-900"
+          categoryClassName="text-sm text-blue-900"
+          bgClassName="bg-gray-100 h-40"
+        />
+      </div>
     </div>
   );
 };
