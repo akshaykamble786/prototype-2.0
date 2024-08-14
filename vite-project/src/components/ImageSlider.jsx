@@ -15,9 +15,9 @@ const ImageSlider = () => {
   };
 
   return (
-    <Slider {...settings}>
+    <Slider {...settings} className='mb-4'>
       <div>
-        <img src="https://i.imghippo.com/files/b9FXU1723372102.webp" alt="Slide 1" className="w-full h-auto object-cover object" />
+        <img src="https://i.imghippo.com/files/b9FXU1723372102.webp" alt="Slide 1" className="w-full h-auto object-cover" />
       </div>
       <div>
         <img src="https://i.imghippo.com/files/Kk1lw1723372065.webp" alt="Slide 2" className="w-full h-auto object-cover" />
@@ -36,3 +36,7 @@ const ImageSlider = () => {
 };
 
 export default ImageSlider;
+
+
+
+
