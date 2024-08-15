@@ -107,15 +107,28 @@ const Computing = () => {
     originalPrice: 25999,
   };
 
+  const computingProduct12 = {
+    images  :{
+      "#2E2C2F": "https://i.imghippo.com/files/purjY1723716206.png",
+      "#F0F1F2": "https://i.imghippo.com/files/4vD3v1723716184.png",
+    },
+    colorOptions:["#2E2C2F","#F0F1F2"],
+    title: "Canon EOS R50 Mirrorless Camera",
+    price: 66990,
+    rating: 4.9,
+    originalPrice: 75995,
+  };
+
   const computingProducts = [
     computingProduct1,
     computingProduct4,
     computingProduct5,
     computingProduct6,
+    computingProduct9,
     computingProduct2,
     computingProduct7,
     computingProduct8,
-    computingProduct9,
+    computingProduct12,
     computingProduct3,
     computingProduct10,
     computingProduct11

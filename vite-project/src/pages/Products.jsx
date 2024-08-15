@@ -53,8 +53,8 @@ const Products = () => {
       image: "havells.png",
     },
     {
-      image:
-        "https://brandslogos.com/wp-content/uploads/images/large/philips-logo.png",
+      // image:"https://brandslogos.com/wp-content/uploads/images/large/philips-logo.png",
+      image: "phil.png",
     },
   ];
 
@@ -67,14 +67,13 @@ const Products = () => {
         slidesToShow={6}
         slidesToScroll={1}
         autoplay={false}
-        className="bg-white py-4"
-        iconClassName="text-blue-900"
-        categoryClassName="text-sm text-blue-900"
+        className="bg-white py-8"
+        categoryClassName="text-md text-blue-900"
         bgClassName="bg-gray-100"
       />
 
-      <h2 className="text-3xl text-left font-medium mt-6">What's Now</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+      <h2 className="text-3xl text-left font-medium mt-4">What's Hot</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-4">
         <div className="bg-pink-100 p-4 sm:p-6 rounded-lg flex flex-col items-center justify-center">
           <img
             className="w-full h-40 sm:h-60 object-contain object-center mb-4 sm:mb-6"
@@ -136,7 +135,7 @@ const Products = () => {
         </div>
       </div>
 
-      <div className="bg-green-100 p-8 sm:p-12 rounded-lg mt-8 flex flex-col-reverse sm:flex-row items-center justify-between w-full">
+      <div className="bg-green-100 p-8 sm:p-12 rounded-lg flex flex-col-reverse sm:flex-row items-center justify-between w-full">
         <div className="flex flex-col items-start max-w-md text-left">
           <h2 className="text-xl sm:text-3xl text-gray-900 font-extrabold title-font mb-4">
             Apple iPhone 13
@@ -165,7 +164,7 @@ const Products = () => {
         </div>
       </div>
 
-      <h2 className="text-3xl text-left font-medium mt-6">Deals of The Day</h2>
+      <h2 className="text-3xl text-left font-medium mt-8">Deals of The Day</h2>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 py-4">
         <div class="bg-gray-200 p-4 h-96 rounded-lg"></div>
         <div class="bg-gray-200 p-4 h-96 rounded-lg"></div>
@@ -188,10 +187,8 @@ const Products = () => {
           slidesToShow={4}
           slidesToScroll={1}
           autoplay={true}
-          autoplaySpeed={3000}
+          autoplaySpeed={2000}
           className="bg-white py-4"
-          iconClassName="text-blue-900"
-          categoryClassName="text-sm text-blue-900"
           bgClassName="bg-gray-100 h-40"
         />
       </div>
