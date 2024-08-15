@@ -40,7 +40,8 @@ const Products = () => {
       image: "https://logos-world.net/wp-content/uploads/2020/04/Sony-Logo.png",
     },
     {
-      image: "https://upload.wikimedia.org/wikipedia/commons/2/25/Dell_logo.png",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/2/25/Dell_logo.png",
     },
     {
       image: "senn.png",
@@ -52,8 +53,9 @@ const Products = () => {
       image: "havells.png",
     },
     {
-      image: "https://brandslogos.com/wp-content/uploads/images/large/philips-logo.png",
-    }
+      image:
+        "https://brandslogos.com/wp-content/uploads/images/large/philips-logo.png",
+    },
   ];
 
   return (
@@ -64,12 +66,14 @@ const Products = () => {
         categories={electronicsCategories}
         slidesToShow={6}
         slidesToScroll={1}
+        autoplay={false}
         className="bg-white py-4"
         iconClassName="text-blue-900"
         categoryClassName="text-sm text-blue-900"
         bgClassName="bg-gray-100"
       />
 
+      <h2 className="text-3xl text-left font-medium mt-6">What's Now</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
         <div className="bg-pink-100 p-4 sm:p-6 rounded-lg flex flex-col items-center justify-center">
           <img
@@ -161,12 +165,30 @@ const Products = () => {
         </div>
       </div>
 
+      <h2 className="text-3xl text-left font-medium mt-6">Deals of The Day</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 py-4">
+        <div class="bg-gray-200 p-4 h-96 rounded-lg"></div>
+        <div class="bg-gray-200 p-4 h-96 rounded-lg"></div>
+        <div class="bg-gray-200 p-4 h-96 rounded-lg"></div>
+        <div class="bg-gray-200 p-4 h-96 rounded-lg"></div>
+      </div>
+
+      <h2 className="text-3xl text-left font-medium mt-6">
+        Limited Time Deals
+      </h2>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-4">
+        <div class="bg-gray-200 p-4 h-72 rounded-lg"></div>
+        <div class="bg-gray-200 p-4 h-72 rounded-lg"></div>
+      </div>
+
       <div>
         <h2 className="text-3xl text-left font-medium mt-6">Top Brands</h2>
         <Carousel
           categories={brandCategories}
           slidesToShow={4}
           slidesToScroll={1}
+          autoplay={true}
+          autoplaySpeed={3000}
           className="bg-white py-4"
           iconClassName="text-blue-900"
           categoryClassName="text-sm text-blue-900"

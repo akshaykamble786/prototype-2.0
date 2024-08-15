@@ -11,6 +11,8 @@ const Carousel = ({
     categoryClassName = "text-sm text-slate-900",
     bgClassName = "bg-gray-100",
     imageClassName = "w-full h-20 object-contain mb-2",
+    autoplay=true,
+    autoplaySpeed=3000,
     breakpoints = [
         {
             breakpoint: 1024,
@@ -67,6 +69,8 @@ const Carousel = ({
         speed: 500,
         slidesToShow,
         slidesToScroll,
+        autoplay,
+        autoplaySpeed,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
         responsive: breakpoints
