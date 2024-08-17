@@ -171,7 +171,7 @@ export default function Footer() {
               <span className="sr-only">GitHub account</span>
             </Link>
 
-            <Link to="#" className="text-gray-500">
+            <Link to="https://x.com/awkshhay" target="_blank" className="text-gray-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-4 h-4"

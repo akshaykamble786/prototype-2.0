@@ -8,3 +8,19 @@
 .custom-gradient {
     background: linear-gradient(135deg, #13172c, #030825, #4a3f7a, #263b59);
 }
+
+@media (max-width: 768px) {
+    .slider-item {
+      height:400px; /* Adjust height to ensure a square aspect ratio */
+      width: 400px;  /* Set width equal to height */
+      margin: 0 auto; /* Center the slider */
+    }
+  
+    .slider-image {
+      height: 100%;
+      width: 100%;
+      object-fit: fill;
+      object-position: center;
+    }
+  }
+  

@@ -1,5 +1,5 @@
+import HeroSection from "../components/ImageSlider";
 import React from "react";
-import ImageSlider from "../components/ImageSlider";
 import Carousel from "../components/Carousel";
 import {
   Home,
@@ -60,7 +60,7 @@ const Products = () => {
 
   return (
     <div className="container mx-auto px-4 md:px-6 py-8 text-center">
-      <ImageSlider />
+      <HeroSection/>
 
       <Carousel
         categories={electronicsCategories}
@@ -70,6 +70,8 @@ const Products = () => {
         className="bg-white py-8"
         categoryClassName="text-md text-blue-900"
         bgClassName="bg-gray-100"
+        nextArrow={true}
+        prevArrow={true}
       />
 
       <h2 className="text-3xl text-left font-medium mt-4">What's Hot</h2>
@@ -166,18 +168,18 @@ const Products = () => {
 
       <h2 className="text-3xl text-left font-medium mt-8">Deals of The Day</h2>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 py-4">
-        <div class="bg-gray-200 p-4 h-96 rounded-lg"></div>
-        <div class="bg-gray-200 p-4 h-96 rounded-lg"></div>
-        <div class="bg-gray-200 p-4 h-96 rounded-lg"></div>
-        <div class="bg-gray-200 p-4 h-96 rounded-lg"></div>
+        <div className="bg-gray-200 p-4 h-96 rounded-lg"></div>
+        <div className="bg-gray-200 p-4 h-96 rounded-lg"></div>
+        <div className="bg-gray-200 p-4 h-96 rounded-lg"></div>
+        <div className="bg-gray-200 p-4 h-96 rounded-lg"></div>
       </div>
 
       <h2 className="text-3xl text-left font-medium mt-6">
         Limited Time Deals
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-4">
-        <div class="bg-gray-200 p-4 h-72 rounded-lg"></div>
-        <div class="bg-gray-200 p-4 h-72 rounded-lg"></div>
+        <div className="bg-gray-200 p-4 h-72 rounded-lg"></div>
+        <div className="bg-gray-200 p-4 h-72 rounded-lg"></div>
       </div>
 
       <div>
@@ -189,7 +191,7 @@ const Products = () => {
           autoplay={true}
           autoplaySpeed={2000}
           className="bg-white py-4"
-          bgClassName="bg-gray-100 h-40"
+          bgClassName="bg-gray-100 h-36"
         />
       </div>
     </div>
