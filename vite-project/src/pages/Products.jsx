@@ -53,14 +53,13 @@ const Products = () => {
       image: "havells.png",
     },
     {
-      // image:"https://brandslogos.com/wp-content/uploads/images/large/philips-logo.png",
       image: "phil.png",
     },
   ];
 
   return (
     <div className="container mx-auto px-4 md:px-6 py-8 text-center">
-      <HeroSection/>
+      <HeroSection />
 
       <Carousel
         categories={electronicsCategories}
@@ -168,18 +167,25 @@ const Products = () => {
 
       <h2 className="text-3xl text-left font-medium mt-8">Deals of The Day</h2>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 py-4">
-        <div className="bg-gray-200 p-4 h-96 rounded-lg"></div>
-        <div className="bg-gray-200 p-4 h-96 rounded-lg"></div>
-        <div className="bg-gray-200 p-4 h-96 rounded-lg"></div>
-        <div className="bg-gray-200 p-4 h-96 rounded-lg"></div>
+        <div className="bg-orange-200 p-4 h-96 rounded-lg flex flex-col items-center justify-center">
+          
+        </div>
+        <div className="bg-violet-100 p-4 h-96 rounded-lg flex flex-col items-center justify center">
+         
+        </div>
+        <div className="bg-teal-200 p-4 h-96 rounded-lg flex flex-col items-center justify center">
+         
+        </div>
+        <div className="bg-rose-300 p-4 h-96 rounded-lg flex flex-col items-center justify center">
+        </div>
       </div>
 
       <h2 className="text-3xl text-left font-medium mt-6">
         Limited Time Deals
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-4">
-        <div className="bg-gray-200 p-4 h-72 rounded-lg"></div>
-        <div className="bg-gray-200 p-4 h-72 rounded-lg"></div>
+        <div className="bg-indigo-300 p-4 h-72 rounded-lg"></div>
+        <div className="bg-emerald-200 p-4 h-72 rounded-lg"></div>
       </div>
 
       <div>

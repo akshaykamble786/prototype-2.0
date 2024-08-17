@@ -24,3 +24,21 @@
     }
   }
   
+  @layer components {
+    .square-img {
+      @apply h-full w-full object-cover;
+    }
+  
+    @screen md {
+      .square-img {
+        @apply h-[500px]; /* Change to desired height for medium and larger screens */
+      }
+    }
+  
+    @screen lg {
+      .square-img {
+        @apply h-[500px]; /* Adjust height based on design needs */
+      }
+    }
+  }
+  
