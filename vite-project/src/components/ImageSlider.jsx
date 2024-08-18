@@ -1,5 +1,5 @@
-import React from 'react';
-import Slider from 'react-slick';
+import React from "react";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -16,7 +16,6 @@ const HeroSection = () => {
 
   return (
     <Slider {...settings} className="mb-4 w-full">
-
       <div className="relative w-full">
         <img
           srcSet="
@@ -34,7 +33,7 @@ const HeroSection = () => {
         <img
           srcSet="
             https://media.croma.com/image/upload/v1723872324/Croma%20Assets/CMS/LP%20Page%20Banners/2024/Sanity/HP/August/17082024/HP_Rotating_TV_17Aug2024_pbus3s.jpg 768w,
-            https://media.croma.com/image/upload/v1723872346/Croma%20Assets/CMS/LP%20Page%20Banners/2024/Sanity/HP/August/17082024/MHP_Rotating_TV_17Aug2024_zfkznm.jpg 1200w
+             https://media.croma.com/image/upload/v1723872346/Croma%20Assets/CMS/LP%20Page%20Banners/2024/Sanity/HP/August/17082024/MHP_Rotating_TV_17Aug2024_zfkznm.jpg 1200w
           "
           sizes="(max-width: 768px) 100vw, 50vw"
           src="https://media.croma.com/image/upload/v1723872346/Croma%20Assets/CMS/LP%20Page%20Banners/2024/Sanity/HP/August/17082024/MHP_Rotating_TV_17Aug2024_zfkznm.jpg"
@@ -56,20 +55,6 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* <div className="relative w-full">
-        <img
-          srcSet="
-            https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1723809451/Croma%20Assets/CMS/Homepage%20Banners/HP%20Rotating/2024/Aug/17082024/Mobile/MHP_Rotating_TWS_17Aug2024_orltdf.jpg 768w,
-            https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1723809451/Croma%20Assets/CMS/Homepage%20Banners/HP%20Rotating/2024/Aug/17082024/Desktop/HP_Rotating_TWS_17Aug2024_kcqjbm.jpg 1200w
-          "
-          sizes="(max-width: 768px) 100vw, 50vw"
-          // src="https://media.croma.com/image/upload/v1723809449/Croma%20Assets/CMS/Homepage%20Banners/HP%20Rotating/2024/Aug/17082024/Desktop/MHP_Rotating_TWS_17Aug2024_jctunv.jpg"
-          src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1723809451/Croma%20Assets/CMS/Homepage%20Banners/HP%20Rotating/2024/Aug/17082024/Desktop/HP_Rotating_TWS_17Aug2024_kcqjbm.jpg"
-          alt="Slide 4"
-          className="w-full h-auto object-cover"
-        />
-      </div> */}
-
       <div className="relative w-full">
         <img
           srcSet="
@@ -82,7 +67,6 @@ const HeroSection = () => {
           className="w-full h-auto object-cover"
         />
       </div>
-
     </Slider>
   );
 };

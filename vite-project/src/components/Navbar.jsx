@@ -7,6 +7,7 @@ import {
   MenuIcon,
   XIcon,
 } from "@heroicons/react/outline";
+import { CiSearch } from "react-icons/ci";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,13 +64,13 @@ const Navbar = () => {
         {/* Mobile Menu Links */}
         {isMenuOpen && (
           <div className="flex flex-col text-center space-y-4 mt-4">
-            <Link
+            {/* <Link
               to="/"
               className="text-gray-600 hover:text-gray-950 hover:underline"
               onClick={toggleMenu}
             >
               Products
-            </Link>
+            </Link> */}
             <Link
               to="/mobiles"
               className="text-gray-600 hover:text-gray-950 hover:underline"
@@ -105,15 +106,15 @@ const Navbar = () => {
       {/* Desktop View */}
       <div className="hidden lg:flex justify-between items-center">
         {/* Left: Brand Name */}
-        <Link className="text-2xl font-bold ml-10 text-gray-800" to="/">
+        <Link className="text-2xl font-bold ml-12 text-gray-800" to="/">
           ELEKTRA
         </Link>
 
         {/* Center: Navigation Links */}
         <div className="flex space-x-6">
-          <Link to="/" className="text-gray-600 hover:text-gray-950 hover:underline">
+          {/* <Link to="/" className="text-gray-600 hover:text-gray-950 hover:underline">
             Products
-          </Link>
+          </Link> */}
           <Link to="/mobiles" className="text-gray-600 hover:text-gray-950 hover:underline">
             Mobiles
           </Link>
@@ -129,20 +130,15 @@ const Navbar = () => {
         </div>
 
         {/* Right: Search Bar and Icons */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-8 mr-12">
           <div className="relative">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="py-1.5 px-3 rounded-md border border-gray-500"
-            />
-            <SearchIcon className="absolute top-1/2 transform -translate-y-1/2 right-3 h-5 w-5 text-gray-500" />
+            <CiSearch size={30} className="text-gray-600"/>
           </div>
           <Link to="/cart" className="text-gray-500">
-            <ShoppingCartIcon className="h-6 w-6 ml-6" />
+            <ShoppingCartIcon className="h-6 w-6 " />
           </Link>
           <Link to="/userprofile" className="text-gray-500">
-            <UserIcon className="h-6 w-6 mr-11 ml-6" />
+            <UserIcon className="h-6 w-6" />
           </Link>
         </div>
       </div>

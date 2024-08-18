@@ -1,5 +1,6 @@
 import HeroSection from "../components/ImageSlider";
 import React from "react";
+import Timer from "../components/Timer";
 import Carousel from "../components/Carousel";
 import {
   Home,
@@ -14,6 +15,9 @@ import {
 } from "lucide-react";
 
 const Products = () => {
+  const imacOfferEndTime = new Date().getTime() + 7 * 60 * 60 * 1000;
+  const washOfferEndTime = new Date().getTime() + 9 * 60 * 60 * 1000;
+
   const electronicsCategories = [
     { name: "Home Theatres", icon: <Home className="text-slate-900" /> },
     { name: "Mobiles", icon: <Tablet className="text-slate-900" /> },
@@ -90,7 +94,7 @@ const Products = () => {
           <p className="text-lg sm:text-xl font-extrabold mb-2 sm:mb-4">
             Starting from &#8377; 43,990
           </p>
-          <button className="bg-black text-white px-4 py-2 w-full sm:w-32 rounded-lg">
+          <button className="bg-black text-white px-4 py-2 w-full sm:w-32 rounded">
             Shop Now
           </button>
         </div>
@@ -110,7 +114,7 @@ const Products = () => {
           <p className="text-lg sm:text-xl font-extrabold mb-2 sm:mb-4">
             Starting from &#8377; 1,68,899
           </p>
-          <button className="bg-black text-white px-4 py-2 w-full sm:w-32 rounded-lg">
+          <button className="bg-black text-white px-4 py-2 w-full sm:w-32 rounded">
             Shop Now
           </button>
         </div>
@@ -130,7 +134,7 @@ const Products = () => {
           <p className="text-lg sm:text-xl font-extrabold mb-2 sm:mb-4">
             Starting from &#8377; 1,59,999
           </p>
-          <button className="bg-black text-white px-4 py-2 w-full sm:w-32 rounded-lg">
+          <button className="bg-black text-white px-4 py-2 w-full sm:w-32 rounded">
             Shop Now
           </button>
         </div>
@@ -148,10 +152,10 @@ const Products = () => {
             &#8377; 49,300
             <span className="line-through text-gray-500">&#8377; 58,300</span>
           </p>
-          <button className="bg-black text-white px-4 sm:px-6 py-2 sm:py-3 w-full sm:w-32 rounded-lg mb-3">
+          <button className="bg-black text-white px-4 sm:px-6 py-2 sm:py-3 w-full sm:w-32 rounded mb-3">
             Buy Now
           </button>
-          <button className="bg-green-100 text-black border-2 border-gray-800 border-solid px-3 py-2 w-full sm:w-32 rounded-lg mb-1">
+          <button className="bg-green-100 text-black border-2 border-gray-800 border-solid px-3 py-2 w-full sm:w-32 rounded mb-1">
             Read More
           </button>
         </div>
@@ -167,25 +171,62 @@ const Products = () => {
 
       <h2 className="text-3xl text-left font-medium mt-8">Deals of The Day</h2>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 py-4">
-        <div className="bg-orange-200 p-4 h-96 rounded-lg flex flex-col items-center justify-center">
-          
-        </div>
-        <div className="bg-violet-100 p-4 h-96 rounded-lg flex flex-col items-center justify center">
-         
-        </div>
-        <div className="bg-teal-200 p-4 h-96 rounded-lg flex flex-col items-center justify center">
-         
-        </div>
-        <div className="bg-rose-300 p-4 h-96 rounded-lg flex flex-col items-center justify center">
-        </div>
+        <div className="bg-orange-200 p-4 h-96 rounded-lg flex flex-col items-center justify-center"></div>
+        <div className="bg-violet-100 p-4 h-96 rounded-lg flex flex-col items-center justify center"></div>
+        <div className="bg-teal-200 p-4 h-96 rounded-lg flex flex-col items-center justify center"></div>
+        <div className="bg-rose-300 p-4 h-96 rounded-lg flex flex-col items-center justify center"></div>
       </div>
 
       <h2 className="text-3xl text-left font-medium mt-6">
         Limited Time Deals
       </h2>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-4">
-        <div className="bg-indigo-300 p-4 h-72 rounded-lg"></div>
-        <div className="bg-emerald-200 p-4 h-72 rounded-lg"></div>
+
+        <div className="bg-indigo-300 p-4 h-auto rounded-lg sm:flex flex-col-reverse">
+          <div className="relative flex flex-col sm:flex-row items-center justify-between p-4 sm:p-6 h-full">
+            <div className="flex flex-col items-start justify-center w-full sm:w-1/2">
+              <h2 className="text-white text-left text-lg font-bold mb-2">
+                iMac Now Starting From &#8377; 89,999
+              </h2>
+              <Timer initialTime={imacOfferEndTime} />
+              <button className="mt-4 px-6 py-2 bg-black text-white rounded">
+                Buy Now
+              </button>
+              <p className="mt-4 text-white text-xs text-left">
+                *Buy now and win a free magic keyboard
+              </p>
+            </div>
+            <img
+              src="imac2.png"
+              alt="iMac Offer"
+              className="h-auto w-full sm:w-1/2 mt-4 sm:mt-0 ml-0 sm:ml-8"
+            />
+          </div>
+        </div>
+
+        <div className="bg-emerald-200 p-4 h-auto rounded-lg sm:flex flex-col-reverse">
+          <div className="relative flex flex-col sm:flex-row items-center justify-between p-4 sm:p-6 h-full">
+            <div className="flex flex-col items-start justify-center w-full sm:w-1/2">
+              <h2 className="text-white text-left text-lg font-bold mb-2">
+                Headphones Now Starting From &#8377; 34,999
+              </h2>
+              <Timer initialTime={washOfferEndTime} />
+              <button className="mt-4 px-6 py-2 bg-black text-white rounded">
+                Buy Now
+              </button>
+              <p className="mt-4 text-white text-xs text-left">
+                *Buy now and win a free magic keyboard
+              </p>
+            </div>
+            <img
+              src="https://i.imghippo.com/files/Htv2R1723197865.png"
+              alt="iMac Offer"
+              className="h-auto w-full sm:w-1/2 mt-4 sm:mt-0 ml-0 sm:ml-8"
+            />
+          </div>
+        </div>
+
       </div>
 
       <div>
