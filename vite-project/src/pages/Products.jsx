@@ -169,64 +169,118 @@ const Products = () => {
         </div>
       </div>
 
-      <h2 className="text-3xl text-left font-medium mt-8">Deals of The Day</h2>
+      {/* <h2 className="text-3xl text-left font-medium mt-8">Deals of The Day</h2>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 py-4">
         <div className="bg-orange-200 p-4 h-96 rounded-lg flex flex-col items-center justify-center"></div>
         <div className="bg-violet-100 p-4 h-96 rounded-lg flex flex-col items-center justify center"></div>
         <div className="bg-teal-200 p-4 h-96 rounded-lg flex flex-col items-center justify center"></div>
         <div className="bg-rose-300 p-4 h-96 rounded-lg flex flex-col items-center justify center"></div>
+      </div> */}
+
+      <h2 className="text-3xl text-left font-medium mt-8">Deals Of The Day</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 py-4">
+        <div className="bg-teal-300 p-4 h-96 rounded-lg flex flex-col items-center justify-center text-white">
+          <img
+            src="https://i.imghippo.com/files/jJjjZ1723197300.png"
+            alt="Microwave & Ovens"
+            className="h-54 w-48 object-cover mb-6"
+          />
+          <h3 className="text-xl font-semibold">Kitchen Appliances</h3>
+          <p className="mt-2 text-center">Starting at ₹7,690*
+            <br/>
+            Inclusive of Exchange Benefits
+          </p>
+        </div>
+
+        <div className="bg-violet-300 p-4 h-96 rounded-lg flex flex-col items-center justify-center text-white">
+          <img
+            src="https://i.imghippo.com/files/44UcI1722420572.png"
+            alt="43 inch led tv"
+            className="h-56 w-56 object-cover mb-4"
+          />
+          <h3 className="text-xl font-semibold">Washing Machines</h3>
+          <p className="mt-2 text-center">
+            ₹15,749*
+            <br />
+            Inclusive of Bank Offer & Exchange Benefits
+          </p>
+        </div>
+        <div className="bg-gradient-to-b from-gray-700 to-gray-900 p-4 h-96 rounded-lg flex flex-col items-center justify-center text-white">
+          <img
+            src="https://i.imghippo.com/files/Tl4mP1723198222.png"
+            alt="MacBook"
+            className="h-56 w-56 object-cover "
+          />
+          <h3 className="text-xl font-semibold">MacBook</h3>
+          <p className="mt-2 text-center">
+            Starting at ₹91,090*
+            <br />
+            *Including Bank Offer
+          </p>
+        </div>
+        <div className="bg-rose-300 p-4 h-96 rounded-lg flex flex-col items-center justify-center text-white">
+          <img
+            src="https://i.imghippo.com/files/4vD3v1723716184.png"
+            alt="Mobile Accessories"
+            className="h-56 w-56 object-cover mb-4"
+          />
+          <h3 className="text-xl font-semibold">Digital Cameras</h3>
+          <p className="mt-2 text-center">Up to 86% Off</p>
+        </div>
       </div>
 
       <h2 className="text-3xl text-left font-medium mt-6">
         Limited Time Deals
       </h2>
-
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-4">
-
-        <div className="bg-indigo-300 p-4 h-auto rounded-lg sm:flex flex-col-reverse">
-          <div className="relative flex flex-col sm:flex-row items-center justify-between p-4 sm:p-6 h-full">
-            <div className="flex flex-col items-start justify-center w-full sm:w-1/2">
-              <h2 className="text-white text-left text-lg font-bold mb-2">
-                iMac Now Starting From &#8377; 89,999
-              </h2>
-              <Timer initialTime={imacOfferEndTime} />
-              <button className="mt-4 px-6 py-2 bg-black text-white rounded">
-                Buy Now
-              </button>
-              <p className="mt-4 text-white text-xs text-left">
-                *Buy now and win a free magic keyboard
-              </p>
-            </div>
-            <img
-              src="imac2.png"
-              alt="iMac Offer"
-              className="h-auto w-full sm:w-1/2 mt-4 sm:mt-0 ml-0 sm:ml-8"
-            />
+        <div className="bg-indigo-300 rounded-lg relative flex flex-col sm:flex-row items-center justify-between p-4 sm:p-6 h-full">
+          <div className="flex flex-col items-start justify-center w-full sm:w-1/2">
+            <img src="applelogo.png" className="h-9 w-9" alt="apple offer" />
+            <h2 className="text-white text-left text-lg font-bold mb-2 mt-2">
+              iMac Now Starting From &#8377; 119,999
+            </h2>
+            <Timer initialTime={imacOfferEndTime} />
+            <button className="mt-4 px-6 py-2 bg-black text-white rounded">
+              Buy Now
+            </button>
+            <p className="mt-4 text-white text-xs text-left">
+              *Buy now and win a free magic keyboard
+            </p>
           </div>
+          <img
+            src="imac.png"
+            alt="iMac Offer"
+            className="h-auto w-full sm:w-1/2 mt-4 sm:mt-0 ml-0 sm:ml-8"
+          />
         </div>
 
-        <div className="bg-emerald-200 p-4 h-auto rounded-lg sm:flex flex-col-reverse">
-          <div className="relative flex flex-col sm:flex-row items-center justify-between p-4 sm:p-6 h-full">
-            <div className="flex flex-col items-start justify-center w-full sm:w-1/2">
-              <h2 className="text-white text-left text-lg font-bold mb-2">
-                Headphones Now Starting From &#8377; 34,999
-              </h2>
-              <Timer initialTime={washOfferEndTime} />
-              <button className="mt-4 px-6 py-2 bg-black text-white rounded">
-                Buy Now
-              </button>
-              <p className="mt-4 text-white text-xs text-left">
-                *Buy now and win a free magic keyboard
-              </p>
+        <div className="bg-purple-300 rounded-lg relative flex flex-col-reverse sm:flex-row items-center justify-between p-4 sm:p-6 h-full">
+          <div className="flex flex-col items-start justify-center w-full sm:w-1/2">
+            <div className="flex mb-2">
+              <img
+                src="senn.png"
+                className="h-9 w-9 mr-4"
+                alt="sennheiser offer"
+              />
+              <img src="boat.png" className="h-9 w-9" alt="boat offer" />
             </div>
-            <img
-              src="https://i.imghippo.com/files/Htv2R1723197865.png"
-              alt="iMac Offer"
-              className="h-auto w-full sm:w-1/2 mt-4 sm:mt-0 ml-0 sm:ml-8"
-            />
+            <h2 className="text-white text-left text-lg font-bold mb-2">
+              Headphones Now Starting From &#8377; 15,999
+            </h2>
+            <Timer initialTime={washOfferEndTime} />
+            <button className="mt-4 px-6 py-2 bg-black text-white rounded">
+              Buy Now
+            </button>
+            <p className="mt-4 text-white text-xs text-left">
+              *Buy now and win a free earbuds
+            </p>
           </div>
+          <img
+            src="https://i.imghippo.com/files/Htv2R1723197865.png"
+            alt="iMac Offer"
+            className="h-auto w-full sm:w-1/2 mt-4 sm:mt-0 ml-0 sm:ml-8"
+          />
         </div>
-
       </div>
 
       <div>
