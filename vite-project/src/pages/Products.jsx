@@ -171,7 +171,6 @@ const Products = () => {
 
       <h2 className="text-3xl text-left font-medium mt-8">Deals Of The Day</h2>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 py-4">
-
         <div className="bg-orange-300 p-4 h-auto rounded-lg flex flex-col items-center justify-center text-white">
           <img src="phil.png" className="h-12" alt="" />
           <h3 className="text-xl font-semibold">Kitchen Appliances</h3>
@@ -180,8 +179,9 @@ const Products = () => {
             alt="Microwave & Ovens"
             className="h-38 w-52 object-cover mb-6"
           />
-          <p className="mt-2 text-center">Starting at ₹7,690*
-            <br/>
+          <p className="mt-2 text-center">
+            Starting at ₹7,690*
+            <br />
             Inclusive of Exchange Benefits
           </p>
           <button className="bg-black text-white px-4 py-2 w-full sm:w-32 rounded mt-2">
@@ -189,11 +189,13 @@ const Products = () => {
           </button>
         </div>
 
-
-        <div className="bg-violet-300 p-4 h-auto rounded-lg flex flex-col items-center justify-center text-white">
+        <div
+          className="bg-gradient-to-b from-rose-300 to-teal-400
+ p-4 h-auto rounded-lg flex flex-col items-center justify-center text-white"
+        >
           <div className="flex mb-4">
-          <img src="./samsung.png" className="h-8 mr-2" alt="samsung offer" />
-          <img src="lg.png" alt="lg offer" className="h-8" />
+            <img src="./samsung.png" className="h-8 mr-2" alt="samsung offer" />
+            <img src="lg.png" alt="lg offer" className="h-8" />
           </div>
           <h3 className="text-xl font-semibold mb-6">Air Conditioners</h3>
           <img
@@ -211,11 +213,14 @@ const Products = () => {
           </button>
         </div>
 
-
-        <div className="bg-gradient-to-b from-gray-700 to-gray-900 p-4 h-auto rounded-lg flex flex-col items-center justify-center text-white">
+        <div className="bg-gradient-to-b from-gray-400 to-gray-700 p-4 h-auto rounded-lg flex flex-col items-center justify-center text-white">
           <div className="flex mb-4">
-            <img src="applelogo.png"  className="h-12 mr-2" alt="" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Dell_logo.png" className="h-12" alt="" />
+            <img src="applelogo.png" className="h-12 mr-2" alt="" />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/2/25/Dell_logo.png"
+              className="h-12"
+              alt=""
+            />
           </div>
           <h3 className="text-xl font-semibold">Latest Laptops</h3>
           <img
@@ -233,9 +238,8 @@ const Products = () => {
           </button>
         </div>
 
-
-        <div className="bg-rose-400 p-4 h-auto rounded-lg flex flex-col items-center justify-center text-white">  
-          <img src="cannon.png" alt=""  className="h-10 w-24"/>
+        <div className="bg-rose-400 p-4 h-auto rounded-lg flex flex-col items-center justify-center text-white">
+          <img src="cannon.png" alt="" className="h-10 w-24" />
           <h3 className="text-xl font-semibold mt-2">Digital Cameras</h3>
           <img
             src="cam.png"
@@ -244,20 +248,20 @@ const Products = () => {
           />
           <p className="mt-2 mb-1 text-center">
             Starting at &#8377; 21,999
-            <br/>
-            Up to 86% Off</p>
+            <br />
+            Up to 86% Off
+          </p>
           <button className="bg-black text-white px-4 py-2 w-full sm:w-32 rounded mt-7">
             Shop Now
           </button>
         </div>
-      
       </div>
 
       <h2 className="text-3xl text-left font-medium mt-6">
         Limited Time Deals
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-4">
-        <div className="bg-indigo-300 rounded-lg relative flex flex-col sm:flex-row items-center justify-between p-4 sm:p-6 h-full">
+        <div className="bg-gradient-to-r from-teal-300 via-blue-300 to-blue-400 rounded-lg relative flex flex-col sm:flex-row items-center justify-between p-4 sm:p-6 h-full">
           <div className="flex flex-col items-start justify-center w-full sm:w-1/2">
             <img src="applelogo.png" className="h-9 w-9" alt="apple offer" />
             <h2 className="text-white text-left text-lg font-bold mb-2 mt-2">
@@ -278,7 +282,7 @@ const Products = () => {
           />
         </div>
 
-        <div className="bg-purple-300 rounded-lg relative flex flex-col-reverse sm:flex-row items-center justify-between p-4 sm:p-6 h-full">
+        <div className="bg-gradient-to-r from-purple-400 via-pink-300 to-pink-400 rounded-lg relative flex flex-col-reverse sm:flex-row items-center justify-between p-4 sm:p-6 h-full">
           <div className="flex flex-col items-start justify-center w-full sm:w-1/2">
             <div className="flex mb-2">
               <img
@@ -306,6 +310,76 @@ const Products = () => {
           />
         </div>
       </div>
+
+      {/* <div>
+        <h2 className="text-3xl text-left font-medium mt-6">Why Elektra ?</h2>
+        <div className="flex gap-56 bg-gray-200 rounded-lg mt-4">
+          <div className="flex-row">
+            <img src="service.png" className="h-18 p-4" alt="shipping" />
+            <h4 className="text-md font-bold">Free Shipping</h4>
+            <h4 className="text-sm">From all orders over &#8377; 1000</h4>
+          </div>
+          <div className="flex-col">
+            <img src="service-02.png" className="h-18 p-4" alt="shipping" />
+            <h4 className="text-md font-bold">Free Shipping</h4>
+            <h4 className="text-sm">From all orders over &#8377; 1000</h4>
+          </div>
+          <div className="flex-col">
+            <img src="service-03.png" className="h-18 p-4" alt="shipping" />
+            <h4 className="text-md font-bold">Free Shipping</h4>
+            <h4 className="text-sm">From all orders over &#8377; 1000</h4>
+          </div>
+          <div className="flex-col">
+            <img src="service-04.png" className="h-18 p-4" alt="shipping" />
+            <h4 className="text-md font-bold">Free Shipping</h4>
+            <h4 className="text-sm">From all orders over &#8377; 1000</h4>
+          </div>
+          <div className="flex-col">
+            <img src="service-05.png" className="h-18 p-4" alt="shipping" />
+            <h4 className="text-md font-bold">Free Shipping</h4>
+            <h4 className="text-sm">From all orders over &#8377; 1000</h4>
+          </div>
+        </div>
+      </div> */}
+
+<div className="mt-6">
+  <h2 className="text-3xl font-medium text-left">Why Elektra?</h2>
+  <div className="bg-gradient-to-r from-gray-200 to-gray-300 rounded-lg mt-4 p-12">
+    <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:flex lg:justify-between lg:gap-12">
+      <div className="text-center flex flex-col items-center">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXRydWNrIj48cGF0aCBkPSJNMTQgMThWNmEyIDIgMCAwIDAtMi0ySDRhMiAyIDAgMCAwLTIgMnYxMWExIDEgMCAwIDAgMSAxaDIiLz48cGF0aCBkPSJNMTUgMThIOSIvPjxwYXRoIGQ9Ik0xOSAxOGgyYTEgMSAwIDAgMCAxLTF2LTMuNjVhMSAxIDAgMCAwLS4yMi0uNjI0bC0zLjQ4LTQuMzVBMSAxIDAgMCAwIDE3LjUyIDhIMTQiLz48Y2lyY2xlIGN4PSIxNyIgY3k9IjE4IiByPSIyIi8+PGNpcmNsZSBjeD0iNyIgY3k9IjE4IiByPSIyIi8+PC9zdmc+" className="h-16 mb-2" alt="Free Shipping" />
+{/* 
+        <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-truck"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg> */}
+
+        
+
+        <h4 className="text-md font-bold">Free Shipping</h4>
+        <p className="text-sm">From all orders over &#8377; 1000</p>
+      </div>
+      <div className="text-center flex flex-col items-center">
+        <img src="service-02.png" className="h-16 mb-2" alt="Support 24/7" />
+        <h4 className="text-md font-bold">Support 24/7</h4>
+        <p className="text-sm">Call us anytime</p>
+      </div>
+      <div className="text-center flex flex-col items-center">
+        <img src="service-03.png" className="h-16 mb-2" alt="100% Money Back" />
+        <h4 className="text-md font-bold">100% Money Back</h4>
+        <p className="text-sm">30 days for free return</p>
+      </div>
+      <div className="text-center flex flex-col items-center">
+        <img src="service-04.png" className="h-16 mb-2" alt="Payment Secure" />
+        <h4 className="text-md font-bold">Payment Secure</h4>
+        <p className="text-sm">100% secure payment</p>
+      </div>
+      <div className="text-center flex flex-col items-center">
+        <img src="service-05.png" className="h-16 mb-2" alt="Easy Tracking" />
+        <h4 className="text-md font-bold">Easy Tracking</h4>
+        <p className="text-sm">Track your order easily</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       <div>
         <h2 className="text-3xl text-left font-medium mt-6">Top Brands</h2>
