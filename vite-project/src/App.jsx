@@ -27,7 +27,7 @@ function Layout() {
   return (
     <div className="min-h-screen flex flex-col">
       {!is404Page && <Navbar />}
-      <main className="flex-grow">
+      <main className="flex-grow m-1">
         <Routes>
           <Route path="/" element={<Products />} />
           <Route path="/products" element={<Products />} />
