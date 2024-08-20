@@ -169,64 +169,88 @@ const Products = () => {
         </div>
       </div>
 
-      {/* <h2 className="text-3xl text-left font-medium mt-8">Deals of The Day</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 py-4">
-        <div className="bg-orange-200 p-4 h-96 rounded-lg flex flex-col items-center justify-center"></div>
-        <div className="bg-violet-100 p-4 h-96 rounded-lg flex flex-col items-center justify center"></div>
-        <div className="bg-teal-200 p-4 h-96 rounded-lg flex flex-col items-center justify center"></div>
-        <div className="bg-rose-300 p-4 h-96 rounded-lg flex flex-col items-center justify center"></div>
-      </div> */}
-
       <h2 className="text-3xl text-left font-medium mt-8">Deals Of The Day</h2>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 py-4">
-        <div className="bg-teal-300 p-4 h-96 rounded-lg flex flex-col items-center justify-center text-white">
+
+        <div className="bg-orange-300 p-4 h-auto rounded-lg flex flex-col items-center justify-center text-white">
+          <img src="phil.png" className="h-12" alt="" />
+          <h3 className="text-xl font-semibold">Kitchen Appliances</h3>
           <img
             src="https://i.imghippo.com/files/jJjjZ1723197300.png"
             alt="Microwave & Ovens"
-            className="h-54 w-48 object-cover mb-6"
+            className="h-38 w-52 object-cover mb-6"
           />
-          <h3 className="text-xl font-semibold">Kitchen Appliances</h3>
           <p className="mt-2 text-center">Starting at ₹7,690*
             <br/>
             Inclusive of Exchange Benefits
           </p>
+          <button className="bg-black text-white px-4 py-2 w-full sm:w-32 rounded mt-2">
+            Shop Now
+          </button>
         </div>
 
-        <div className="bg-violet-300 p-4 h-96 rounded-lg flex flex-col items-center justify-center text-white">
+
+        <div className="bg-violet-300 p-4 h-auto rounded-lg flex flex-col items-center justify-center text-white">
+          <div className="flex mb-4">
+          <img src="./samsung.png" className="h-8 mr-2" alt="samsung offer" />
+          <img src="lg.png" alt="lg offer" className="h-8" />
+          </div>
+          <h3 className="text-xl font-semibold mb-6">Air Conditioners</h3>
           <img
-            src="https://i.imghippo.com/files/44UcI1722420572.png"
+            src="ac.png"
             alt="43 inch led tv"
-            className="h-56 w-56 object-cover mb-4"
+            className="h-40 w-52 object-contain mb-4"
           />
-          <h3 className="text-xl font-semibold">Washing Machines</h3>
           <p className="mt-2 text-center">
-            ₹15,749*
+            Starting at ₹15,749*
             <br />
             Inclusive of Bank Offer & Exchange Benefits
           </p>
+          <button className="bg-black text-white px-4 py-2 w-full sm:w-32 rounded mt-4">
+            Shop Now
+          </button>
         </div>
-        <div className="bg-gradient-to-b from-gray-700 to-gray-900 p-4 h-96 rounded-lg flex flex-col items-center justify-center text-white">
+
+
+        <div className="bg-gradient-to-b from-gray-700 to-gray-900 p-4 h-auto rounded-lg flex flex-col items-center justify-center text-white">
+          <div className="flex mb-4">
+            <img src="applelogo.png"  className="h-12 mr-2" alt="" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Dell_logo.png" className="h-12" alt="" />
+          </div>
+          <h3 className="text-xl font-semibold">Latest Laptops</h3>
           <img
             src="https://i.imghippo.com/files/Tl4mP1723198222.png"
             alt="MacBook"
-            className="h-56 w-56 object-cover "
+            className="h-50 w-48 object-cover "
           />
-          <h3 className="text-xl font-semibold">MacBook</h3>
-          <p className="mt-2 text-center">
+          <p className="mt-4 mb-1 text-center">
             Starting at ₹91,090*
             <br />
             *Including Bank Offer
           </p>
+          <button className="bg-black text-white px-4 py-2 w-full sm:w-32 rounded mt-4">
+            Shop Now
+          </button>
         </div>
-        <div className="bg-rose-300 p-4 h-96 rounded-lg flex flex-col items-center justify-center text-white">
+
+
+        <div className="bg-rose-400 p-4 h-auto rounded-lg flex flex-col items-center justify-center text-white">  
+          <img src="cannon.png" alt=""  className="h-10 w-24"/>
+          <h3 className="text-xl font-semibold mt-2">Digital Cameras</h3>
           <img
-            src="https://i.imghippo.com/files/4vD3v1723716184.png"
+            src="cam.png"
             alt="Mobile Accessories"
-            className="h-56 w-56 object-cover mb-4"
+            className="h-38 w-52 object-cover mb-4 mt-4"
           />
-          <h3 className="text-xl font-semibold">Digital Cameras</h3>
-          <p className="mt-2 text-center">Up to 86% Off</p>
+          <p className="mt-2 mb-1 text-center">
+            Starting at &#8377; 21,999
+            <br/>
+            Up to 86% Off</p>
+          <button className="bg-black text-white px-4 py-2 w-full sm:w-32 rounded mt-7">
+            Shop Now
+          </button>
         </div>
+      
       </div>
 
       <h2 className="text-3xl text-left font-medium mt-6">
@@ -272,7 +296,7 @@ const Products = () => {
               Buy Now
             </button>
             <p className="mt-4 text-white text-xs text-left">
-              *Buy now and win a free earbuds
+              *Buy now and win free earbuds
             </p>
           </div>
           <img
