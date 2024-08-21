@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { HeartIcon } from "@heroicons/react/outline";
+import { HeartIcon } from "@heroicons/react/solid";
 
 const ProductCard = ({
   images,
@@ -13,6 +13,10 @@ const ProductCard = ({
   const [selectedColor, setSelectedColor] = useState(
     colorOptions.length > 0 ? colorOptions[0] : "default"
   );
+
+  const [wishlist, setWishlist] = useState(false)
+
+  const toggleWishlist = () => setWishlist(!wishlist) 
 
   const handleColorChange = (color) => {
     setSelectedColor(color);
@@ -28,7 +32,12 @@ const ProductCard = ({
           src={imageSrc}
           alt={title}
         />
-        <HeartIcon className="h-7 w-7 absolute top-4 right-5"/>
+       <HeartIcon
+      className={`h-7 w-7 absolute top-4 right-5 cursor-pointer ${
+        wishlist ? 'text-red-500' : 'text-gray-400'
+      }`}
+      onClick={toggleWishlist}
+    />
       </div>
 
       {saleOrNot && (

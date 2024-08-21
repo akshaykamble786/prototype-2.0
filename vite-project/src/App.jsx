@@ -8,6 +8,8 @@ import Computing from './pages/Computing';
 import Footer from './components/Footer';
 import Accessories from './pages/Accessories';
 import NotFound404 from './components/404NotFound';
+import UserProfile from './pages/UserProfile.jsx';
+import Cart from './pages/Cart.jsx'
 import "./components/index.js";
 import "./pages/index.js";
 
@@ -27,7 +29,7 @@ function Layout() {
   return (
     <div className="min-h-screen flex flex-col">
       {!is404Page && <Navbar />}
-      <main className="flex-grow m-1">
+      <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Products />} />
           <Route path="/products" element={<Products />} />
@@ -35,8 +37,8 @@ function Layout() {
           <Route path="/appliances" element={<Appliances />} />
           <Route path="/computing" element={<Computing />} />
           <Route path="/accessories" element={<Accessories />} />
-          <Route path="/cart" element={<Products />} />
-          <Route path="/userprofile" element={<Products />} />
+          <Route path="/cart" element={<Cart/>} />
+          <Route path="/userprofile" element={<UserProfile/>} />
           <Route path="*" element={<NotFound404 />} /> 
         </Routes>
       </main>

@@ -36,34 +36,15 @@ const Products = () => {
   ];
 
   const brandCategories = [
-    {
-      image: "./applelogo.png",
-    },
-    {
-      image: "lg.png",
-    },
-    {
-      image: "./samsung.png",
-    },
-    {
-      image: "https://logos-world.net/wp-content/uploads/2020/04/Sony-Logo.png",
-    },
-    {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/2/25/Dell_logo.png",
-    },
-    {
-      image: "senn.png",
-    },
-    {
-      image: "cannon.png",
-    },
-    {
-      image: "havells.png",
-    },
-    {
-      image: "phil.png",
-    },
+    { image: "./applelogo.png" },
+    { image: "lg.png" },
+    { image: "./samsung.png" },
+    { image: "https://logos-world.net/wp-content/uploads/2020/04/Sony-Logo.png" },
+    { image: "https://upload.wikimedia.org/wikipedia/commons/2/25/Dell_logo.png" },
+    { image: "senn.png" },
+    { image: "cannon.png" },
+    { image: "havells.png" },
+    { image: "phil.png" },
   ];
 
   return (
@@ -84,7 +65,7 @@ const Products = () => {
 
       <h2 className="text-3xl text-left font-medium mt-4">What's Hot</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-4">
-        <div className="bg-pink-100 p-4 sm:p-6 rounded-lg flex flex-col items-center justify-center">
+        <div className="bg-gradient-to-b from-pink-300 via-orange-100 to-rose-200 p-4 sm:p-6 rounded-lg flex flex-col items-center justify-center">
           <img
             className="w-full h-40 sm:h-60 object-contain object-center mb-4 sm:mb-6"
             src="https://i.imghippo.com/files/BFWPa1723372627.png"
@@ -104,7 +85,7 @@ const Products = () => {
           </button>
         </div>
 
-        <div className="bg-yellow-100 p-4 sm:p-6 rounded-lg flex flex-col items-center justify-center">
+        <div className="bg-gradient-to-b from-yellow-200 via-amber-200 to-orange-300 p-4 sm:p-6 rounded-lg flex flex-col items-center justify-center">
           <img
             className="w-full h-40 sm:h-60 object-contain object-center mb-4 sm:mb-6"
             src="https://i.imghippo.com/files/DDELZ1723371819.png"
@@ -124,7 +105,7 @@ const Products = () => {
           </button>
         </div>
 
-        <div className="bg-purple-100 p-4 sm:p-6 rounded-lg flex flex-col items-center justify-center">
+        <div className="bg-gradient-to-b from-purple-300 via-indigo-200 to-blue-300 p-4 sm:p-6 rounded-lg flex flex-col items-center justify-center">
           <img
             className="w-full h-40 sm:h-60 object-contain object-center mb-4 sm:mb-6"
             src="https://i.imghippo.com/files/urJPH1723371865.png"
@@ -145,7 +126,7 @@ const Products = () => {
         </div>
       </div>
 
-      <div className="bg-green-100 p-8 sm:p-12 rounded-lg flex flex-col-reverse sm:flex-row items-center justify-between w-full">
+      <div className="bg-gradient-to-r from-green-200 to-lime-300 p-8 sm:p-12 rounded-lg flex flex-col-reverse sm:flex-row items-center justify-between w-full">
         <div className="flex flex-col items-start max-w-md text-left">
           <h2 className="text-xl sm:text-3xl text-gray-900 font-extrabold title-font mb-4">
             Apple iPhone 13
@@ -318,41 +299,39 @@ const Products = () => {
         </div>
       </div>
 
-      <div className="mt-6">
-        <h2 className="text-3xl font-medium text-left">Why Elektra?</h2>
-        <div className="bg-gradient-to-r from-gray-200 to-gray-400 rounded-lg mt-4 p-12">
+        <h2 className="text-3xl font-medium text-left mt-6">Why Elektra?</h2>
+        <div className="bg-gradient-to-b from-gray-200 to-gray-300 rounded-lg mt-4 p-12">
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:flex lg:justify-between lg:gap-12">
             <div className="text-center flex flex-col items-center">
               <Truck strokeWidth={1.3} size={72} />
-              <h4 className="text-lg font-bold">Free Shipping</h4>
+              <h4 className="text-lg font-bold mt-1">Free Shipping</h4>
               <p className="text-sm">From all orders over &#8377; 1000</p>
             </div>
             <div className="text-center flex flex-col items-center">
               <Gift strokeWidth={1.3} size={72} />
-              <h4 className="text-lg font-bold">Support 24/7</h4>
+              <h4 className="text-lg font-bold mt-1">Support 24/7</h4>
               <p className="text-sm">Call us anytime</p>
             </div>
             <div className="text-center flex flex-col items-center">
             <Headset size={72} strokeWidth={1.3} />
-              <h4 className="text-lg font-bold">100% Money Back</h4>
+              <h4 className="text-lg font-bold mt-1">100% Money Back</h4>
               <p className="text-sm">30 days for free return</p>
             </div>
             <div className="text-center flex flex-col items-center">
             <ShieldCheck size={72} strokeWidth={1.3} />
-              <h4 className="text-md font-bold">Payment Secure</h4>
+              <h4 className="text-md font-bold mt-1">Payment Secure</h4>
               <p className="text-sm">100% secure payment</p>
             </div>
             <div className="text-center flex flex-col items-center">
             <CreditCard size={72} strokeWidth={1.3} />
-              <h4 className="text-md font-bold">Easy Tracking</h4>
+              <h4 className="text-md font-bold mt-1">Easy Tracking</h4>
               <p className="text-sm">Track your order easily</p>
             </div>
           </div>
         </div>
-      </div>
 
       <div>
-        <h2 className="text-3xl text-left font-medium mt-6">Top Brands</h2>
+        <h2 className="text-3xl text-left font-medium mt-8">Top Brands</h2>
         <Carousel
           categories={brandCategories}
           slidesToShow={4}
