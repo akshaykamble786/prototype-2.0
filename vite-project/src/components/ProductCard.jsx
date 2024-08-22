@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { HeartIcon } from "@heroicons/react/solid";
+import { useNavigate } from "react-router-dom";
+import ProductDetail from "./ProductDetail";
 
 const ProductCard = ({
   images,
@@ -24,8 +26,10 @@ const ProductCard = ({
 
   const imageSrc = images[selectedColor] || images;
 
+  const navigate = useNavigate()
+
   return (
-    <div className="relative max-w-xs w-96 max-h-[500px] flex flex-col rounded-xl overflow-hidden shadow-lg bg-gray-200 p-4 mx-auto mb-8">
+    <div className="relative max-w-xs w-96 max-h-[500px] flex flex-col rounded-xl overflow-hidden shadow-lg bg-gray-200 p-4 mx-auto mb-8" onClick={()=>navigate('/product-detail')}>
       <div className="h-72 w-full flex items-center justify-center overflow-hidden">
         <img
           className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"

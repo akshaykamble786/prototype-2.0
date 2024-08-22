@@ -10,9 +10,7 @@ import Accessories from './pages/Accessories';
 import NotFound404 from './components/404NotFound';
 import UserProfile from './pages/UserProfile.jsx';
 import Cart from './pages/Cart.jsx'
-import "./components/index.js";
-import "./pages/index.js";
-
+import ProductDetail from './components/ProductDetail.jsx';
 
 function App() {
   return (
@@ -23,8 +21,9 @@ function App() {
 }
 
 function Layout() {
-  const location = useLocation();
-  const is404Page = location.pathname !== '/' && !['/products', '/mobiles', '/appliances', '/computing', '/accessories', '/cart', '/userprofile'].includes(location.pathname);
+  const location = useLocation()
+
+ const is404Page = location.pathname !== '/' && !['/products', '/mobiles', '/appliances', '/computing', '/accessories', '/cart', '/userprofile', '/product-detail'].includes(location.pathname);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -40,6 +39,7 @@ function Layout() {
           <Route path="/cart" element={<Cart/>} />
           <Route path="/userprofile" element={<UserProfile/>} />
           <Route path="*" element={<NotFound404 />} /> 
+          <Route path="/product-detail" element={<ProductDetail/>}/>
         </Routes>
       </main>
       {!is404Page && <Footer />}

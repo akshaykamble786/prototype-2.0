@@ -157,7 +157,7 @@ const Products = () => {
 
       <h2 className="text-3xl text-left font-medium mt-8">Deals Of The Day</h2>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 py-4">
-        <div className="bg-gradient-to-br from-[#13172c] via-[#030825] via-[#4a3f7a] to-[#263b59]
+        <div className="bg-gradient-to-br from-[#13172c] via-[#4a3f7a] to-[#263b59]
  p-4 h-auto rounded-lg flex flex-col items-center justify-center text-white">
           <img src="phil.png" className="h-12" alt="" />
           <h3 className="text-xl font-semibold">Kitchen Appliances</h3>
@@ -309,13 +309,13 @@ const Products = () => {
             </div>
             <div className="text-center flex flex-col items-center">
               <Gift strokeWidth={1.3} size={72} />
-              <h4 className="text-lg font-bold mt-1">Support 24/7</h4>
-              <p className="text-sm">Call us anytime</p>
+              <h4 className="text-lg font-bold mt-1">Daily Offers</h4>
+              <p className="text-sm">Save upto 25% </p>
             </div>
             <div className="text-center flex flex-col items-center">
             <Headset size={72} strokeWidth={1.3} />
-              <h4 className="text-lg font-bold mt-1">100% Money Back</h4>
-              <p className="text-sm">30 days for free return</p>
+              <h4 className="text-lg font-bold mt-1">Support 24/7</h4>
+              <p className="text-sm">Call us anytime</p>
             </div>
             <div className="text-center flex flex-col items-center">
             <ShieldCheck size={72} strokeWidth={1.3} />
