@@ -29,12 +29,13 @@ const ProductCard = ({
   const navigate = useNavigate()
 
   return (
-    <div className="relative max-w-xs w-96 max-h-[500px] flex flex-col rounded-xl overflow-hidden shadow-lg bg-gray-200 p-4 mx-auto mb-8" onClick={()=>navigate('/product-detail')}>
+    <div className="relative max-w-xs w-96 max-h-[500px] flex flex-col rounded-xl overflow-hidden shadow-lg bg-gray-200 p-4 mx-auto mb-8">
       <div className="h-72 w-full flex items-center justify-center overflow-hidden">
         <img
           className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
           src={imageSrc}
           alt={title}
+          onClick={()=>navigate('/product-detail')}
         />
        <HeartIcon
       className={`h-7 w-7 absolute top-4 right-5 cursor-pointer ${
