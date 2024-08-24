@@ -5,7 +5,7 @@ const ProductDetail = () => {
   const [selectedStorage, setSelectedStorage] = useState("64GB");
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
-  const [activeTab, setActiveTab] = useState("general");
+  const [activeTab, setActiveTab] = useState("general");  
 
   const productData = {
     Gray: {
@@ -194,42 +194,26 @@ const ProductDetail = () => {
         {/* Tabs for Additional Information */}
         <div className="mt-8">
           <div className="border-b border-gray-200">
-            <nav className="flex space-x-6">
-            <button
-                className={`py-4 ${
-                  activeTab === "offers"
-                    ? "text-gray-900 border-b-2 border-blue-600"
-                    : "text-gray-600"
-                }`}
-                onClick={() => handleTabClick("offers")}
-              >
-                Offers
-              </button>
+            <nav className="flex">
               <button
-                className={`py-4 ${
-                  activeTab === "general"
-                    ? "text-gray-900 border-b-2 border-blue-600"
-                    : "text-gray-600"
+                className={`py-4 border border-gray-500 p-4 ${
+                  activeTab === "general" ? "font-semibold" : "text-gray-600"
                 }`}
                 onClick={() => handleTabClick("general")}
               >
                 Highlights
               </button>
               <button
-                className={`py-4 ${
-                  activeTab === "features"
-                    ? "text-gray-900 border-b-2 border-blue-600"
-                    : "text-gray-600"
+                className={`py-4 border border-gray-500 p-4  ${
+                  activeTab === "features" ? "font-semibold" : "text-gray-600"
                 }`}
                 onClick={() => handleTabClick("features")}
               >
                 Specifications
               </button>
               <button
-                className={`py-4 ${
-                  activeTab === "shipping"
-                    ? "text-gray-900 border-b-2 border-blue-600"
-                    : "text-gray-600"
+                className={`py-4 border border-gray-500 p-4  ${
+                  activeTab === "shipping" ? "font-semibold" : "text-gray-600"
                 }`}
                 onClick={() => handleTabClick("shipping")}
               >
@@ -239,93 +223,111 @@ const ProductDetail = () => {
           </div>
 
           {/* Tab Content */}
-          <div className="mt-4">
+          <div className="border border-gray-500 p-4 ">
             {activeTab === "general" && (
               <div className="text-sm text-gray-600 grid grid-cols-2 gap-4">
-                <div>
-                  <span className="font-semibold">Model:</span> DEXP LF-800
-                </div>
-                <div>
-                  <span className="font-semibold">Cleaning:</span> Dry/Wet
-                </div>
-                <div>
-                  <span className="font-semibold">Power:</span> 22W
-                </div>
-                <div>
-                  <span className="font-semibold">Battery life:</span> 60 min
-                </div>
+                <ul className="list-disc ml-4">
+                  <li>128 GB ROM</li>
+                  <li>15.49 cm (6.1 inch) Super Retina XDR Display</li>
+                  <li>48MP + 12MP | 12MP Front Camera</li>
+                  <li>A16 Bionic Chip, 6 Core Processor Processor</li>
+                </ul>
               </div>
             )}
             {activeTab === "features" && (
               <div className="text-sm text-gray-600">
-                {/* Feature content */}
-                <ul className="list-disc ml-4">
-                  <li>22W motor with powerful suction.</li>
-                  <li>Dual cleaning modes: dry and wet.</li>
-                  <li>Large 600ml dust container for extended cleaning.</li>
-                  <li>Intelligent path planning for efficient cleaning.</li>
-                </ul>
+                <table border="1" cellpadding="10" cellspacing="0">
+                  <tr>
+                    <th>In The Box</th>
+                    <td>Handset, USB C Charge Cable (1m), Documentation</td>
+                  </tr>
+                  <tr>
+                    <th>Model Number</th>
+                    <td>MTP43HN/A</td>
+                  </tr>
+                  <tr>
+                    <th>Model Name</th>
+                    <td>iPhone 15</td>
+                  </tr>
+                  <tr>
+                    <th>Color</th>
+                    <td>{selectedColor}</td>
+                  </tr>
+                  <tr>
+                    <th>Browse Type</th>
+                    <td>Smartphones</td>
+                  </tr>
+                  <tr>
+                    <th>SIM Type</th>
+                    <td>Dual Sim (Nano + eSIM)</td>
+                  </tr>
+                  <tr>
+                    <th>Hybrid Sim Slot</th>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <th>Touchscreen</th>
+                    <td>Yes</td>
+                  </tr>
+                  <tr>
+                    <th>OTG Compatible</th>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <th>Sound Enhancements</th>
+                    <td>Built-in Stereo Speaker</td>
+                  </tr>
+                </table>
               </div>
             )}
             {activeTab === "shipping" && (
               <div className="text-sm text-gray-600">
                 {/* Shipping content */}
-                <p>
-                  Free shipping on orders over $50. Standard delivery within 5-7
-                  business days. Expedited shipping options available at
-                  checkout. Easy returns within 30 days of purchase.
-                </p>
-              </div>
-            )}
-            {activeTab === "offers" && (
-              <div className="text-sm text-gray-600">
-                {/* Shipping content */}
-                <p>
-                  Free shipping on orders over $50. Standard delivery within 5-7
-                  business days. Expedited shipping options available at
-                  checkout. Easy returns within 30 days of purchase.
-                </p>
+                <ul className="list-disc ml-4">
+                  <li>7 days Service Centre Replacement</li>
+                  <li>Free Delivery</li>
+                  <li>Warranty Policy</li>
+                  <li>Top Brand</li>
+                </ul>
               </div>
             )}
           </div>
-
-          {/* review section */}
-          <div className="mt-8">
-            <h3 className="text-lg font-semibold text-gray-800">
-              Customer Reviews
-            </h3>
-            <div className="mt-4 space-y-4">
-              <div className="p-4 border rounded-lg">
-                <div className="flex items-center justify-between">
-                  <span className="text-yellow-500">★ ★ ★ ★ ☆</span>
-                  <span className="text-gray-500 text-sm">
-                    John Doe - July 2024
-                  </span>
-                </div>
-                <p className="mt-2 text-gray-600">
-                  The vacuum cleaner works great! It easily picks up dirt and
-                  debris from my hardwood floors and carpets. The battery life
-                  is impressive, and I love the sleek design.
-                </p>
-              </div>
-              <div className="p-4 border rounded-lg">
-                <div className="flex items-center justify-between">
-                  <span className="text-yellow-500">★ ★ ★ ★ ☆</span>
-                  <span className="text-gray-500 text-sm">
-                    Jane Smith - August 2024
-                  </span>
-                </div>
-                <p className="mt-2 text-gray-600">
-                  This vacuum cleaner is a game-changer! It’s quiet, efficient,
-                  and the app control makes it so easy to schedule cleanings.
-                  Highly recommend!
-                </p>
-              </div>
-            </div>
-          </div>
-
         </div>
+      </div>
 
+      {/* review section */}
+      <div className="mt-8">
+        <h3 className="text-lg font-semibold text-gray-800">
+          Customer Reviews
+        </h3>
+        <div className="mt-4 space-y-4">
+          <div className="p-4 border rounded-lg">
+            <div className="flex items-center justify-between">
+              <span className="text-yellow-500">★ ★ ★ ★ ☆</span>
+              <span className="text-gray-500 text-sm">
+                John Doe - July 2024
+              </span>
+            </div>
+            <p className="mt-2 text-gray-600">
+              The vacuum cleaner works great! It easily picks up dirt and debris
+              from my hardwood floors and carpets. The battery life is
+              impressive, and I love the sleek design.
+            </p>
+          </div>
+          <div className="p-4 border rounded-lg">
+            <div className="flex items-center justify-between">
+              <span className="text-yellow-500">★ ★ ★ ★ ☆</span>
+              <span className="text-gray-500 text-sm">
+                Jane Smith - August 2024
+              </span>
+            </div>
+            <p className="mt-2 text-gray-600">
+              This vacuum cleaner is a game-changer! It’s quiet, efficient, and
+              the app control makes it so easy to schedule cleanings. Highly
+              recommend!
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

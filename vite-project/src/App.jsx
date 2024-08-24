@@ -21,18 +21,15 @@ function App() {
 }
 
 function Layout() {
-  const location = useLocation()
-
- const is404Page = location.pathname !== '/' && !['/products', '/mobiles', '/appliances', '/computing', '/accessories', '/cart', '/userprofile', '/product-detail'].includes(location.pathname);
 
   return (
     <div className="min-h-screen flex flex-col">
-      {!is404Page && <Navbar />}
+      <Navbar />
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Products />} />
-          <Route path="/products" element={<Products />} />
           <Route path="/mobiles" element={<Mobiles />} />
+          <Route path="/mobiles/:id" element={<Mobiles />} />
           <Route path="/appliances" element={<Appliances />} />
           <Route path="/computing" element={<Computing />} />
           <Route path="/accessories" element={<Accessories />} />
@@ -42,7 +39,7 @@ function Layout() {
           <Route path="/product-detail" element={<ProductDetail/>}/>
         </Routes>
       </main>
-      {!is404Page && <Footer />}
+      <Footer />
     </div>
   );
 }
