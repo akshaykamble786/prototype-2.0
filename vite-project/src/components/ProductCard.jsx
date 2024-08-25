@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { HeartIcon } from "@heroicons/react/solid";
 import { useNavigate } from "react-router-dom";
 import ProductDetail from "./ProductDetail";
+import Wishlist from "./Wishlist";
 
 const ProductCard = ({
   images,
@@ -14,11 +14,7 @@ const ProductCard = ({
 }) => {
   const [selectedColor, setSelectedColor] = useState(
     colorOptions.length > 0 ? colorOptions[0] : "default"
-  );
-
-  const [wishlist, setWishlist] = useState(false)
-
-  const toggleWishlist = () => setWishlist(!wishlist) 
+  ); 
 
   const handleColorChange = (color) => {
     setSelectedColor(color);
@@ -37,12 +33,7 @@ const ProductCard = ({
           alt={title}
           onClick={()=>navigate('/product-detail')}
         />
-       <HeartIcon
-      className={`h-7 w-7 absolute top-4 right-5 cursor-pointer ${
-        wishlist ? 'text-red-500' : 'text-gray-400'
-      }`}
-      onClick={toggleWishlist}
-    />
+       <Wishlist className='size-9 absolute top-4 right-4 cursor-pointer'/>
       </div>
 
       {saleOrNot && (
