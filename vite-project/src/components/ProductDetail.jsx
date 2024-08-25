@@ -1,11 +1,13 @@
+import { HeartIcon } from "@heroicons/react/solid";
 import React, { useState } from "react";
+import { MdCompare } from "react-icons/md";
 
 const ProductDetail = () => {
   const [selectedColor, setSelectedColor] = useState("Gray");
   const [selectedStorage, setSelectedStorage] = useState("64GB");
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
-  const [activeTab, setActiveTab] = useState("general");  
+  const [activeTab, setActiveTab] = useState("general");
 
   const productData = {
     Gray: {
@@ -186,117 +188,116 @@ const ProductDetail = () => {
           <button className="px-6 py-2 bg-black text-white rounded-lg">
             Buy Now
           </button>
-          <button className="px-6 py-2 bg-white text-black rounded-lg border border-black">
-            Add to Wishlist
-          </button>
+          <HeartIcon className="size-9 text-gray-400"/>
+          <MdCompare className="size-8" />
+        </div>
+      </div>
+
+      {/* Tabs for Additional Information */}
+      <div className="mt-8">
+        <div className="border-b border-gray-200">
+          <nav className="flex">
+            <button
+              className={`py-3 border border-gray-500 px-2 ${
+                activeTab === "general" ? "font-semibold" : "text-gray-600"
+              }`}
+              onClick={() => handleTabClick("general")}
+            >
+              Highlights
+            </button>
+            <button
+              className={`py-3 border border-gray-500 px-2  ${
+                activeTab === "features" ? "font-semibold" : "text-gray-600"
+              }`}
+              onClick={() => handleTabClick("features")}
+            >
+              Specifications
+            </button>
+            <button
+              className={`py-3 border border-gray-500 px-2  ${
+                activeTab === "shipping" ? "font-semibold" : "text-gray-600"
+              }`}
+              onClick={() => handleTabClick("shipping")}
+            >
+              Shipping & returns
+            </button>
+          </nav>
         </div>
 
-        {/* Tabs for Additional Information */}
-        <div className="mt-8">
-          <div className="border-b border-gray-200">
-            <nav className="flex">
-              <button
-                className={`py-4 border border-gray-500 p-4 ${
-                  activeTab === "general" ? "font-semibold" : "text-gray-600"
-                }`}
-                onClick={() => handleTabClick("general")}
-              >
-                Highlights
-              </button>
-              <button
-                className={`py-4 border border-gray-500 p-4  ${
-                  activeTab === "features" ? "font-semibold" : "text-gray-600"
-                }`}
-                onClick={() => handleTabClick("features")}
-              >
-                Specifications
-              </button>
-              <button
-                className={`py-4 border border-gray-500 p-4  ${
-                  activeTab === "shipping" ? "font-semibold" : "text-gray-600"
-                }`}
-                onClick={() => handleTabClick("shipping")}
-              >
-                Shipping & returns
-              </button>
-            </nav>
-          </div>
-
-          {/* Tab Content */}
-          <div className="border border-gray-500 p-4 ">
-            {activeTab === "general" && (
-              <div className="text-sm text-gray-600 grid grid-cols-2 gap-4">
-                <ul className="list-disc ml-4">
-                  <li>128 GB ROM</li>
-                  <li>15.49 cm (6.1 inch) Super Retina XDR Display</li>
-                  <li>48MP + 12MP | 12MP Front Camera</li>
-                  <li>A16 Bionic Chip, 6 Core Processor Processor</li>
-                </ul>
-              </div>
-            )}
-            {activeTab === "features" && (
-              <div className="text-sm text-gray-600">
-                <table border="1" cellpadding="10" cellspacing="0">
-                  <tr>
-                    <th>In The Box</th>
-                    <td>Handset, USB C Charge Cable (1m), Documentation</td>
-                  </tr>
-                  <tr>
-                    <th>Model Number</th>
-                    <td>MTP43HN/A</td>
-                  </tr>
-                  <tr>
-                    <th>Model Name</th>
-                    <td>iPhone 15</td>
-                  </tr>
-                  <tr>
-                    <th>Color</th>
-                    <td>{selectedColor}</td>
-                  </tr>
-                  <tr>
-                    <th>Browse Type</th>
-                    <td>Smartphones</td>
-                  </tr>
-                  <tr>
-                    <th>SIM Type</th>
-                    <td>Dual Sim (Nano + eSIM)</td>
-                  </tr>
-                  <tr>
-                    <th>Hybrid Sim Slot</th>
-                    <td>No</td>
-                  </tr>
-                  <tr>
-                    <th>Touchscreen</th>
-                    <td>Yes</td>
-                  </tr>
-                  <tr>
-                    <th>OTG Compatible</th>
-                    <td>No</td>
-                  </tr>
-                  <tr>
-                    <th>Sound Enhancements</th>
-                    <td>Built-in Stereo Speaker</td>
-                  </tr>
-                </table>
-              </div>
-            )}
-            {activeTab === "shipping" && (
-              <div className="text-sm text-gray-600">
-                {/* Shipping content */}
-                <ul className="list-disc ml-4">
-                  <li>7 days Service Centre Replacement</li>
-                  <li>Free Delivery</li>
-                  <li>Warranty Policy</li>
-                  <li>Top Brand</li>
-                </ul>
-              </div>
-            )}
-          </div>
+        {/* Tab Content */}
+        <div className="border border-gray-500 p-4 mt-[-2px]">
+          {activeTab === "general" && (
+            <div className="text-sm text-gray-600 grid grid-cols-2 gap-4">
+              <ul className="list-disc ml-4">
+                <li>128 GB ROM</li>
+                <li>15.49 cm (6.1 inch) Super Retina XDR Display</li>
+                <li>48MP + 12MP | 12MP Front Camera</li>
+                <li>A16 Bionic Chip, 6 Core Processor Processor</li>
+              </ul>
+            </div>
+          )}
+          {activeTab === "features" && (
+            <div className="text-sm text-gray-600">
+              <table border="1" cellPadding="10" cellSpacing="0">
+                <tr>
+                  <th>In The Box</th>
+                  <td>Handset, USB C Charge Cable (1m), Documentation</td>
+                </tr>
+                <tr>
+                  <th>Model Number</th>
+                  <td>MTP43HN/A</td>
+                </tr>
+                <tr>
+                  <th>Model Name</th>
+                  <td>iPhone 15</td>
+                </tr>
+                <tr>
+                  <th>Color</th>
+                  <td>{selectedColor}</td>
+                </tr>
+                <tr>
+                  <th>Browse Type</th>
+                  <td>Smartphones</td>
+                </tr>
+                <tr>
+                  <th>SIM Type</th>
+                  <td>Dual Sim (Nano + eSIM)</td>
+                </tr>
+                <tr>
+                  <th>Hybrid Sim Slot</th>
+                  <td>No</td>
+                </tr>
+                <tr>
+                  <th>Touchscreen</th>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <th>OTG Compatible</th>
+                  <td>No</td>
+                </tr>
+                <tr>
+                  <th>Sound Enhancements</th>
+                  <td>Built-in Stereo Speaker</td>
+                </tr>
+              </table>
+            </div>
+          )}
+          {activeTab === "shipping" && (
+            <div className="text-sm text-gray-600">
+              {/* Shipping content */}
+              <ul className="list-disc ml-4">
+                <li>7 days Service Centre Replacement</li>
+                <li>Free Delivery</li>
+                <li>Warranty Policy</li>
+                <li>Top Brand</li>
+              </ul>
+            </div>
+          )}
         </div>
       </div>
 
       {/* review section */}
-      <div className="mt-8">
+      <div className="mt-6">
         <h3 className="text-lg font-semibold text-gray-800">
           Customer Reviews
         </h3>
@@ -328,6 +329,14 @@ const ProductDetail = () => {
             </p>
           </div>
         </div>
+      </div>
+
+      {/* Related products */}
+
+      <div>
+        <h2 className="text-lg font-semibold text-gray-800">
+          Related Products
+        </h2>
       </div>
     </div>
   );
