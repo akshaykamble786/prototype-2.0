@@ -304,7 +304,7 @@ const ProductDetail = () => {
           )}
           {activeTab === "shipping" && (
             <div className="text-sm text-gray-600">
-              {/* Shipping content */}
+              Shipping content
               <ul className="list-disc ml-4">
                 <li>7 days Service Centre Replacement</li>
                 <li>Free Delivery</li>
@@ -352,7 +352,6 @@ const ProductDetail = () => {
       </div>
 
       {/* Related products */}
-
       <div>
         <h2 className="text-xl font-semibold text-gray-800">
           Related Products
