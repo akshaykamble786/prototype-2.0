@@ -105,7 +105,7 @@ const Navbar = () => {
 
         {/* Dropdown for Mobile View */}
         {isDropdownOpen && (
-          <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
+          <div className="absolute top-full right-2 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
             <div className="flex flex-col text-center space-y-2">
               <Link
                 to="/account"
@@ -138,6 +138,14 @@ const Navbar = () => {
               >
                 <CogIcon className="h-5 w-5 mr-2 text-gray-500" />
                 Admin Panel
+              </Link>
+              <Link
+                to="/admin"
+                className="flex items-center px-4 py-2 hover:bg-gray-100"
+                onClick={toggleDropdown}
+              >
+                <CogIcon className="h-5 w-5 mr-2 text-gray-500" />
+                Logout
               </Link>
             </div>
           </div>
@@ -217,6 +225,10 @@ const Navbar = () => {
                   <Link to="/admin" className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
                     <CogIcon className="h-5 w-5 mr-2 text-gray-500" />
                     Admin Panel
+                  </Link>
+                  <Link to="/admin" className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    <CogIcon className="h-5 w-5 mr-2 text-gray-500" />
+                    Logout
                   </Link>
                 </ul>
               </div>
