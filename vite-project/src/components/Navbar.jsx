@@ -14,22 +14,23 @@ import {
   ClipboardListIcon,
 } from "@heroicons/react/solid";
 import { CiSearch } from "react-icons/ci";
+import { LogOutIcon } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
-    // Close menu if open
     if (isMenuOpen) setIsMenuOpen(false);
     setDropdownOpen(!isDropdownOpen);
   };
 
   const toggleMenu = () => {
-    // Close dropdown if open
     if (isDropdownOpen) setDropdownOpen(false);
     setIsMenuOpen(!isMenuOpen);
   };
+
+ 
 
   return (
     <nav className="bg-white shadow-lg p-4 relative">
@@ -59,7 +60,10 @@ const Navbar = () => {
             <Link to="/cart" className="text-gray-500">
               <ShoppingCartIcon className="h-6 w-6" />
             </Link>
-            <button onClick={toggleDropdown} className="text-gray-500 focus:outline-none">
+            <button
+              onClick={toggleDropdown}
+              className="text-gray-500 focus:outline-none"
+            >
               <UserIcon className="h-6 w-6" />
             </button>
           </div>
@@ -75,7 +79,7 @@ const Navbar = () => {
             >
               Mobiles
             </Link>
-            <hr/>
+            <hr />
             <Link
               to="/appliances"
               className="text-gray-600 hover:text-gray-950 hover:underline p-2"
@@ -83,7 +87,7 @@ const Navbar = () => {
             >
               Appliances
             </Link>
-            <hr/>
+            <hr />
             <Link
               to="/computing"
               className="text-gray-600 hover:text-gray-950 hover:underline p-2"
@@ -91,7 +95,7 @@ const Navbar = () => {
             >
               Computing
             </Link>
-            <hr/>
+            <hr />
             <Link
               to="/accessories"
               className="text-gray-600 hover:text-gray-950 hover:underline p-2"
@@ -99,7 +103,7 @@ const Navbar = () => {
             >
               Accessories
             </Link>
-            <hr/>
+            <hr />
           </div>
         )}
 
@@ -144,7 +148,7 @@ const Navbar = () => {
                 className="flex items-center px-4 py-2 hover:bg-gray-100"
                 onClick={toggleDropdown}
               >
-                <CogIcon className="h-5 w-5 mr-2 text-gray-500" />
+                <LogOutIcon className="h-5 w-5 mr-2 text-gray-500" />
                 Logout
               </Link>
             </div>
@@ -190,8 +194,14 @@ const Navbar = () => {
         {/* Right: Search Bar and Icons */}
         <div className="flex items-center space-x-8 mr-12">
           <div className="relative">
-            <CiSearch size={30} className="text-gray-600" />
+            <CiSearch
+              size={30}
+              className="text-gray-600"
+            />
           </div>
+
+          
+
           <Link to="/cart" className="text-gray-500">
             <ShoppingCartIcon className="h-6 w-6 " />
           </Link>
@@ -209,25 +219,40 @@ const Navbar = () => {
             {isDropdownOpen && (
               <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
                 <ul className="py-2">
-                  <Link to="/account"className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    <UserIcon className="h-5 w-5 mr-2 text-gray-500" />
+                  <Link
+                    to="/account"
+                    className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                  >
+                    <UserIcon className="h-5 w-5 mr-3 text-gray-500" />
                     My Account
                   </Link>
 
-                  <Link to="/orders" className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    <ClipboardListIcon className="h-5 w-5 mr-2 text-gray-500" />
+                  <Link
+                    to="/orders"
+                    className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                  >
+                    <ClipboardListIcon className="h-5 w-5 mr-3 text-gray-500" />
                     Orders
                   </Link>
-                  <Link to="/wishlist" className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    <HeartIcon className="h-5 w-5 mr-2 text-gray-500" />
+                  <Link
+                    to="/wishlist"
+                    className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                  >
+                    <HeartIcon className="h-5 w-5 mr-3 text-gray-500" />
                     Wishlist
                   </Link>
-                  <Link to="/admin" className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    <CogIcon className="h-5 w-5 mr-2 text-gray-500" />
+                  <Link
+                    to="/admin"
+                    className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                  >
+                    <CogIcon className="h-5 w-5 mr-3 text-gray-500" />
                     Admin Panel
                   </Link>
-                  <Link to="/admin" className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    <CogIcon className="h-5 w-5 mr-2 text-gray-500" />
+                  <Link
+                    to="/admin"
+                    className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                  >
+                    <LogOutIcon className="h-5 w-5 mr-3 text-gray-500" />
                     Logout
                   </Link>
                 </ul>
