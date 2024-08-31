@@ -1,17 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-.jost-font {
-  font-family: "Jost", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
 
 .custom-gradient {
     background: linear-gradient(135deg, #13172c, #030825, #4a3f7a, #263b59);
@@ -25,9 +16,9 @@
 
 @media (max-width: 768px) {
     .slider-item {
-      height:400px; /* Adjust height to ensure a square aspect ratio */
-      width: 400px;  /* Set width equal to height */
-      margin: 0 auto; /* Center the slider */
+      height:400px; 
+      width: 400px;  
+      margin: 0 auto; 
     }
   
     .slider-image {
@@ -45,13 +36,13 @@
   
     @screen md {
       .square-img {
-        @apply h-[500px]; /* Change to desired height for medium and larger screens */
+        @apply h-[500px]; 
       }
     }
   
     @screen lg {
       .square-img {
-        @apply h-[500px]; /* Adjust height based on design needs */
+        @apply h-[500px];
       }
     }
   }

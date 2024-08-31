@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  ShoppingCartIcon,
-  MenuIcon,
-  UserIcon,
-  XIcon,
-} from "@heroicons/react/outline";
+import { MenuIcon, UserIcon, XIcon } from "@heroicons/react/outline";
 import {
   ChevronDownIcon,
   ChevronUpIcon,
@@ -14,7 +9,9 @@ import {
   ClipboardListIcon,
 } from "@heroicons/react/solid";
 import { CiSearch } from "react-icons/ci";
-import { LogOutIcon } from "lucide-react";
+import { ListOrdered, ListOrderedIcon, LogOutIcon } from "lucide-react";
+import { CiUser } from "react-icons/ci";
+import { ShoppingCart } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,8 +26,6 @@ const Navbar = () => {
     if (isDropdownOpen) setDropdownOpen(false);
     setIsMenuOpen(!isMenuOpen);
   };
-
- 
 
   return (
     <nav className="bg-white shadow-lg p-4 relative">
@@ -57,14 +52,14 @@ const Navbar = () => {
           {/* Right: Cart and User Icons */}
           <div className="flex items-center space-x-4">
             <CiSearch size={30} className="text-gray-600" />
-            <Link to="/cart" className="text-gray-500">
-              <ShoppingCartIcon className="h-6 w-6" />
+            <Link to="/cart" className="text-gray-600">
+              <ShoppingCart strokeWidth={1.25} />
             </Link>
             <button
               onClick={toggleDropdown}
               className="text-gray-500 focus:outline-none"
             >
-              <UserIcon className="h-6 w-6" />
+              <CiUser className="text-gray-700 h-6 w-6" />
             </button>
           </div>
         </div>
@@ -109,11 +104,11 @@ const Navbar = () => {
 
         {/* Dropdown for Mobile View */}
         {isDropdownOpen && (
-          <div className="absolute top-full right-2 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
+          <div className="absolute top-full right-2 mt-2 w-44 bg-white rounded-md shadow-lg z-50">
             <div className="flex flex-col text-center space-y-2">
               <Link
                 to="/account"
-                className="flex items-center px-4 py-2 hover:bg-gray-100"
+                className="flex items-center px-3 py-2 hover:bg-gray-100"
                 onClick={toggleDropdown}
               >
                 <UserIcon className="h-5 w-5 mr-2 text-gray-500" />
@@ -121,7 +116,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/orders"
-                className="flex items-center px-4 py-2 hover:bg-gray-100"
+                className="flex items-center px-3 py-2 hover:bg-gray-100"
                 onClick={toggleDropdown}
               >
                 <ClipboardListIcon className="h-5 w-5 mr-2 text-gray-500" />
@@ -129,7 +124,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/wishlist"
-                className="flex items-center px-4 py-2 hover:bg-gray-100"
+                className="flex items-center px-3 py-2 hover:bg-gray-100"
                 onClick={toggleDropdown}
               >
                 <HeartIcon className="h-5 w-5 mr-2 text-gray-500" />
@@ -137,7 +132,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/admin"
-                className="flex items-center px-4 py-2 hover:bg-gray-100"
+                className="flex items-center px-3 py-2 hover:bg-gray-100"
                 onClick={toggleDropdown}
               >
                 <CogIcon className="h-5 w-5 mr-2 text-gray-500" />
@@ -145,7 +140,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/admin"
-                className="flex items-center px-4 py-2 hover:bg-gray-100"
+                className="flex items-center px-3 py-2 hover:bg-gray-100"
                 onClick={toggleDropdown}
               >
                 <LogOutIcon className="h-5 w-5 mr-2 text-gray-500" />
@@ -159,7 +154,7 @@ const Navbar = () => {
       {/* Desktop View */}
       <div className="hidden lg:flex justify-between items-center">
         {/* Left: Brand Name */}
-        <Link className="text-2xl font-bold ml-12 text-gray-800" to="/">
+        <Link className="text-2xl font-bold ml-10 text-gray-800" to="/">
           ELEKTRA
         </Link>
 
@@ -194,21 +189,16 @@ const Navbar = () => {
         {/* Right: Search Bar and Icons */}
         <div className="flex items-center space-x-8 mr-12">
           <div className="relative">
-            <CiSearch
-              size={30}
-              className="text-gray-600"
-            />
+            <CiSearch size={30} className="text-gray-600" />
           </div>
 
-          
-
-          <Link to="/cart" className="text-gray-500">
-            <ShoppingCartIcon className="h-6 w-6 " />
+          <Link to="/cart" className="text-gray-700">
+            <ShoppingCart strokeWidth={1.25} />
           </Link>
 
           <div className="relative z-50">
             <button onClick={toggleDropdown} className="flex items-center">
-              <UserIcon className="h-6 w-6 text-gray-500" />
+              <CiUser className="text-gray-800 h-6 w-6" />
               {isDropdownOpen ? (
                 <ChevronUpIcon className="h-4 w-4 ml-1" />
               ) : (
@@ -221,7 +211,7 @@ const Navbar = () => {
                 <ul className="py-2">
                   <Link
                     to="/account"
-                    className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                    className="flex items-center px-3 py-2 hover:bg-gray-100 cursor-pointer"
                   >
                     <UserIcon className="h-5 w-5 mr-3 text-gray-500" />
                     My Account
@@ -229,28 +219,35 @@ const Navbar = () => {
 
                   <Link
                     to="/orders"
-                    className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                    className="flex items-center px-3 py-2 hover:bg-gray-100 cursor-pointer"
                   >
                     <ClipboardListIcon className="h-5 w-5 mr-3 text-gray-500" />
                     Orders
                   </Link>
                   <Link
                     to="/wishlist"
-                    className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                    className="flex items-center px-3 py-2 hover:bg-gray-100 cursor-pointer"
                   >
                     <HeartIcon className="h-5 w-5 mr-3 text-gray-500" />
                     Wishlist
                   </Link>
                   <Link
+                    to="#"
+                    className="flex items-center px-3 py-2 hover:bg-gray-100 cursor-pointer"
+                  >
+                    <ListOrderedIcon className="h-5 w-5 mr-3 text-gray-500" />
+                    Theme
+                  </Link>
+                  <Link
                     to="/admin"
-                    className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                    className="flex items-center px-3 py-2 hover:bg-gray-100 cursor-pointer"
                   >
                     <CogIcon className="h-5 w-5 mr-3 text-gray-500" />
                     Admin Panel
                   </Link>
                   <Link
                     to="/admin"
-                    className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                    className="flex items-center px-3 py-2 hover:bg-gray-100 cursor-pointer"
                   >
                     <LogOutIcon className="h-5 w-5 mr-3 text-gray-500" />
                     Logout

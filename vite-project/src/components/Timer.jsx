@@ -36,15 +36,15 @@ const Timer = ({ initialTime }) => {
     <div className="text-center text-white">
       <h2 className="text-2xl font-bold mb-4">Offer Ends in :</h2>
       <div className="flex justify-center space-x-3 text-lg">
-        <div className="bg-blue-600 rounded p-2">
+        <div className="bg-gray-200 text-black rounded p-2">
           <span className="font-semibold">{timeLeft.hours.toString().padStart(2, '0')}</span>
         </div>
         <span>:</span>
-        <div className="bg-blue-600 rounded p-2">
+        <div className="bg-gray-200 text-black rounded p-2">
           <span className="font-semibold">{timeLeft.minutes.toString().padStart(2, '0')}</span>
         </div>
         <span>:</span>
-        <div className="bg-blue-600 rounded p-2">
+        <div className="bg-gray-200 text-black rounded p-2">
           <span className="font-semibold">{timeLeft.seconds.toString().padStart(2, '0')}</span>
         </div>
       </div>

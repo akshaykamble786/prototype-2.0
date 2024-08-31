@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MdCompare } from "react-icons/md";
 import Wishlist from "./Wishlist";
+import { MdOutlineShare } from "react-icons/md";
 
 const ProductDetail = () => {
   const [selectedColor, setSelectedColor] = useState("Gray");
@@ -36,7 +37,7 @@ const ProductDetail = () => {
       ],
     },
 
-    White: {
+    colors: {
       price: {
         "256 GB": "1,39,990",
         "512 GB": "1,68,990",
@@ -46,10 +47,10 @@ const ProductDetail = () => {
         "https://i.imghippo.com/files/9xQok1722159207.png",
         "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
         "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
-      ],
+    ],
     },
 
-    RoyalBlue: {
+    Blue: {
       price: {
         "256 GB": "1,39,990",
         "512 GB": "1,68,990",
@@ -92,8 +93,8 @@ const ProductDetail = () => {
           alt="Product"
           className="w-full h-auto rounded-lg mb-4"
         />
-        <Wishlist className="w-8 h-8 absolute top-5 right-9 text-gray-400" />
         <MdCompare className="w-8 h-8 absolute top-5 right-0 text-gray-400" />
+        <MdOutlineShare className="w-8 h-8 absolute top-5 right-10 text-gray-400"/>
         <div className="flex space-x-2">
           {productData[selectedColor].images.map((image, index) => (
             <img
@@ -207,8 +208,9 @@ const ProductDetail = () => {
           <button className="w-full md:w-auto px-6 py-2 bg-custom-darkblue text-white rounded-lg">
             Add to Cart
           </button>
-          <button className="w-full md:w-auto px-6 py-2 border border-gray-500 text-black rounded-lg">
-            Buy Now
+          <button className="flex w-full md:w-auto px-6 py-2 border border-gray-500 text-black rounded-lg">
+            <Wishlist className="size-6 mr-2" />
+            Add to wishlist
           </button>
         </div>
       </div>
@@ -362,7 +364,3 @@ const ProductDetail = () => {
 };
 
 export default ProductDetail;
-
-
-
-

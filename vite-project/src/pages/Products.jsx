@@ -19,7 +19,7 @@ import {
   CreditCard
 } from "lucide-react";
 
-const Products = () => {
+const HomePage = () => {
   const imacOfferEndTime = new Date().getTime() + 7 * 60 * 60 * 1000;
   const washOfferEndTime = new Date().getTime() + 9 * 60 * 60 * 1000;
 
@@ -64,7 +64,7 @@ const Products = () => {
       />
 
       <h2 className="text-3xl text-left font-medium mt-4">What's Hot</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 py-3">
         <div className="bg-gradient-to-b from-pink-300 via-orange-100 to-rose-200 p-4 sm:p-6 rounded-lg flex flex-col items-center justify-center">
           <img
             className="w-full h-40 sm:h-60 object-contain object-center mb-4 sm:mb-6"
@@ -156,7 +156,7 @@ const Products = () => {
       </div>
 
       <h2 className="text-3xl text-left font-medium mt-8">Deals Of The Day</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 py-4">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-3 py-3">
         <div className="bg-gradient-to-br from-[#13172c] via-[#4a3f7a] to-[#263b59]
  p-4 h-auto rounded-lg flex flex-col items-center justify-center text-white">
           <img src="phil.png" className="h-12" alt="" />
@@ -248,7 +248,7 @@ const Products = () => {
       <h2 className="text-3xl text-left font-medium mt-6">
         Limited Time Deals
       </h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 py-3">
         <div className="bg-gradient-to-r from-teal-300 via-blue-300 to-blue-400 rounded-lg relative flex flex-col sm:flex-row items-center justify-between p-4 sm:p-6 h-full">
           <div className="flex flex-col items-start justify-center w-full sm:w-1/2">
             <img src="applelogo.png" className="h-9 w-9" alt="apple offer" />
@@ -346,4 +346,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default HomePage;

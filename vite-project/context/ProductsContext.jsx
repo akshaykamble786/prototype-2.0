@@ -6,114 +6,96 @@ const ProductContext = createContext();
 export const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([
     {
-      id: 1,
+      id: crypto.randomUUID(),
+      category: "Smartphone",
       title: "Apple iPhone 15 Pro Max",
-      price: 139990,
+      price: "1,49,990",
+      originalPrice: "1,69,990",
+      sale: true,
+      rating: 4.2,
+      reviewCount: 32,
+      storage: ["256 GB", "512 GB"],
+      cardImage: {
+        "#414141": "https://i.imghippo.com/files/odBsF1722159182.png",
+        "#DEDBD2": "https://i.imghippo.com/files/9xQok1722159207.png",
+      },
       colors: {
         "#414141": {
-          price: {
-            "256 GB": "1,39,990",
-            "512 GB": "1,68,990",
-            "1 TB": "1,99,990",
-          },
           images: [
             "https://i.imghippo.com/files/odBsF1722159182.png",
-            "https://m.media-amazon.com/images/I/61Jrsu9d3-L._SX679_.jpg",
-            "https://m.media-amazon.com/images/I/715zWp1q7rL._SX679_.jpg",
-          ],
-        },
-        "#DEDBD2": {
-          price: {
-            "256 GB": "1,39,990",
-            "512 GB": "1,68,990",
-            "1 TB": "1,99,990",
-          },
-          images: [
-            "https://i.imghippo.com/files/d21Iw1722159117.png",
-            "https://m.media-amazon.com/images/I/51UtwJ0576L._SX679_.jpg",
-            "https://m.media-amazon.com/images/I/71lmRVkniLL._SX679_.jpg",
-          ],
-        },
-        "#273039": {
-          price: {
-            "256 GB": "1,39,990",
-            "512 GB": "1,68,990",
-            "1 TB": "1,99,990",
-          },
-          images: [
             "https://i.imghippo.com/files/9xQok1722159207.png",
-            "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
-            "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
           ],
-        },
-        "#959188": {
           price: {
             "256 GB": "1,39,990",
             "512 GB": "1,68,990",
-            "1 TB": "1,99,990",
           },
+        },
+
+        "#DEDBD2": {
           images: [
-            "https://i.imghippo.com/files/3Aebh1722159154.png",
-            "https://m.media-amazon.com/images/I/61HZS-ZSCLL._SX679_.jpg",
-            "https://m.media-amazon.com/images/I/71kGvmn-t8L._SX679_.jpg",
+            "https://i.imghippo.com/files/odBsF1722159182.png",
+            "https://i.imghippo.com/files/9xQok1722159207.png",
           ],
+          price: {
+            "256 GB": "1,69,990",
+            "512 GB": "1,78,990",
+          },
         },
       },
-      rating: 4.3,
-      reviewCount: 23,
-      originalPrice: 179990,
-      sale: true,
-      storage: ["256 GB", "512 GB", "1 TB"],
-      highlights: ["lorem", "dioodf", "sfbssf", "sfcd"],
-      specifications: ["fage", "zeg"],
-      shippingAndReturns: ["gsrgedse"],
-      reviews: ["jvkfjb;fkj", "kjgsighsihgr"],
+      specifications: {
+        "In the box": "Handset, Charging Block",
+      },
+      highlights: ["Fast Charging", "Efficient Performance"],
+      shippingAndReturns: ["7 days replacement", "30 days exchange"],
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, praesentium.",
+      reviews: ["great product", "great battery", "great cameras"],
     },
     {
-      id: 2,
-      title: "Samsung Z Fold6",
-      price: 168990,
+      id: crypto.randomUUID(),
+      category: "Appliance",
+      title: "Pigeon Air Fryer",
+      price: "4,990",
+      originalPrice: "6,990",
+      sale: false,
+      rating: 4.1,
+      reviewCount: 22,
+      power: ["2 kW", "4 kW"],
+      cardImage: {
+        "#33494F": "https://i.imghippo.com/files/vhGY71722420758.png",
+        "#3B3B3B": "https://i.imghippo.com/files/jJjjZ1723197300.png",
+      },
       colors: {
-        "#465066": {
-          price: {
-            "512 GB": "1,68,990",
-            "1 TB": "1,99,990",
-          },
+        "#33494F": {
           images: [
             "https://i.imghippo.com/files/odBsF1722159182.png",
-            "https://m.media-amazon.com/images/I/61Jrsu9d3-L._SX679_.jpg",
-          ],
-        },
-        "#7E7E7E": {
-          price: {
-            "512 GB": "1,68,990",
-            "1 TB": "1,99,990",
-          },
-          images: [
-            "https://i.imghippo.com/files/d21Iw1722159117.png",
-            "https://m.media-amazon.com/images/I/71lmRVkniLL._SX679_.jpg",
-          ],
-        },
-        "#E9D6DB": {
-          price: {
-            "512 GB": "1,68,990",
-            "1 TB": "1,99,990",
-          },
-          images: [
             "https://i.imghippo.com/files/9xQok1722159207.png",
-            "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
           ],
+          price: {
+            "2 kW": "9,990",
+            "4 kW": "8,990",
+          },
+        },
+
+        "#3B3B3B": {
+          images: [
+            "https://i.imghippo.com/files/odBsF1722159182.png",
+            "https://i.imghippo.com/files/9xQok1722159207.png",
+          ],
+          price: {
+            "2 kW": "7,990",
+            "4 kW": "4,990",
+          },
         },
       },
-      rating: 4.9,
-      reviewCount: 27,
-      originalPrice: 179990,
-      sale: false,
-      storage: ["512 GB", "1 TB"],
-      highlights: ["DBgfsbf", "Gsdgrs"],
-      specifications: ["dgsdgbsf"],
-      shippingAndReturns: ["gesdgsf"],
-      reviews: ["jvkfjb;fkj", "kjgsighsihgr"],
+      specifications: {
+        "In the box": "Handset, Charging Block",
+      },
+      highlights: ["Fast Charging", "Efficient Performance"],
+      shippingAndReturns: ["7 days replacement", "30 days exchange"],
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, praesentium.",
+      reviews: ["great product", "great battery", "great cameras"],
     },
   ]);
 
