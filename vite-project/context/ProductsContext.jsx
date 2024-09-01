@@ -29,7 +29,7 @@ export const ProductProvider = ({ children }) => {
 
         "#DEDBD2": {
           cardImages: ["https://i.imghippo.com/files/9xQok1722159207.png"],
-          images: [
+          detailImages: [
             "https://i.imghippo.com/files/odBsF1722159182.png",
             "https://i.imghippo.com/files/9xQok1722159207.png",
           ],
@@ -41,7 +41,7 @@ export const ProductProvider = ({ children }) => {
 
         "#273039": {
           cardImages: ["https://i.imghippo.com/files/3Aebh1722159154.png"],
-          images: [
+          detailImages: [
             "https://i.imghippo.com/files/odBsF1722159182.png",
             "https://i.imghippo.com/files/9xQok1722159207.png",
           ],
@@ -53,7 +53,7 @@ export const ProductProvider = ({ children }) => {
 
         "#959188": {
           cardImages: ["https://i.imghippo.com/files/d21Iw1722159117.png"],
-          images: [
+          detailImages: [
             "https://i.imghippo.com/files/odBsF1722159182.png",
             "https://i.imghippo.com/files/9xQok1722159207.png",
           ],
@@ -72,52 +72,90 @@ export const ProductProvider = ({ children }) => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, praesentium.",
       reviews: ["great product", "great battery", "great cameras"],
     },
-    // {
-    //   id: crypto.randomUUID(),
-    //   category: "Appliance",
-    //   title: "Pigeon Air Fryer",
-    //   price: "4,990",
-    //   originalPrice: "6,990",
-    //   sale: false,
-    //   rating: 4.1,
-    //   reviewCount: 22,
-    //   power: ["2 kW", "4 kW"],
-    //   cardImage: {
-    //     "#33494F": "https://i.imghippo.com/files/vhGY71722420758.png",
-    //     "#3B3B3B": "https://i.imghippo.com/files/jJjjZ1723197300.png",
-    //   },
-    //   colors: {
-    //     "#33494F": {
-    //       images: [
-    //         "https://i.imghippo.com/files/odBsF1722159182.png",
-    //         "https://i.imghippo.com/files/9xQok1722159207.png",
-    //       ],
-    //       price: {
-    //         "2 kW": "9,990",
-    //         "4 kW": "8,990",
-    //       },
-    //     },
+    {
+      id: crypto.randomUUID(),
+      category: "Smartphone",
+      title: "Samsung S24 Ultra",
+      price: "1,69,990",
+      originalPrice: "1,79,990",
+      sale: false,
+      rating: 3.9,
+      reviewCount: 42,
+      storage: ["512 GB", "1 TB"],
+      colors: {
+        "#453F57": {
+          cardImages: ["https://i.imghippo.com/files/z7flt1722158064.png"],
+          detailImages: [
+            "https://i.imghippo.com/files/odBsF1722159182.png",
+            "https://i.imghippo.com/files/9xQok1722159207.png",
+          ],
+          price: {
+            "256 GB": "1,79,990",
+            "512 GB": "1,88,990",
+          },
+        },
 
-    //     "#3B3B3B": {
-    //       images: [
-    //         "https://i.imghippo.com/files/odBsF1722159182.png",
-    //         "https://i.imghippo.com/files/9xQok1722159207.png",
-    //       ],
-    //       price: {
-    //         "2 kW": "7,990",
-    //         "4 kW": "4,990",
-    //       },
-    //     },
-    //   },
-    //   specifications: {
-    //     "In the box": "Handset, Charging Block",
-    //   },
-    //   highlights: ["Fast Charging", "Efficient Performance"],
-    //   shippingAndReturns: ["7 days replacement", "30 days exchange"],
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, praesentium.",
-    //   reviews: ["great product", "great battery", "great cameras"],
-    // },
+        "#F0E1B9": {
+          cardImages: ["https://i.imghippo.com/files/DO4I31722158126.png"],
+          detailImages: [
+            "https://i.imghippo.com/files/odBsF1722159182.png",
+            "https://i.imghippo.com/files/9xQok1722159207.png",
+          ],
+          price: {
+            "256 GB": "1,79,990",
+            "512 GB": "1,88,990",
+          },
+        },
+      },
+      specifications: {
+        "In the box": "Handset, Charging Block, Earbuds",
+      },
+      highlights: [
+        "Fast Charging",
+        "Efficient Performance",
+        "Great Gaming Experience",
+      ],
+      shippingAndReturns: ["7 days replacement", "21 days exchange"],
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, praesentium.",
+      reviews: [
+        "great product",
+        "great battery",
+        "great cameras",
+        "great performance",
+      ],
+    },
+    {
+      id: crypto.randomUUID(),
+      category: "Appliances",
+      title: "Pigeon Air Fryer",
+      price: "9,990",
+      originalPrice: "19,990",
+      sale: true,
+      rating: 4.8,
+      reviewCount: 22,
+      size: ["6 Litres", "10 Litres","15 Litres"],
+      cardImages:["https://i.imghippo.com/files/D3Iw81722420883.png"],
+      detailImages:[""],
+      price:{
+        "6 Litres" : "9,990",
+        "10 Litres" : "11,990",
+        "15 Litres" : "13,990"
+      },
+      specifications: {
+        "In the box": "Machine",
+      },
+      highlights: [
+        "Efficient Performance",
+      ],
+      shippingAndReturns: ["14 days replacement", "30 days exchange"],
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, praesentium.",
+      reviews: [
+        "great product",
+        "great performance",
+      ],
+    },
   ]);
 
   return (

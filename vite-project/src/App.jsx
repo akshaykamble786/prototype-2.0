@@ -14,10 +14,10 @@ import Account from "./pages/Account.jsx";
 import Orders from "./pages/Orders.jsx";
 import Wishlist from "./pages/Wishlist.jsx";
 import AdminPanel from "./pages/AdminPanel.jsx";
-import ProductList from "./components/ProductList.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
 import ProductContainer from "./components/ProductContainer.jsx";
+import ProductDetails from "./components/ProductDetails.jsx";
 
 function App() {
   return (
@@ -35,7 +35,7 @@ function Layout() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/mobiles" element={<Mobiles />} />
-          <Route path="/mobiles/:id" element={<Mobiles />} />
+          <Route path="/mobiles/:id" element={<ProductDetail />} />
           <Route path="/appliances" element={<Appliances />} />
           <Route path="/computing" element={<Computing />} />
           <Route path="/accessories" element={<Accessories />} />
@@ -48,8 +48,8 @@ function Layout() {
           <Route path="/admin" element={<AdminPanel />} />
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<Signup/>} />
-          <Route path="/list" element={<ProductList/>} />
           <Route path="/container" element={<ProductContainer/>} />
+          <Route path="/container/:id" element={<ProductDetails/>} />
         </Routes>
       </main>
       <Footer />

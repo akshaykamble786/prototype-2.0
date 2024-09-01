@@ -111,7 +111,7 @@ const ProductDetail = () => {
       </div>
 
       {/* Right: Product Details */}
-      <div className="mt-6 flex flex-col">
+      <div className="mt-9 flex flex-col">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-semibold">
             Apple iPhone 15 Pro Max ({selectedColor}, {selectedStorage})
