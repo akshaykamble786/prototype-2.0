@@ -1,119 +1,115 @@
-import React, { useContext } from "react";
-import ProductContext from "../../context/ProductsContext";
+import React, { useState } from "react";
 
-const ProductList = () => {
-  const { products } = useContext(ProductContext); // Consume the context
+const ProductList = ({ product }) => {
+  // Removed the unused `products` declaration
+  const [selectedColor, setSelectedColor] = useState(
+    Object.keys(product.colors)[0]
+  );
+
+  // Handle color change
+  const handleColorChange = (color) => {
+    setSelectedColor(color);
+  };
 
   return (
-    <div className="product-list">
-      <h2>Product List</h2>
-      {products.map((product) => (
-        <div key={product.id} className="product-card">
-          <h3>{product.title}</h3>
-          <p>Price: ₹{product.price}</p>
-          <p>Original Price: ₹{product.originalPrice}</p>
-          <p>Sale: {product.sale ? "On Sale" : "Regular Price"}</p>
-          <p>
-            Rating: {product.rating} ({product.reviewCount} reviews)
-          </p>
+    <div className="bg-white shadow-md rounded-lg p-4 w-64">
+      {/* Heart Icon */}
+      <div className="flex justify-end">
+        <button className="text-gray-400 hover:text-red-500">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6.75 12l5.25 5.25L21 6"
+            />
+          </svg>
+        </button>
+      </div>
 
-          {/* Display Product Images */}
-          <div className="product-images">
-            <h4>Images</h4>
-            {Object.values(product.cardImage).map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                alt={`${product.title} color option`}
-                width="100"
+      {/* Product Image */}
+      <img
+        src={product.colors[selectedColor].cardImages[0]}
+        alt={product.title}
+        className="w-full h-48 object-contain mb-4"
+      />
+
+      {/* Product Info */}
+      <h3 className="text-lg font-semibold">{product.title}</h3>
+      <div className="flex items-center my-2">
+        <div className="flex items-center">
+          {/* Stars */}
+          {Array.from({ length: 5 }, (_, index) => (
+            <svg
+              key={index}
+              xmlns="http://www.w3.org/2000/svg"
+              fill={index < Math.floor(product.rating) ? "currentColor" : "none"}
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className={`w-4 h-4 ${
+                index < Math.floor(product.rating)
+                  ? "text-yellow-400"
+                  : "text-gray-300"
+              }`}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l2.148 6.6a1 1 0 00.95.69h6.6c.92 0 1.3 1.18.707 1.707l-5.347 4.4a1 1 0 00-.364 1.118l2.148 6.6c.3.92-.755 1.688-1.536 1.118l-5.347-4.4a1 1 0 00-1.178 0l-5.347 4.4c-.781.57-1.836-.198-1.536-1.118l2.148-6.6a1 1 0 00-.364-1.118l-5.347-4.4c-.592-.527-.213-1.707.707-1.707h6.6a1 1 0 00.95-.69l2.148-6.6z"
               />
-            ))}
-          </div>
-
-          {/* Display Color Options */}
-          <div className="product-colors">
-            <h4>Available Colors</h4>
-            {Object.entries(product.colors).map(([color, details], index) => (
-              <div key={index}>
-                <p>Color: {color}</p>
-                {details.images.map((image, idx) => (
-                  <img
-                    key={idx}
-                    src={image}
-                    alt={`${product.title} ${color}`}
-                    width="100"
-                  />
-                ))}
-              </div>
-            ))}
-          </div>
-
-          {/* Display Storage or Power Options Dynamically */}
-          <div className="product-options">
-            {product.storage ? (
-              <div>
-                <h4>Storage Options</h4>
-                {product.storage.map((option, index) => (
-                  <p key={index}>{option}</p>
-                ))}
-              </div>
-            ) : (
-              <div>
-                <h4>Power Options</h4>
-                {product.power.map((option, index) => (
-                  <p key={index}>{option}</p>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Display Specifications */}
-          <div className="product-specifications">
-            <h4>Specifications</h4>
-            {Object.entries(product.specifications).map(([spec, value], index) => (
-              <p key={index}>
-                {spec}: {value}
-              </p>
-            ))}
-          </div>
-
-          {/* Display Highlights */}
-          <div className="product-highlights">
-            <h4>Highlights</h4>
-            <ul>
-              {product.highlights.map((highlight, index) => (
-                <li key={index}>{highlight}</li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Display Shipping and Returns */}
-          <div className="product-shipping">
-            <h4>Shipping & Returns</h4>
-            <ul>
-              {product.shippingAndReturns.map((policy, index) => (
-                <li key={index}>{policy}</li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Display Reviews */}
-          <div className="product-reviews">
-            <h4>Customer Reviews</h4>
-            <ul>
-              {product.reviews.map((review, index) => (
-                <li key={index}>{review}</li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Display Description */}
-          <div className="product-description">
-            <h4>Description</h4>
-            <p>{product.description}</p>
-          </div>
+            </svg>
+          ))}
         </div>
-      ))}
+        <span className="ml-2 text-sm bg-yellow-100 text-yellow-700 px-2 rounded">
+          {product.rating}
+        </span>
+      </div>
+
+      {/* Price */}
+      <div className="text-gray-500 line-through text-sm mb-1">
+        ₹{product.originalPrice}
+      </div>
+      <div className="text-xl font-bold">₹{product.price}</div>
+
+      {/* Color Options */}
+      <div className="flex space-x-2 mt-4">
+        {Object.keys(product.colors).map((color) => (
+          <button
+            key={color}
+            className={`w-6 h-6 rounded-full border-2 ${
+              selectedColor === color ? "border-red-500" : "border-gray-300"
+            }`}
+            style={{ backgroundColor: color }}
+            onClick={() => handleColorChange(color)}
+          ></button>
+        ))}
+      </div>
+
+      {/* Add to Cart Button */}
+      <button className="bg-blue-900 text-white w-full py-2 mt-4 rounded-lg flex items-center justify-center space-x-2 hover:bg-blue-800">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="currentColor"
+          className="w-6 h-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3 3h2l.4 2m0 0l1.2 6M5.4 5h13.2l1.2 6m-15.6-6L4.8 18m0 0H19.2m-14.4 0a1.8 1.8 0 11-3.6 0m17.4 0a1.8 1.8 0 11-3.6 0m1.2-6h-6"
+          />
+        </svg>
+        <span>Add to Cart</span>
+      </button>
     </div>
   );
 };

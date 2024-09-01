@@ -17,6 +17,7 @@ import AdminPanel from "./pages/AdminPanel.jsx";
 import ProductList from "./components/ProductList.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
+import ProductContainer from "./components/ProductContainer.jsx";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function Layout() {
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<Signup/>} />
           <Route path="/list" element={<ProductList/>} />
+          <Route path="/container" element={<ProductContainer/>} />
         </Routes>
       </main>
       <Footer />
