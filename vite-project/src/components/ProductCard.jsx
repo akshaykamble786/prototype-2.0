@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ProductDetail from "./ProductDetail";
 import Wishlist from "./Wishlist";
+import ProductContext from "../../context/ProductsContext";
 
 const ProductCard = ({
   images,
@@ -12,6 +13,9 @@ const ProductCard = ({
   rating,
   saleOrNot,
 }) => {
+
+  const {currency} = useContext(ProductContext)
+
   const [selectedColor, setSelectedColor] = useState(
     colorOptions.length > 0 ? colorOptions[0] : "default"
   ); 
@@ -33,8 +37,8 @@ const ProductCard = ({
           alt={title}
           onClick={()=>navigate('/product-detail')}
         />
-       <Wishlist className='size-9 absolute top-4 right-4 cursor-pointer'/>
       </div>
+       <Wishlist className='size-9 absolute top-4 right-4 cursor-pointer'/>
 
       {saleOrNot && (
         <span className="absolute top-4 -left-2 w-20 transform -rotate-45 bg-custom-darkestblue text-white text-xs font-semibold px-1 py-1 text-center">
@@ -82,9 +86,9 @@ const ProductCard = ({
         <div className="flex flex-col justify-end">
           <div className="flex items-center justify-between">
             <p className="text-sm text-gray-600 line-through">
-              &#8377; {originalPrice}
+             {currency} {originalPrice}
             </p>
-            <p className="text-lg font-bold text-gray-900">&#8377; {price}</p>
+            <p className="text-lg font-bold text-gray-900"> {currency} {price}</p>
           </div>
           <a
             href="#"

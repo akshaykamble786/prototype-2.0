@@ -8,8 +8,8 @@ export const ProductProvider = ({ children }) => {
       id: crypto.randomUUID(),
       category: "Smartphone",
       title: "Apple iPhone 15 Pro Max",
-      price: "1,49,990",
-      originalPrice: "1,69,990",
+      cost: "1,49,990",
+      originalCost: "1,69,990",
       sale: true,
       rating: 4.2,
       reviewCount: 32,
@@ -76,8 +76,8 @@ export const ProductProvider = ({ children }) => {
       id: crypto.randomUUID(),
       category: "Smartphone",
       title: "Samsung S24 Ultra",
-      price: "1,69,990",
-      originalPrice: "1,79,990",
+      cost: "1,69,990",
+      originalCost: "1,79,990",
       sale: false,
       rating: 3.9,
       reviewCount: 42,
@@ -129,8 +129,8 @@ export const ProductProvider = ({ children }) => {
       id: crypto.randomUUID(),
       category: "Appliances",
       title: "Pigeon Air Fryer",
-      price: "9,990",
-      originalPrice: "19,990",
+      cost: "9,990",
+      originalCost: "19,990",
       sale: true,
       rating: 4.8,
       reviewCount: 22,
@@ -158,8 +158,10 @@ export const ProductProvider = ({ children }) => {
     },
   ]);
 
+  const currency = "₹"
+
   return (
-    <ProductContext.Provider value={{ products, setProducts }}>
+    <ProductContext.Provider value={{ products, setProducts, currency }}>
       {children}
     </ProductContext.Provider>
   );

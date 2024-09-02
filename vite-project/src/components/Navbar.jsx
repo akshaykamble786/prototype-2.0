@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MenuIcon, UserIcon, XIcon } from "@heroicons/react/outline";
 import {
   ChevronDownIcon,
@@ -8,12 +8,13 @@ import {
   HeartIcon,
   ClipboardListIcon,
 } from "@heroicons/react/solid";
-import { CiSearch } from "react-icons/ci";
-import { ListOrdered, ListOrderedIcon, LogOutIcon } from "lucide-react";
-import { CiUser } from "react-icons/ci";
-import { ShoppingCart } from "lucide-react";
+import { ListOrderedIcon, LogOutIcon, ShoppingCart } from "lucide-react";
+import { CiUser, CiSearch } from "react-icons/ci";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
@@ -52,14 +53,15 @@ const Navbar = () => {
           {/* Right: Cart and User Icons */}
           <div className="flex items-center space-x-4">
             <CiSearch size={30} className="text-gray-600" />
-            <Link to="/cart" className="text-gray-600">
+            <Link to="/cart" className="text-gray-600 relative">
               <ShoppingCart strokeWidth={1.25} />
+              <p className="absolute right-[-5px] top-[-5px] w-4 text-center leading-4 bg-custom-darkblue text-white aspect-square rounded-full text-xs">0</p>
             </Link>
             <button
               onClick={toggleDropdown}
               className="text-gray-500 focus:outline-none"
             >
-              <CiUser className="text-gray-700 h-6 w-6" />
+              <CiUser className="text-gray-700 h-6 w-6" onClick={()=>navigate('/signup')}/>
             </button>
           </div>
         </div>
@@ -69,7 +71,7 @@ const Navbar = () => {
           <div className="absolute top-full left-0 right-0 flex flex-col text-center m-4 bg-white z-50">
             <Link
               to="/mobiles"
-              className="text-gray-600 hover:text-gray-950 hover:underline p-2 "
+              className="text-gray-600 hover:text-gray-950 hover:underline p-2"
               onClick={toggleMenu}
             >
               Mobiles
@@ -160,30 +162,34 @@ const Navbar = () => {
 
         {/* Center: Navigation Links */}
         <div className="flex space-x-6">
-          <Link
+          <NavLink
             to="/mobiles"
-            className="text-gray-600 hover:text-gray-950 hover:underline"
+            className="text-gray-600 hover:text-gray-950 flex flex-col items-center gap-1"
           >
             Mobiles
-          </Link>
-          <Link
+          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+          </NavLink>
+          <NavLink
             to="/appliances"
-            className="text-gray-600 hover:text-gray-950 hover:underline"
+            className="text-gray-600 hover:text-gray-950 flex flex-col items-center gap-1"
           >
             Appliances
-          </Link>
-          <Link
+          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+          </NavLink>
+          <NavLink
             to="/computing"
-            className="text-gray-600 hover:text-gray-950 hover:underline"
+            className="text-gray-600 hover:text-gray-950 flex flex-col items-center gap-1"
           >
             Computing
-          </Link>
-          <Link
+          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+          </NavLink>
+          <NavLink
             to="/accessories"
-            className="text-gray-600 hover:text-gray-950 hover:underline"
+            className="text-gray-600 hover:text-gray-950 flex flex-col items-center gap-1"
           >
             Accessories
-          </Link>
+          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+          </NavLink>
         </div>
 
         {/* Right: Search Bar and Icons */}
@@ -192,8 +198,9 @@ const Navbar = () => {
             <CiSearch size={30} className="text-gray-600" />
           </div>
 
-          <Link to="/cart" className="text-gray-700">
+          <Link to="/cart" className="text-gray-700 relative">
             <ShoppingCart strokeWidth={1.25} />
+            <p className="absolute right-[-5px] top-[-5px] w-4 text-center leading-4 bg-custom-darkblue text-white aspect-square rounded-full text-xs">0</p>
           </Link>
 
           <div className="relative z-50">

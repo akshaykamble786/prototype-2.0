@@ -1,26 +1,62 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
-import ProductContext from "../../context/ProductsContext";
+import ProductContext from "../../context/ProductsContext"; // Make sure this path is correct
 
 const ProductDetails = () => {
-  const { id } = useParams();
-  const { products } = useContext(ProductContext);
-  
-  // Find product by ID
-  const product = products.find((prod) => prod.id === parseInt(id));
+  const { id } = useParams(); // Extract the product id from the URL
+  const { products } = useContext(ProductContext); // Get products from context
 
-  if (!product) return <div>Product not found!</div>;
+  // Find the product by ID
+  const product = products.find((product) => product.id === id);
+
+  if (!product) {
+    return <div>Product not found</div>;
+  }
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">{product.title}</h1>
-      <img
-        src={product.colors[Object.keys(product.colors)[0]].cardImages[0]}
-        alt={product.title}
-        className="w-full h-auto object-contain mb-4"
-      />
-      <p className="text-lg">{product.description}</p>
-      {/* Display more details like price, color options, etc. */}
+    <div className="p-4">
+      <h1 className="text-2xl font-bold">{product.title}</h1>
+      <div className="flex">
+        {/* Display the first image of the product */}
+        <img
+          src={
+            product.colors
+              ? Object.values(product.colors)[0].detailImages[0]
+              : product.detailImages[0] // For products without color options
+          }
+          alt={product.title}
+          className="w-64 h-64 object-contain"
+        />
+
+        {/* Product Details */}
+        <div className="ml-4">
+          <p className="text-lg mb-2">{product.description}</p>
+          <div className="text-gray-500 line-through mb-1">
+            ₹{product.originalCost}
+          </div>
+          <div className="text-xl font-bold">₹{product.cost}</div>
+
+          {/* Display color options if available */}
+          {product.colors && (
+            <div className="flex space-x-2 mt-4">
+              {Object.keys(product.colors).map((color) => (
+                <button
+                  key={color}
+                  className={`w-6 h-6 rounded-full border-2`}
+                  style={{ backgroundColor: color }}
+                ></button>
+              ))}
+            </div>
+          )}
+          
+          {/* Additional information like highlights, reviews, etc. */}
+          <ul className="list-disc pl-5 mt-4">
+            {product.highlights.map((highlight, index) => (
+              <li key={index}>{highlight}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };

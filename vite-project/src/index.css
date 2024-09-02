@@ -6,15 +6,9 @@
 
 .custom-gradient {
     background: linear-gradient(135deg, #13172c, #030825, #4a3f7a, #263b59);
-    background-color: cadetblue;
-    background-color: cornflowerblue;
-    background-color: lightblue;
-    background-color: lightskyblue;
-    background-color: royalblue;
-    background-color: steelblue;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .slider-item {
       height:400px; 
       width: 400px;  
@@ -45,5 +39,9 @@
         @apply h-[500px];
       }
     }
-  }
+  } */
   
+a.active hr{
+  display:block;
+}
+ 
