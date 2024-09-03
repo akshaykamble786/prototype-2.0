@@ -136,7 +136,7 @@ const HomePage = () => {
           </p>
           <p className="text-lg sm:text-2xl font-extrabold mb-4">
             &#8377; 49,300
-            <span className="line-through text-gray-500">&#8377; 58,300</span>
+            <span className="line-through text-sm text-gray-500">&#8377; 58,300</span>
           </p>
           <button className="bg-black text-white px-4 sm:px-6 py-2 sm:py-3 w-full sm:w-32 rounded mb-3">
             Buy Now
