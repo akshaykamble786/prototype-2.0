@@ -54,7 +54,7 @@ const ProductCard = ({ product }) => {
               className={`w-4 h-4 ${
                 index < Math.floor(product.rating)
                   ? "text-yellow-300"
-                  : "text-gray-300"
+                  : "text-gray-500"
               }`}
             >
               <path
