@@ -649,6 +649,165 @@ export const ProductProvider = ({ children }) => {
         "great performance",
       ],
     },
+
+    {
+      id: crypto.randomUUID(),
+      category: "Accessories",
+      title: "Apple 20W USB-C Power Adapter",
+      cost: "1,549",
+      originalCost: "1,900",
+      sale: false,
+      rating: 3.8,
+      reviewCount: 65,
+      cardImages: ["https://i.imghippo.com/files/qZcJx1723267265.png"],
+      detailImages: [""],
+      specifications: {
+        "In the box": "Machine",
+      },
+      highlights: ["Efficient Performance"],
+      shippingAndReturns: ["14 days replacement", "30 days exchange"],
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, praesentium.",
+      reviews: ["great product", "great performance"],
+    },
+    {
+      id: crypto.randomUUID(),
+      category: "Accessories",
+      title: "Promate 130W Laptop Power Bank",
+      cost: "6,999",
+      originalCost: "15,999",
+      sale: true,
+      rating: 4.9,
+      reviewCount: 12,
+      capacity: ["10000 mAh", "20000 mAh", "27000 mAh"],
+      cardImages: ["https://i.imghippo.com/files/kiH3P1723267325.png"],
+      detailImages: [""],
+      price: {
+        "10000 mAh": "6,999",
+        "20000 mAh": "7,999",
+        "27000 mAh": "8,999",
+      },
+      specifications: {
+        "In the box": "Machine",
+      },
+      highlights: ["Efficient Performance"],
+      shippingAndReturns: ["14 days replacement", "30 days exchange"],
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, praesentium.",
+      reviews: ["great product", "great performance"],
+    },
+    {
+      id: crypto.randomUUID(),
+      category: "Accessories",
+      title: "MOKOBARA Unisex Multipurpose Laptop Backpack",
+      cost: "7,599",
+      originalCost: "13,999",
+      sale: true,
+      rating: 4.2,
+      reviewCount: 16,
+      cardImages: ["https://i.imghippo.com/files/b4U2b1723267046.png"],
+      detailImages: [""],
+      specifications: {
+        "In the box": "Machine",
+      },
+      highlights: ["Efficient Performance"],
+      shippingAndReturns: ["14 days replacement", "30 days exchange"],
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, praesentium.",
+      reviews: ["great product", "great performance"],
+    },
+    {
+      id: crypto.randomUUID(),
+      category: "Accessories",
+      title: "Belkin Magsafe 2-in-1 Wireless Charging Dock",
+      cost: "16,999",
+      originalCost: "19,999",
+      sale: false,
+      rating: 4.0,
+      reviewCount: 3,
+      colors: {
+        "#2E2C2F": {
+          cardImages: ["https://i.imghippo.com/files/Cpohd1723267074.png"],
+          detailImages: [
+            "https://i.imghippo.com/files/odBsF1722159182.png",
+            "https://i.imghippo.com/files/9xQok1722159207.png",
+          ],
+          price: "16,999"
+        },
+
+        "#F0F1F2": {
+          cardImages: ["https://i.imghippo.com/files/c4cSK1723267378.png"],
+          detailImages: [
+            "https://i.imghippo.com/files/odBsF1722159182.png",
+            "https://i.imghippo.com/files/9xQok1722159207.png",
+          ],
+          price: "17,999"
+        },
+      },
+      specifications: {
+        "In the box": "Handset, Charging Block, Earbuds",
+      },
+      highlights: [
+        "Fast Charging",
+        "Efficient Performance",
+        "Great Gaming Experience",
+      ],
+      shippingAndReturns: ["7 days replacement", "21 days exchange"],
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, praesentium.",
+      reviews: [
+        "great product",
+        "great battery",
+        "great cameras",
+        "great performance",
+      ],
+    },
+    {
+      id: crypto.randomUUID(),
+      category: "Accessories",
+      title: "Sony DualSense Wireless Controller (PlayStation 5)",
+      cost: "5,499",
+      originalCost: "6,390",
+      sale: false,
+      rating: 4.7,
+      reviewCount: 23,
+      colors: {
+        "#0B0C10": {
+          cardImages: ["https://i.imghippo.com/files/rFioc1723267113.png"],
+          detailImages: [
+            "https://i.imghippo.com/files/odBsF1722159182.png",
+            "https://i.imghippo.com/files/9xQok1722159207.png",
+          ],
+          price: "5,499"
+        },
+
+        "#E7E7ED": {
+          cardImages: ["https://i.imghippo.com/files/TwYd61723267401.png"],
+          detailImages: [
+            "https://i.imghippo.com/files/odBsF1722159182.png",
+            "https://i.imghippo.com/files/9xQok1722159207.png",
+          ],
+          price: "6,099"
+        },
+
+        "#4FBCF7": {
+          cardImages: ["https://i.imghippo.com/files/fJM2k1723267181.png"],
+          detailImages: [
+            "https://i.imghippo.com/files/odBsF1722159182.png",
+            "https://i.imghippo.com/files/9xQok1722159207.png",
+          ],
+          price: "6,799"
+        },
+      },
+      specifications: {
+        "In the box": "Handset, Charging Block",
+      },
+      highlights: ["Fast Charging", "Efficient Performance"],
+      shippingAndReturns: ["7 days replacement", "30 days exchange"],
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, praesentium.",
+      reviews: ["great product", "great battery", "great cameras"],
+    },
   ]);
 
   const currency = "₹";
