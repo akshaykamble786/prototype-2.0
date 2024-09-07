@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Wishlist from "./Wishlist";
-import ProductContext from "../../context/ProductsContext";
+import ProductContext from "../context/ProductsContext";
 
 const ProductCard = ({ product }) => {
   const { currency } = useContext(ProductContext);
@@ -15,10 +15,16 @@ const ProductCard = ({ product }) => {
     setSelectedColor(color);
   };
 
+  const categoryRoute = getCategoryRoute(product.category);
+
+  const handleProductClick = () => {
+    localStorage.setItem('selectedProduct',JSON.stringify(product));
+  }
+
   return (
     <div className="relative max-w-xs w-96 max-h-[500px] flex flex-col rounded-xl overflow-hidden shadow-lg bg-gray-200 p-4 mx-auto mb-8">
       <div className="h-72 w-full flex items-center justify-center overflow-hidden">
-        <Link to={`/mobiles/${product.id}`}>
+        <Link to={`/${categoryRoute}/${product.id}`} onClick={handleProductClick}>
           <img
             className="w-full h-64 object-contain transition-transform duration-300 hover:scale-105 cursor-pointer"
             src={
@@ -122,3 +128,18 @@ const ProductCard = ({ product }) => {
 };
 
 export default ProductCard;
+
+const getCategoryRoute = (category) => {
+  switch (category.toLowerCase()) {
+    case "smartphone":
+      return "mobiles";
+    case "appliance":
+      return "appliances";
+    case "computing":
+      return "computing";
+    case "accessories":
+      return "accessories";
+    default:
+      return "mobiles"; // Fallback category
+  }
+}

@@ -1,5 +1,5 @@
 import ProductCard from '../components/ProductCard'
-import ProductContext from '../../context/ProductsContext';
+import ProductContext from "../context/ProductsContext";
 import React, { useContext } from 'react';
 
 const Mobiles = () => {

@@ -16,14 +16,13 @@ import Wishlist from "./pages/Wishlist.jsx";
 import AdminPanel from "./pages/AdminPanel.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
-import ProductContainer from "./components/ProductContainer.jsx";
 import ProductDetails from "./components/ProductDetails.jsx";
 
 function App() {
   return (
-        <Router>
-          <Layout />
-        </Router>
+    <Router>
+      <Layout />
+    </Router>
   );
 }
 
@@ -34,11 +33,19 @@ function Layout() {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<HomePage />} />
+
+         {/* Product Listing Pages */}
           <Route path="/mobiles" element={<Mobiles />} />
-          <Route path="/mobiles/:id" element={<ProductDetail />} />
           <Route path="/appliances" element={<Appliances />} />
           <Route path="/computing" element={<Computing />} />
           <Route path="/accessories" element={<Accessories />} />
+
+          {/* Dynamic Product Detail Pages */}
+          <Route path="/mobiles/:id" element={<ProductDetails />} />
+          <Route path="/appliances/:id" element={<ProductDetails />} />
+          <Route path="/computing/:id" element={<ProductDetails />} />
+          <Route path="/accessories/:id" element={<ProductDetails />} />
+
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<NotFound404 />} />
           <Route path="/product-detail" element={<ProductDetail />} />
@@ -46,10 +53,8 @@ function Layout() {
           <Route path="/account" element={<Account />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/admin" element={<AdminPanel />} />
-          <Route path="/login" element={<Login/>} />
-          <Route path="/signup" element={<Signup/>} />
-          <Route path="/container" element={<ProductContainer/>} />
-          <Route path="/container/:id" element={<ProductDetails/>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </main>
       <Footer />
