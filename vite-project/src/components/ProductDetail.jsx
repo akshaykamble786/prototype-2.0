@@ -128,7 +128,7 @@ const ProductDetail = () => {
             &#8377;
             {productData[selectedColor].price[selectedStorage]}
           </span>
-          <span className="text-gray-500 ml-2 line-through">&#8377;280</span>
+          <span className="">&#8377;280</span>
         </div>
 
         <p className="text-gray-600 mt-4">
