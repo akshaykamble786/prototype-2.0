@@ -24,7 +24,7 @@ const HomePage = () => {
   const washOfferEndTime = new Date().getTime() + 9 * 60 * 60 * 1000;
 
   const electronicsCategories = [
-    { name: "Home Theatres", icon: <Home className="text-slate-900" /> },
+    { name: "Home Theatres", icon: <Home className="text-slate-900" />},
     { name: "Mobiles", icon: <Tablet className="text-slate-900" /> },
     { name: "Wearables", icon: <Watch className="text-slate-900" /> },
     { name: "Media Players", icon: <Speaker className="text-slate-900" /> },

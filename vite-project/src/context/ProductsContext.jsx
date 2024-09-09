@@ -8,7 +8,7 @@ export const ProductProvider = ({ children }) => {
     return storedProducts ? JSON.parse(storedProducts) : []; // Load from localStorage if available
   });
 
-  useEffect(()=>{
+  useEffect(() => {
     const initialProducts = [
       {
         id: crypto.randomUUID(),
@@ -25,43 +25,47 @@ export const ProductProvider = ({ children }) => {
             cardImages: ["https://i.imghippo.com/files/odBsF1722159182.png"],
             detailImages: [
               "https://i.imghippo.com/files/odBsF1722159182.png",
-              "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/61Jrsu9d3-L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/715zWp1q7rL._SX679_.jpg",
             ],
             price: {
-              "256 GB": "1,39,990",
-              "512 GB": "1,68,990",
+              "256 GB": "1,49,990",
+              "512 GB": "1,69,990",
             },
           },
-  
+
           "#DEDBD2": {
             cardImages: ["https://i.imghippo.com/files/9xQok1722159207.png"],
             detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               "256 GB": "1,69,990",
               "512 GB": "1,78,990",
             },
           },
-  
+
           "#273039": {
             cardImages: ["https://i.imghippo.com/files/3Aebh1722159154.png"],
             detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
-              "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://i.imghippo.com/files/3Aebh1722159154.png",
+              "https://m.media-amazon.com/images/I/61HZS-ZSCLL._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71kGvmn-t8L._SX679_.jpg",
             ],
             price: {
               "256 GB": "1,59,990",
               "512 GB": "1,74,990",
             },
           },
-  
+
           "#959188": {
             cardImages: ["https://i.imghippo.com/files/d21Iw1722159117.png"],
             detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
-              "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://i.imghippo.com/files/d21Iw1722159117.png",
+              "https://m.media-amazon.com/images/I/51UtwJ0576L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71lmRVkniLL._SX679_.jpg",
             ],
             price: {
               "256 GB": "1,49,990",
@@ -82,8 +86,8 @@ export const ProductProvider = ({ children }) => {
         id: crypto.randomUUID(),
         category: "Smartphone",
         title: "Samsung S24 Ultra",
-        cost: "1,69,990",
-        originalCost: "1,79,990",
+        cost: "1,79,990",
+        originalCost: "1,99,990",
         sale: false,
         rating: 3.9,
         reviewCount: 42,
@@ -92,15 +96,14 @@ export const ProductProvider = ({ children }) => {
           "#453F57": {
             cardImages: ["https://i.imghippo.com/files/z7flt1722158064.png"],
             detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
-              "https://i.imghippo.com/files/9xQok1722159207.png",
+              'https://i.imghippo.com/files/z7flt1722158064.png',
             ],
             price: {
               "512 GB": "1,79,990",
               "1 TB": "1,88,990",
             },
           },
-  
+
           "#F0E1B9": {
             cardImages: ["https://i.imghippo.com/files/DO4I31722158126.png"],
             detailImages: [
@@ -153,7 +156,7 @@ export const ProductProvider = ({ children }) => {
               "256 GB": "50,990",
             },
           },
-  
+
           "#6691B7": {
             cardImages: ["https://i.imghippo.com/files/G3iXH1722158879.png"],
             detailImages: [
@@ -206,7 +209,7 @@ export const ProductProvider = ({ children }) => {
               "256 GB": "1,19,990",
             },
           },
-  
+
           "#FEDEC9": {
             cardImages: ["https://i.imghippo.com/files/1dd6c1722159072.png"],
             detailImages: [
@@ -246,7 +249,7 @@ export const ProductProvider = ({ children }) => {
         sale: true,
         rating: 4.4,
         reviewCount: 19,
-        size: ["512 GB", "1 TB"],
+        storage: ["512 GB", "1 TB"],
         colors: {
           "#465066": {
             cardImages: ["https://i.imghippo.com/files/4dDBx1722158230.png"],
@@ -259,7 +262,7 @@ export const ProductProvider = ({ children }) => {
               "1 TB": "1,84,999",
             },
           },
-  
+
           "#7E7E7E": {
             cardImages: ["https://i.imghippo.com/files/c4TUe1722158339.png"],
             detailImages: [
@@ -301,7 +304,7 @@ export const ProductProvider = ({ children }) => {
           "great performance",
         ],
       },
-  
+
       {
         id: crypto.randomUUID(),
         category: "Appliance",
@@ -324,7 +327,7 @@ export const ProductProvider = ({ children }) => {
               Manual: "2,499",
             },
           },
-  
+
           "#3B3B3B": {
             cardImages: ["https://i.imghippo.com/files/jJjjZ1723197300.png"],
             detailImages: [
@@ -364,7 +367,7 @@ export const ProductProvider = ({ children }) => {
         sale: true,
         rating: 4.5,
         reviewCount: 34,
-        size: ["6 Litres", "10 Litres", "15 Litres"],
+        capacity: ["6 Litres", "10 Litres", "15 Litres"],
         cardImages: ["https://i.imghippo.com/files/3UMZQ1722420676.png"],
         detailImages: [""],
         price: {
@@ -403,7 +406,7 @@ export const ProductProvider = ({ children }) => {
               Grill: "8,750",
             },
           },
-  
+
           "#16151B": {
             cardImages: ["https://i.imghippo.com/files/gG9jE1722938134.png"],
             detailImages: [
@@ -443,7 +446,7 @@ export const ProductProvider = ({ children }) => {
         sale: true,
         rating: 4.3,
         reviewCount: 39,
-        size: ["530 Litres", "560 Litres", "600 Litres"],
+        capacity: ["530 Litres", "560 Litres", "600 Litres"],
         cardImages: ["https://i.imghippo.com/files/MMnFK1722420738.png"],
         detailImages: [""],
         price: {
@@ -469,7 +472,7 @@ export const ProductProvider = ({ children }) => {
         sale: true,
         rating: 4.8,
         reviewCount: 59,
-        size: ["1.5 Ton 3 Star", "2 Ton 4 Star", "2.2 Ton 5 Star"],
+        capacity: ["1.5 Ton 3 Star", "2 Ton 4 Star", "2.2 Ton 5 Star"],
         cardImages: ["https://i.imghippo.com/files/gHRSb1722420835.png"],
         detailImages: [""],
         price: {
@@ -486,7 +489,7 @@ export const ProductProvider = ({ children }) => {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, praesentium.",
         reviews: ["great product", "great performance"],
       },
-  
+
       {
         id: crypto.randomUUID(),
         category: "Computing",
@@ -509,7 +512,7 @@ export const ProductProvider = ({ children }) => {
               "1 TB": "3,79,990",
             },
           },
-  
+
           "#F0F1F2": {
             cardImages: ["https://i.imghippo.com/files/Tl4mP1723198222.png"],
             detailImages: [
@@ -609,7 +612,7 @@ export const ProductProvider = ({ children }) => {
         sale: false,
         rating: 4.9,
         reviewCount: 9,
-        Lens: ["RF-S 18-150", "RF-S 18-45", "R10 Body Only"],
+        lens: ["RF-S 18-150", "RF-S 18-45", "R10 Body Only"],
         colors: {
           "#2E2C2F": {
             cardImages: ["https://i.imghippo.com/files/purjY1723716206.png"],
@@ -623,7 +626,7 @@ export const ProductProvider = ({ children }) => {
               "R10 Body Only": "95,190",
             },
           },
-  
+
           "#F0F1F2": {
             cardImages: ["https://i.imghippo.com/files/4vD3v1723716184.png"],
             detailImages: [
@@ -655,7 +658,7 @@ export const ProductProvider = ({ children }) => {
           "great performance",
         ],
       },
-  
+
       {
         id: crypto.randomUUID(),
         category: "Accessories",
@@ -738,16 +741,16 @@ export const ProductProvider = ({ children }) => {
               "https://i.imghippo.com/files/odBsF1722159182.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
             ],
-            price: "16,999"
+            price: "16,999",
           },
-  
+
           "#F0F1F2": {
             cardImages: ["https://i.imghippo.com/files/c4cSK1723267378.png"],
             detailImages: [
               "https://i.imghippo.com/files/odBsF1722159182.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
             ],
-            price: "17,999"
+            price: "17,999",
           },
         },
         specifications: {
@@ -784,25 +787,25 @@ export const ProductProvider = ({ children }) => {
               "https://i.imghippo.com/files/odBsF1722159182.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
             ],
-            price: "5,499"
+            price: "5,499",
           },
-  
+
           "#E7E7ED": {
             cardImages: ["https://i.imghippo.com/files/TwYd61723267401.png"],
             detailImages: [
               "https://i.imghippo.com/files/odBsF1722159182.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
             ],
-            price: "6,099"
+            price: "6,099",
           },
-  
+
           "#4FBCF7": {
             cardImages: ["https://i.imghippo.com/files/fJM2k1723267181.png"],
             detailImages: [
               "https://i.imghippo.com/files/odBsF1722159182.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
             ],
-            price: "6,799"
+            price: "6,799",
           },
         },
         specifications: {
@@ -814,10 +817,10 @@ export const ProductProvider = ({ children }) => {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, praesentium.",
         reviews: ["great product", "great battery", "great cameras"],
       },
-    ]
+    ];
     localStorage.setItem("products", JSON.stringify(initialProducts));
     setProducts(initialProducts);
-  },[])
+  }, []);
 
   const currency = "₹";
 

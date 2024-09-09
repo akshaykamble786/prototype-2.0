@@ -88,17 +88,17 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-500 font-medium">
                 <li className="mb-3">
-                  <Link to="#" className="hover:underline">
+                  <Link to="/mobiles" className="hover:underline">
                     Smartphones
                   </Link>
                 </li>
                 <li className="mb-3">
-                  <Link to="#" className="hover:underline">
+                  <Link to="/appliances" className="hover:underline">
                     Home Appliances
                   </Link>
                 </li>
                 <li className="mb-3">
-                  <Link to="#" className="hover:underline">
+                  <Link to="/computing" className="hover:underline">
                     Computers
                   </Link>
                 </li>
@@ -108,7 +108,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li className="mb-3">
-                  <Link to="#" className="hover:underline">
+                  <Link to="/accessories" className="hover:underline">
                     Accessories
                   </Link>
                 </li>

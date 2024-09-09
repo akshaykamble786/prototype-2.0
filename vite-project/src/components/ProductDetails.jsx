@@ -20,19 +20,28 @@ const ProductDetails = () => {
       const parsedProduct = JSON.parse(storedProduct);
       if (parsedProduct.id === id) {
         setProduct(parsedProduct);
+        if (parsedProduct.colors) {
+          setSelectedColor(Object.keys(parsedProduct.colors)[0]); // Set default color if colors exist
+        }
       } else {
         const foundProduct = products.find((prod) => prod.id === id);
         setProduct(foundProduct);
-
-        if (foundProduct)
+        if (foundProduct) {
           localStorage.setItem("selectedProduct", JSON.stringify(foundProduct));
+          if (foundProduct.colors) {
+            setSelectedColor(Object.keys(foundProduct.colors)[0]); // Set default color if colors exist
+          }
+        }
       }
     } else {
       const foundProduct = products.find((prod) => prod.id === id);
       setProduct(foundProduct);
-
-      if (foundProduct)
+      if (foundProduct) {
         localStorage.setItem("selectedProduct", JSON.stringify(foundProduct));
+        if (foundProduct.colors) {
+          setSelectedColor(Object.keys(foundProduct.colors)[0]); // Set default color if colors exist
+        }
+      }
     }
   }, [id, products]);
 
@@ -59,7 +68,7 @@ const ProductDetails = () => {
 
   // Determine the cost based on selected color and storage
   const currentCost =
-    selectedColor && selectedStorage
+    selectedColor && product.colors && product.colors[selectedColor] && selectedStorage
       ? product.colors[selectedColor].price[selectedStorage]
       : product.cost;
 
@@ -69,29 +78,17 @@ const ProductDetails = () => {
       <div className="relative flex flex-col">
         <img
           src={
-            selectedColor && product.colors[selectedColor]
+            selectedColor && product.colors && product.colors[selectedColor]
               ? product.colors[selectedColor].detailImages[0]
-              : Object.values(product.colors)[0].detailImages[0] // Default to the first color if none is selected
+              : product.cardImages
+              ? product.cardImages[0]
+              : Object.values(product.colors || {})[0]?.detailImages[0]
           }
           alt={product.title}
           className="w-full h-auto object-contain rounded-lg mb-4"
         />
         <MdCompare className="w-8 h-8 absolute top-5 right-0 text-gray-400" />
         <MdOutlineShare className="w-8 h-8 absolute top-5 right-10 text-gray-400" />
-
-        {/* <div className="flex space-x-2">
-          {product.detailImages[selectedColor].map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`Thumbnail ${index + 1}`}
-              className={`w-16 h-16 object-cover cursor-pointer rounded-lg border ${
-                selectedImage === index ? "border-black" : "border-gray-300"
-              }`}
-              onClick={() => handleImageClick(index)}
-            />
-          ))}
-        </div> */}
       </div>
 
       {/* Right: Product Details */}
@@ -103,7 +100,7 @@ const ProductDetails = () => {
         <div className="flex items-center mt-2">
           <span className="text-yellow-500 text-xl">★ ★ ★ ★ ☆</span>
           <span className="text-gray-600 ml-2 text-sm">
-            (product.reviewCount)
+            ({product.reviewCount})
           </span>
         </div>
 
@@ -112,61 +109,81 @@ const ProductDetails = () => {
             {currency}
             {currentCost}
           </span>
-          <span className="text-gray-500 ml-2 line-through">
-            {currency}
-            {product.originalCost}
-          </span>
+          {product.originalCost && (
+            <span className="text-gray-500 ml-2 line-through">
+              {currency}
+              {product.originalCost}
+            </span>
+          )}
         </div>
 
         <p className="text-gray-600 mt-4">{product.description}</p>
 
         <div className="flex flex-col md:flex-row">
-          {/* color options */}
-          <div className="mt-6 md:mr-8">
-            <span className="text-gray-700 font-semibold">Color</span>
-            {product.colors && (
+          {/* Color options */}
+          {product.colors && Object.keys(product.colors).length > 0 && (
+            <div className="mt-6 md:mr-8">
+              <span className="text-gray-700 font-semibold">Color</span>
               <div className="flex space-x-2 mt-4">
                 {Object.keys(product.colors).map((color) => (
                   <button
                     key={color}
                     className={`w-8 h-8 rounded-full border-2 ${
-                      selectedColor === color
-                        ? "border-red-500"
-                        : "border-gray-300"
+                      selectedColor === color ? "border-red-500" : "border-gray-300"
                     }`}
                     style={{ backgroundColor: color }}
                     onClick={() => handleColorChange(color)}
                   ></button>
                 ))}
               </div>
-            )}
-          </div>
+            </div>
+          )}
 
-          <div className="mt-6">
-            <span className="text-gray-700 font-semibold">Storage</span>
-            {selectedColor && product.colors[selectedColor].price && (
-              <div className="flex space-x-2 mt-4">
-                {Object.keys(product.colors[selectedColor].price).map(
-                  (storage) => (
+          {/* Storage/Type/Capacity options */}
+          {selectedColor &&
+            product.colors &&
+            product.colors[selectedColor]?.price &&
+            Object.keys(product.colors[selectedColor].price).length > 0 && (
+              <div className="mt-6">
+                <span className="text-gray-700 font-semibold">Storage</span>
+                <div className="flex space-x-2 mt-2">
+                  {Object.keys(product.colors[selectedColor].price).map((storage) => (
                     <button
                       key={storage}
                       className={`px-4 py-2 border rounded-lg ${
-                        selectedStorage === storage
-                          ? "border-black"
-                          : "border-gray-300"
+                        selectedStorage === storage ? "border-black" : "border-gray-300"
                       }`}
                       onClick={() => handleStorageChange(storage)}
                     >
                       {storage}
                     </button>
-                  )
-                )}
+                  ))}
+                </div>
               </div>
             )}
-          </div>
+
+          {/* Capacity Options */}
+          {product.capacity && (
+            <div className="mt-6">
+              <span className="text-gray-700 font-semibold">Capacity</span>
+              <div className="flex space-x-2 mt-2">
+                {product.capacity.map((cap) => (
+                  <button
+                    key={cap}
+                    className={`px-4 py-2 border rounded-lg ${
+                      selectedStorage === cap ? "border-black" : "border-gray-300"
+                    }`}
+                    onClick={() => handleStorageChange(cap)}
+                  >
+                    {cap}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
-        {/* quantity feature */}
+        {/* Quantity feature */}
         <div className="mt-4 flex items-center">
           <span className="text-gray-700 font-semibold">Quantity</span>
           <button
@@ -189,45 +206,40 @@ const ProductDetails = () => {
         </div>
 
         {/* Buttons */}
-
         <div className="mt-6 flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
-          <button className="w-full md:w-auto px-6 py-2 bg-custom-darkblue text-white rounded-md">
+          <button className="w-full md:w-auto px-8 py-2 bg-custom-darkblue text-white rounded-md">
             Add to Cart
           </button>
-          <button className="flex w-full md:w-auto px-6 py-2 border border-gray-500 text-black rounded-md">
+          <button className="flex w-full md:w-auto px-8 py-2 border border-gray-500 text-black rounded-md">
             Add to wishlist
           </button>
         </div>
       </div>
 
-      {/* tab */}
+      {/* Tabs */}
       <div className="mt-8">
         <div className="border-b border-gray-500">
           <nav className="flex">
             <button
               onClick={() => setActiveTab("highlights")}
               className={`py-3 border border-gray-500 px-2 ${
-                activeTab === "highlights" ? "font-semibold" : "text-gray-600"
+                activeTab === "highlights" ? "text-blue-500" : ""
               }`}
             >
               Highlights
             </button>
             <button
-              onClick={() => setActiveTab("specifications")}
+              onClick={() => setActiveTab("description")}
               className={`py-3 border border-gray-500 px-2 ${
-                activeTab === "specifications"
-                  ? "font-semibold"
-                  : "text-gray-600"
+                activeTab === "description" ? "text-blue-500" : ""
               }`}
             >
-              Specifications
+              Description
             </button>
             <button
-              onClick={() => setActiveTab("shippingAndReturns")}
+              onClick={() => setActiveTab("shipping")}
               className={`py-3 border border-gray-500 px-2 ${
-                activeTab === "shippingAndReturns"
-                  ? "font-semibold"
-                  : "text-gray-600"
+                activeTab === "shipping" ? "text-blue-500" : ""
               }`}
             >
               Shipping & Returns
@@ -235,44 +247,25 @@ const ProductDetails = () => {
           </nav>
         </div>
 
-        {/* tab content */}
-        <div className="border border-gray-500 p-4 mt-[-2px]">
-          {activeTab === "highlights" && (
-            <ul className="list-disc pl-5">
+        {activeTab === "highlights" && (
+          <div className="p-4 mt-3">
+            <ul className="list-disc list-inside">
               {product.highlights.map((highlight, index) => (
                 <li key={index}>{highlight}</li>
               ))}
             </ul>
-          )}
-
-          {activeTab === "specifications" && (
-            <table className="text-sm">
-              <tbody>
-                {Object.entries(product.specifications).map(
-                  ([key, value], index) => (
-                    <tr key={index}>
-                      <td className="px-4 py-2 font-medium text-gray-700">
-                        {key}
-                      </td>
-                      <td className="px-4 py-2">{value}</td>
-                    </tr>
-                  )
-                )}
-              </tbody>
-            </table>
-          )}
-
-          {activeTab === "shippingAndReturns" && (
-            <ul className="list-disc pl-5">
-              {product.shippingAndReturns.map((info, index) => (
-                <li key={index}>{info}</li>
-              ))}
-            </ul>
-          )}
-        </div>
+          </div>
+        )}
+        {activeTab === "description" && (
+          <div className="p-4">{product.description}</div>
+        )}
+        {activeTab === "shipping" && (
+          <div className="p-4">{product.shippingAndReturns}</div>
+        )}
       </div>
     </div>
   );
 };
 
 export default ProductDetails;
+
