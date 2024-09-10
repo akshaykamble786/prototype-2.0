@@ -22,11 +22,11 @@ export const ProductProvider = ({ children }) => {
         storage: ["256 GB", "512 GB"],
         colors: {
           "#414141": {
-            cardImages: ["https://i.imghippo.com/files/odBsF1722159182.png"],
-            detailImages: [
+            images: [
               "https://i.imghippo.com/files/odBsF1722159182.png",
-              "https://m.media-amazon.com/images/I/61Jrsu9d3-L._SX679_.jpg",
-              "https://m.media-amazon.com/images/I/715zWp1q7rL._SX679_.jpg",
+              "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               "256 GB": "1,49,990",
@@ -34,9 +34,9 @@ export const ProductProvider = ({ children }) => {
             },
           },
 
-          "#DEDBD2": {
-            cardImages: ["https://i.imghippo.com/files/9xQok1722159207.png"],
-            detailImages: [
+          "#F0F1F2": {
+            images: [
+              "https://i.imghippo.com/files/9xQok1722159207.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
               "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
               "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
@@ -48,11 +48,11 @@ export const ProductProvider = ({ children }) => {
           },
 
           "#273039": {
-            cardImages: ["https://i.imghippo.com/files/3Aebh1722159154.png"],
-            detailImages: [
+            images: [
               "https://i.imghippo.com/files/3Aebh1722159154.png",
-              "https://m.media-amazon.com/images/I/61HZS-ZSCLL._SX679_.jpg",
-              "https://m.media-amazon.com/images/I/71kGvmn-t8L._SX679_.jpg",
+              "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               "256 GB": "1,59,990",
@@ -61,11 +61,11 @@ export const ProductProvider = ({ children }) => {
           },
 
           "#959188": {
-            cardImages: ["https://i.imghippo.com/files/d21Iw1722159117.png"],
-            detailImages: [
+            images: [
               "https://i.imghippo.com/files/d21Iw1722159117.png",
-              "https://m.media-amazon.com/images/I/51UtwJ0576L._SX679_.jpg",
-              "https://m.media-amazon.com/images/I/71lmRVkniLL._SX679_.jpg",
+              "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               "256 GB": "1,49,990",
@@ -94,9 +94,11 @@ export const ProductProvider = ({ children }) => {
         storage: ["512 GB", "1 TB"],
         colors: {
           "#453F57": {
-            cardImages: ["https://i.imghippo.com/files/z7flt1722158064.png"],
-            detailImages: [
-              'https://i.imghippo.com/files/z7flt1722158064.png',
+            images: [
+              "https://i.imghippo.com/files/z7flt1722158064.png",
+              "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               "512 GB": "1,79,990",
@@ -105,10 +107,11 @@ export const ProductProvider = ({ children }) => {
           },
 
           "#F0E1B9": {
-            cardImages: ["https://i.imghippo.com/files/DO4I31722158126.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/DO4I31722158126.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               "512 GB": "1,79,990",
@@ -146,10 +149,11 @@ export const ProductProvider = ({ children }) => {
         storage: ["128 GB", "256 GB"],
         colors: {
           "#6C8582": {
-            cardImages: ["https://i.imghippo.com/files/7AUxZ1722158911.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/7AUxZ1722158911.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               "128 GB": "43,990",
@@ -158,10 +162,11 @@ export const ProductProvider = ({ children }) => {
           },
 
           "#6691B7": {
-            cardImages: ["https://i.imghippo.com/files/G3iXH1722158879.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/G3iXH1722158879.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               "128 GB": "43,990",
@@ -199,10 +204,11 @@ export const ProductProvider = ({ children }) => {
         storage: ["128 GB", "256 GB"],
         colors: {
           "#252525": {
-            cardImages: ["https://i.imghippo.com/files/HtMIv1722159041.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/HtMIv1722159041.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               "128 GB": "1,09,990",
@@ -211,10 +217,11 @@ export const ProductProvider = ({ children }) => {
           },
 
           "#FEDEC9": {
-            cardImages: ["https://i.imghippo.com/files/1dd6c1722159072.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/1dd6c1722159072.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               "128 GB": "1,09,990",
@@ -252,10 +259,11 @@ export const ProductProvider = ({ children }) => {
         storage: ["512 GB", "1 TB"],
         colors: {
           "#465066": {
-            cardImages: ["https://i.imghippo.com/files/4dDBx1722158230.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/4dDBx1722158230.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               "512 GB": "1,64,999",
@@ -264,10 +272,11 @@ export const ProductProvider = ({ children }) => {
           },
 
           "#7E7E7E": {
-            cardImages: ["https://i.imghippo.com/files/c4TUe1722158339.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/c4TUe1722158339.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               "512 GB": "1,64,999",
@@ -275,10 +284,11 @@ export const ProductProvider = ({ children }) => {
             },
           },
           "#E9D6DB": {
-            cardImages: ["https://i.imghippo.com/files/DKtvy1722158286.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/DKtvy1722158286.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               "512 GB": "1,64,999",
@@ -317,10 +327,11 @@ export const ProductProvider = ({ children }) => {
         type: ["Digital", "Manual"],
         colors: {
           "#33494F": {
-            cardImages: ["https://i.imghippo.com/files/vhGY71722420758.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/vhGY71722420758.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               Digital: "2,659",
@@ -329,10 +340,11 @@ export const ProductProvider = ({ children }) => {
           },
 
           "#3B3B3B": {
-            cardImages: ["https://i.imghippo.com/files/jJjjZ1723197300.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/jJjjZ1723197300.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               Digital: "2,759",
@@ -368,8 +380,12 @@ export const ProductProvider = ({ children }) => {
         rating: 4.5,
         reviewCount: 34,
         capacity: ["6 Litres", "10 Litres", "15 Litres"],
-        cardImages: ["https://i.imghippo.com/files/3UMZQ1722420676.png"],
-        detailImages: [""],
+        images: [
+          "https://i.imghippo.com/files/3UMZQ1722420676.png",
+          "https://i.imghippo.com/files/9xQok1722159207.png",
+          "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+          "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+        ],
         price: {
           "6 Litres": "5,699",
           "10 Litres": "5,799",
@@ -396,10 +412,11 @@ export const ProductProvider = ({ children }) => {
         type: ["Solo", "Grill"],
         colors: {
           "#80578D": {
-            cardImages: ["https://i.imghippo.com/files/fnv3L1722420847.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/fnv3L1722420847.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               Solo: "7,490",
@@ -408,10 +425,11 @@ export const ProductProvider = ({ children }) => {
           },
 
           "#16151B": {
-            cardImages: ["https://i.imghippo.com/files/gG9jE1722938134.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/gG9jE1722938134.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               Solo: "7,490",
@@ -447,8 +465,12 @@ export const ProductProvider = ({ children }) => {
         rating: 4.3,
         reviewCount: 39,
         capacity: ["530 Litres", "560 Litres", "600 Litres"],
-        cardImages: ["https://i.imghippo.com/files/MMnFK1722420738.png"],
-        detailImages: [""],
+        images: [
+          "https://i.imghippo.com/files/MMnFK1722420738.png",
+          "https://i.imghippo.com/files/9xQok1722159207.png",
+          "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+          "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+        ],
         price: {
           "530 Litres": "56,990",
           "560 Litres": "59,799",
@@ -473,8 +495,12 @@ export const ProductProvider = ({ children }) => {
         rating: 4.8,
         reviewCount: 59,
         capacity: ["1.5 Ton 3 Star", "2 Ton 4 Star", "2.2 Ton 5 Star"],
-        cardImages: ["https://i.imghippo.com/files/gHRSb1722420835.png"],
-        detailImages: [""],
+        images: [
+          "https://i.imghippo.com/files/gHRSb1722420835.png",
+          "https://i.imghippo.com/files/9xQok1722159207.png",
+          "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+          "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+        ],
         price: {
           "1.5 Ton 3 Star": "44,990",
           "2 Ton 4 Star": "52,300",
@@ -502,10 +528,11 @@ export const ProductProvider = ({ children }) => {
         storage: ["512 GB", "1 TB"],
         colors: {
           "#2E2C2F": {
-            cardImages: ["https://i.imghippo.com/files/qsCJb1723198202.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/qsCJb1723198202.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               "512 GB": "2,39,990",
@@ -514,10 +541,11 @@ export const ProductProvider = ({ children }) => {
           },
 
           "#F0F1F2": {
-            cardImages: ["https://i.imghippo.com/files/Tl4mP1723198222.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/Tl4mP1723198222.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               "512 GB": "2,39,990",
@@ -552,8 +580,12 @@ export const ProductProvider = ({ children }) => {
         sale: false,
         rating: 4.4,
         reviewCount: 29,
-        cardImages: ["https://i.imghippo.com/files/w63dX1723197583.png"],
-        detailImages: [""],
+        images: [
+          "https://i.imghippo.com/files/w63dX1723197583.png",
+          "https://i.imghippo.com/files/9xQok1722159207.png",
+          "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+          "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+        ],
         specifications: {
           "In the box": "Machine",
         },
@@ -572,8 +604,12 @@ export const ProductProvider = ({ children }) => {
         sale: true,
         rating: 4.8,
         reviewCount: 11,
-        cardImages: ["https://i.imghippo.com/files/HiTzb1723197628.png"],
-        detailImages: [""],
+        images: [
+          "https://i.imghippo.com/files/HiTzb1723197628.png",
+          "https://i.imghippo.com/files/9xQok1722159207.png",
+          "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+          "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+        ],
         specifications: {
           "In the box": "Machine",
         },
@@ -592,8 +628,12 @@ export const ProductProvider = ({ children }) => {
         sale: true,
         rating: 4.1,
         reviewCount: 31,
-        cardImages: ["https://i.imghippo.com/files/883w31723197920.png"],
-        detailImages: [""],
+        images: [
+          "https://i.imghippo.com/files/883w31723197920.png",
+          "https://i.imghippo.com/files/9xQok1722159207.png",
+          "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+          "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+        ],
         specifications: {
           "In the box": "Machine",
         },
@@ -615,10 +655,11 @@ export const ProductProvider = ({ children }) => {
         lens: ["RF-S 18-150", "RF-S 18-45", "R10 Body Only"],
         colors: {
           "#2E2C2F": {
-            cardImages: ["https://i.imghippo.com/files/purjY1723716206.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/purjY1723716206.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               "RF-S 18-150": "73,500",
@@ -628,10 +669,11 @@ export const ProductProvider = ({ children }) => {
           },
 
           "#F0F1F2": {
-            cardImages: ["https://i.imghippo.com/files/4vD3v1723716184.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/4vD3v1723716184.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: {
               "RF-S 18-150": "73,500",
@@ -668,8 +710,12 @@ export const ProductProvider = ({ children }) => {
         sale: false,
         rating: 3.8,
         reviewCount: 65,
-        cardImages: ["https://i.imghippo.com/files/qZcJx1723267265.png"],
-        detailImages: [""],
+        images: [
+          "https://i.imghippo.com/files/qZcJx1723267265.png",
+          "https://i.imghippo.com/files/9xQok1722159207.png",
+          "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+          "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+        ],
         specifications: {
           "In the box": "Machine",
         },
@@ -689,8 +735,12 @@ export const ProductProvider = ({ children }) => {
         rating: 4.9,
         reviewCount: 12,
         capacity: ["10000 mAh", "20000 mAh", "27000 mAh"],
-        cardImages: ["https://i.imghippo.com/files/kiH3P1723267325.png"],
-        detailImages: [""],
+        images: [
+          "https://i.imghippo.com/files/kiH3P1723267325.png",
+          "https://i.imghippo.com/files/9xQok1722159207.png",
+          "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+          "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+        ],
         price: {
           "10000 mAh": "6,999",
           "20000 mAh": "7,999",
@@ -714,8 +764,12 @@ export const ProductProvider = ({ children }) => {
         sale: true,
         rating: 4.2,
         reviewCount: 16,
-        cardImages: ["https://i.imghippo.com/files/b4U2b1723267046.png"],
-        detailImages: [""],
+        images: [
+          "https://i.imghippo.com/files/b4U2b1723267046.png",
+          "https://i.imghippo.com/files/9xQok1722159207.png",
+          "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+          "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+        ],
         specifications: {
           "In the box": "Machine",
         },
@@ -736,19 +790,21 @@ export const ProductProvider = ({ children }) => {
         reviewCount: 3,
         colors: {
           "#2E2C2F": {
-            cardImages: ["https://i.imghippo.com/files/Cpohd1723267074.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/Cpohd1723267074.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: "16,999",
           },
 
           "#F0F1F2": {
-            cardImages: ["https://i.imghippo.com/files/c4cSK1723267378.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/c4cSK1723267378.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: "17,999",
           },
@@ -782,28 +838,31 @@ export const ProductProvider = ({ children }) => {
         reviewCount: 23,
         colors: {
           "#0B0C10": {
-            cardImages: ["https://i.imghippo.com/files/rFioc1723267113.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/rFioc1723267113.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: "5,499",
           },
 
           "#E7E7ED": {
-            cardImages: ["https://i.imghippo.com/files/TwYd61723267401.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/TwYd61723267401.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: "6,099",
           },
 
           "#4FBCF7": {
-            cardImages: ["https://i.imghippo.com/files/fJM2k1723267181.png"],
-            detailImages: [
-              "https://i.imghippo.com/files/odBsF1722159182.png",
+            images: [
+              "https://i.imghippo.com/files/fJM2k1723267181.png",
               "https://i.imghippo.com/files/9xQok1722159207.png",
+              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
             ],
             price: "6,799",
           },

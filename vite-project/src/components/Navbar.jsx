@@ -206,11 +206,6 @@ const Navbar = () => {
           <div className="relative z-50">
             <button onClick={toggleDropdown} className="flex items-center">
               <CiUser className="text-gray-800 h-6 w-6" />
-              {isDropdownOpen ? (
-                <ChevronUpIcon className="h-4 w-4 ml-1" />
-              ) : (
-                <ChevronDownIcon className="h-4 w-4 ml-1" />
-              )}
             </button>
 
             {isDropdownOpen && (

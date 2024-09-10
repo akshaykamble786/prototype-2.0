@@ -9,7 +9,6 @@ import Footer from "./components/Footer";
 import Accessories from "./pages/Accessories";
 import NotFound404 from "./components/404NotFound";
 import Cart from "./pages/Cart.jsx";
-import ProductDetail from "./components/ProductDetail.jsx";
 import Account from "./pages/Account.jsx";
 import Orders from "./pages/Orders.jsx";
 import Wishlist from "./pages/Wishlist.jsx";
@@ -40,7 +39,7 @@ function Layout() {
           <Route path="/computing" element={<Computing />} />
           <Route path="/accessories" element={<Accessories />} />
 
-          {/* Dynamic Product Detail Pages */}
+          {/* Dynamic Product Details Pages */}
           <Route path="/mobiles/:id" element={<ProductDetails />} />
           <Route path="/appliances/:id" element={<ProductDetails />} />
           <Route path="/computing/:id" element={<ProductDetails />} />
@@ -48,7 +47,6 @@ function Layout() {
 
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<NotFound404 />} />
-          <Route path="/product-detail" element={<ProductDetail />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/account" element={<Account />} />
           <Route path="/wishlist" element={<Wishlist />} />

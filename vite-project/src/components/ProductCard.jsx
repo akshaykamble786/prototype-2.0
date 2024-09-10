@@ -29,8 +29,8 @@ const ProductCard = ({ product }) => {
             className="w-full h-64 object-contain transition-transform duration-300 hover:scale-105 cursor-pointer"
             src={
               hasColors
-                ? product.colors[selectedColor].cardImages[0]
-                : product.cardImages[0]
+                ? product.colors[selectedColor].images[0]
+                : product.images[0]
             }
             alt={product.title}
           />

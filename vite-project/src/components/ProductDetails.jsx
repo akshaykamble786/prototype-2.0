@@ -381,20 +381,40 @@ const ProductDetails = () => {
   return (
     <div className="max-w-6xl mx-auto p-4 grid grid-cols-1 md:grid-cols-2 gap-6">
       {/* Left: Thumbnails and Main Image */}
+
       <div className="relative flex flex-col">
         <img
           src={
             selectedColor && product.colors && product.colors[selectedColor]
-              ? product.colors[selectedColor].detailImages[0]
-              : product.cardImages
-              ? product.cardImages[0]
-              : Object.values(product.colors || {})[0]?.detailImages[0]
+              ? product.colors[selectedColor].images[selectedImage] 
+              : product.images
+              ? product.images[selectedImage]
+              : Object.values(product.colors || {})[0]?.images[selectedImage]
           }
           alt={product.title}
-          className="w-96 h-96 object-center object-contain rounded-lg mb-4"
+          className="w-full h-96 object-center object-contain rounded-lg mb-4"
         />
+
         <MdCompare className="w-8 h-8 absolute top-5 right-0 text-gray-400" />
         <MdOutlineShare className="w-8 h-8 absolute top-5 right-10 text-gray-400" />
+
+        <div className="flex space-x-2">
+          {(selectedColor && product.colors && product.colors[selectedColor]
+            ? product.colors[selectedColor].images 
+            : product.images
+          )
+            .map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Thumbnail ${index + 1}`}
+                className={`w-16 h-16 object-cover cursor-pointer rounded-lg border ${
+                  selectedImage === index ? "border-black" : "border-gray-300"
+                }`}
+                onClick={() => handleImageClick(index)}
+              />
+            ))}
+        </div>
       </div>
 
       {/* Right: Product Details */}
