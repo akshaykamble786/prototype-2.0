@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import ProductCard from "../components/ProductCard";
-import ProductContext from "../context/ProductsContext";
+import useProductsContext from "../hooks/useProductsContext";
 
 const Appliances = () => {
 
-  const { products } = useContext(ProductContext);
+  const { products } = useProductsContext()
 
   return (
     <>

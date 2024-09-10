@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Wishlist from "./Wishlist";
-import ProductContext from "../context/ProductsContext";
+import useProductsContext from "../hooks/useProductsContext";
 
 const ProductCard = ({ product }) => {
-  const { currency } = useContext(ProductContext);
+  const { currency } = useProductsContext()
   const hasColors = product.colors && Object.keys(product.colors).length > 0;
 
   const [selectedColor, setSelectedColor] = useState(
