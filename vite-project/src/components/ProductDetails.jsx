@@ -1,291 +1,4 @@
-// import React, { useContext, useState, useEffect } from "react";
-// import { useParams } from "react-router-dom";
-// import { MdCompare, MdOutlineShare } from "react-icons/md";
-// import useProductsContext from "../hooks/useProductsContext";
-
-// const ProductDetails = () => {
-//   const { id } = useParams();
-//   const { products, currency } = useProductsContext();
-//   const [product, setProduct] = useState(null);
-//   const [selectedColor, setSelectedColor] = useState(null);
-//   const [selectedVariant, setSelectedVariant] = useState(null);
-//   const [selectedImage, setSelectedImage] = useState(0);
-//   const [activeTab, setActiveTab] = useState("highlights");
-//   const [quantity, setQuantity] = useState(1);
-
-//   useEffect(() => {
-//     const storedProduct = localStorage.getItem("selectedProduct");
-
-//     if (storedProduct) {
-//       const parsedProduct = JSON.parse(storedProduct);
-//       if (parsedProduct.id === id) {
-//         setProduct(parsedProduct);
-//         if (parsedProduct.colors) {
-//           setSelectedColor(Object.keys(parsedProduct.colors)[0]); // Set default color if colors exist
-//         }
-//       } else {
-//         const foundProduct = products.find((prod) => prod.id === id);
-//         setProduct(foundProduct);
-//         if (foundProduct) {
-//           localStorage.setItem("selectedProduct", JSON.stringify(foundProduct));
-//           if (foundProduct.colors) {
-//             setSelectedColor(Object.keys(foundProduct.colors)[0]); // Set default color if colors exist
-//           }
-//         }
-//       }
-//     } else {
-//       const foundProduct = products.find((prod) => prod.id === id);
-//       setProduct(foundProduct);
-//       if (foundProduct) {
-//         localStorage.setItem("selectedProduct", JSON.stringify(foundProduct));
-//         if (foundProduct.colors) {
-//           setSelectedColor(Object.keys(foundProduct.colors)[0]); // Set default color if colors exist
-//         }
-//       }
-//     }
-//   }, [id, products]);
-
-//   const handleColorChange = (color) => {
-//     setSelectedColor(color);
-//     setSelectedImage(0);
-//   };
-
-//   const handleVariantChange = (variant) => {
-//     setSelectedVariant(variant);
-//   };
-
-//   const handleImageClick = (index) => {
-//     setSelectedImage(index);
-//   };
-
-//   if (!product) {
-//     return <div>Product not found</div>;
-//   }
-
-//   // Determine the cost based on selected color and variant
-//   const currentCost =
-//     selectedColor &&
-//     product.colors &&
-//     product.colors[selectedColor] &&
-//     selectedVariant
-//       ? product.colors[selectedColor].price[selectedVariant]
-//       : product.cost;
-
-//   // Determine the variant type dynamically
-//   const variantType = product.storage
-//     ? "Storage"
-//     : product.lens
-//     ? "Lens"
-//     : product.type
-//     ? "Type"
-//     : null;
-
-//   const variantOptions = product.storage || product.lens || product.type || [];
-
-//   return (
-//     <div className="max-w-6xl mx-auto p-4 grid grid-cols-1 md:grid-cols-2 gap-6">
-//       {/* Left: Thumbnails and Main Image */}
-//       <div className="relative flex flex-col">
-//         <img
-//           src={
-//             selectedColor && product.colors && product.colors[selectedColor]
-//               ? product.colors[selectedColor].detailImages[0]
-//               : product.cardImages
-//               ? product.cardImages[0]
-//               : Object.values(product.colors || {})[0]?.detailImages[0]
-//           }
-//           alt={product.title}
-//           className="w-96 h-96 object-center object-contain rounded-lg mb-4"
-//         />
-//         <MdCompare className="w-8 h-8 absolute top-5 right-0 text-gray-400" />
-//         <MdOutlineShare className="w-8 h-8 absolute top-5 right-10 text-gray-400" />
-//       </div>
-
-//       {/* Right: Product Details */}
-//       <div className="mt-9 flex flex-col">
-//         <div className="flex items-center justify-between">
-//           <h2 className="text-2xl font-semibold">{product.title}</h2>
-//         </div>
-
-//         <div className="flex items-center mt-2">
-//           <span className="text-yellow-500 text-xl">★ ★ ★ ★ ☆</span>
-//           <span className="text-gray-600 ml-2 text-sm">
-//             ({product.reviewCount})
-//           </span>
-//         </div>
-
-//         <div className="mt-4">
-//           <span className="text-2xl font-bold text-gray-800">
-//             {currency}
-//             {currentCost}
-//           </span>
-//           {product.originalCost && (
-//             <span className="text-gray-500 ml-2 line-through">
-//               {currency}
-//               {product.originalCost}
-//             </span>
-//           )}
-//         </div>
-
-//         <p className="text-gray-600 mt-4">{product.description}</p>
-
-//         <div className="flex flex-col md:flex-row">
-//           {/* Color options */}
-//           {product.colors && Object.keys(product.colors).length > 0 && (
-//             <div className="mt-6 md:mr-8">
-//               <span className="text-gray-700 font-semibold">Color</span>
-//               <div className="flex space-x-2 mt-4">
-//                 {Object.keys(product.colors).map((color) => (
-//                   <button
-//                     key={color}
-//                     className={`w-8 h-8 rounded-full border-2 ${
-//                       selectedColor === color
-//                         ? "border-red-500"
-//                         : "border-gray-300"
-//                     }`}
-//                     style={{ backgroundColor: color }}
-//                     onClick={() => handleColorChange(color)}
-//                   ></button>
-//                 ))}
-//               </div>
-//             </div>
-//           )}
-
-//           {/* Dynamic Variant Options */}
-//           {selectedColor &&
-//             product.colors &&
-//             product.colors[selectedColor]?.price &&
-//             Object.keys(product.colors[selectedColor].price).length > 0 && (
-//               <div className="mt-6">
-//                 <span className="text-gray-700 font-semibold">
-//                   {variantType}
-//                 </span>
-//                 <div className="flex space-x-2 mt-2">
-//                   {variantOptions.map((variant) => (
-//                     <button
-//                       key={variant}
-//                       className={`px-4 py-2 border rounded-lg ${
-//                         selectedVariant === variant &&
-//                         "border-black bg-gray-200"
-//                       }`}
-//                       onClick={() => handleVariantChange(variant)}
-//                     >
-//                       {variant}
-//                     </button>
-//                   ))}
-//                 </div>
-//               </div>
-//             )}
-//         </div>
-
-//         {/* Quantity feature */}
-//         <div className="mt-4 flex items-center">
-//           <span className="text-gray-700 font-semibold">Quantity</span>
-//           <button
-//             className="ml-4 border border-gray p-2"
-//             onClick={() =>
-//               setQuantity((prevQuantity) =>
-//                 prevQuantity > 1 ? prevQuantity - 1 : 1
-//               )
-//             }
-//           >
-//             -
-//           </button>
-//           <span className="border border-gray p-2 px-6">{quantity}</span>
-//           <button
-//             className="border border-gray p-2"
-//             onClick={() => setQuantity((prevQuantity) => quantity + 1)}
-//           >
-//             +
-//           </button>
-//         </div>
-
-//         {/* Buttons */}
-//         <div className="mt-6 flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
-//           <button className="w-full md:w-auto px-8 py-2 bg-custom-darkblue text-white rounded-md">
-//             Add to Cart
-//           </button>
-//           <button className="flex w-full md:w-auto px-8 py-2 border border-gray-500 text-black rounded-md">
-//             Add to wishlist
-//           </button>
-//         </div>
-//       </div>
-
-//       {/* Tabs */}
-//       <div className="mt-8">
-//         <div className="border-b border-gray-500">
-//           <nav className="flex">
-//             <button
-//               onClick={() => setActiveTab("highlights")}
-//               className={`py-3 border border-gray-500 px-2 ${
-//                 activeTab === "highlights" && "bg-gray-200 font-semibold"
-//               }`}
-//             >
-//               Highlights
-//             </button>
-//             <button
-//               onClick={() => setActiveTab("specifications")}
-//               className={`py-3 border border-gray-500 px-2 ${
-//                 activeTab === "specifications" && "bg-gray-200 font-semibold"
-//               }`}
-//             >
-//               Specifications
-//             </button>
-//             <button
-//               onClick={() => setActiveTab("shippingAndReturns")}
-//               className={`py-3 border border-gray-500 px-2 ${
-//                 activeTab === "shippingAndReturns" &&
-//                 "bg-gray-200 font-semibold"
-//               }`}
-//             >
-//               Shipping & Returns
-//             </button>
-//           </nav>
-//         </div>
-
-//         {/* Tab Content */}
-//         <div className="border border-gray-500 p-4 mt-[-1px]">
-//           {activeTab === "highlights" && (
-//             <ul className="list-disc pl-5">
-//               {product.highlights.map((highlight, index) => (
-//                 <li key={index}>{highlight}</li>
-//               ))}
-//             </ul>
-//           )}
-
-//           {activeTab === "specifications" && (
-//             <table className="text-md">
-//               <tbody>
-//                 {Object.entries(product.specifications).map(
-//                   ([key, value], index) => (
-//                     <tr key={index}>
-//                       <td className="px-4 py-2 font-extrabold text-gray-700">
-//                         {key}
-//                       </td>
-//                       <td className="px-4 py-2">{value}</td>
-//                     </tr>
-//                   )
-//                 )}
-//               </tbody>
-//             </table>
-//           )}
-
-//           {activeTab === "shippingAndReturns" && (
-//             <ul className="list-disc pl-5">
-//               {product.shippingAndReturns.map((info, index) => (
-//                 <li key={index}>{info}</li>
-//               ))}
-//             </ul>
-//           )}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ProductDetails;
-
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { MdCompare, MdOutlineShare } from "react-icons/md";
 import useProductsContext from "../hooks/useProductsContext";
@@ -353,19 +66,40 @@ const ProductDetails = () => {
     return <div>Product not found</div>;
   }
 
-  // Determine the cost based on selected color and variant
-  const currentCost =
-    selectedVariant && product.price && product.price[selectedVariant]
-      ? product.price[selectedVariant]
-      : selectedColor &&
-        product.colors &&
-        product.colors[selectedColor] &&
-        product.colors[selectedColor].price &&
-        selectedVariant
-      ? product.colors[selectedColor].price[selectedVariant]
-      : product.cost;
+  // const currentCost =
+  //   selectedVariant && product.price && product.price[selectedVariant]
+  //     ? product.price[selectedVariant]
+  //     : selectedColor &&
+  //       product.colors &&
+  //       product.colors[selectedColor] &&
+  //       product.colors[selectedColor].price &&
+  //       selectedVariant
+  //     ? product.colors[selectedColor].price[selectedVariant]
+  //     : product.cost;
 
-  // Determine the variant options dynamically
+  const currentCost = (() => {
+    if (selectedColor && product.colors && product.colors[selectedColor]) {
+      const colorData = product.colors[selectedColor];
+
+      if (
+        selectedVariant &&
+        colorData.price &&
+        typeof colorData.price === "object" &&
+        colorData.price[selectedVariant]
+      ) {
+        return colorData.price[selectedVariant];
+      } else if (colorData.price && typeof colorData.price !== "object") {
+        return colorData.price;
+      }
+    }
+
+    if (selectedVariant && product.price && product.price[selectedVariant]) {
+      return product.price[selectedVariant];
+    }
+
+    return product.cost;
+  })();
+
   const variantType = product.storage
     ? "storage"
     : product.capacity
@@ -407,7 +141,7 @@ const ProductDetails = () => {
               key={index}
               src={image}
               alt={`Thumbnail ${index + 1}`}
-              className={`w-16 h-16 object-cover cursor-pointer rounded-lg border ${
+              className={`w-16 h-16 object-contain cursor-pointer rounded-lg border ${
                 selectedImage === index ? "border-black" : "border-gray-300"
               }`}
               onClick={() => handleImageClick(index)}
@@ -516,8 +250,8 @@ const ProductDetails = () => {
           <button className="w-full md:w-auto px-8 py-2 bg-custom-darkblue text-white rounded-md">
             Add to Cart
           </button>
-          <button className="flex w-full md:w-auto px-8 py-2 border border-gray-500 text-black rounded-md">
-            Add to wishlist
+          <button className="w-full md:w-auto px-8 py-2 bg-white border border-black text-black rounded-md">
+            Add to Wishlist
           </button>
         </div>
       </div>
@@ -529,7 +263,7 @@ const ProductDetails = () => {
             <button
               onClick={() => setActiveTab("highlights")}
               className={`py-3 border border-gray-500 px-2 ${
-                activeTab === "highlights" && "bg-gray-200 font-semibold"
+                activeTab === "highlights" && "bg-gray-200"
               }`}
             >
               Highlights
@@ -537,7 +271,7 @@ const ProductDetails = () => {
             <button
               onClick={() => setActiveTab("specifications")}
               className={`py-3 border border-gray-500 px-2 ${
-                activeTab === "specifications" && "bg-gray-200 font-semibold"
+                activeTab === "specifications" && "bg-gray-200"
               }`}
             >
               Specifications
@@ -546,7 +280,7 @@ const ProductDetails = () => {
               onClick={() => setActiveTab("shippingAndReturns")}
               className={`py-3 border border-gray-500 px-2 ${
                 activeTab === "shippingAndReturns" &&
-                "bg-gray-200 font-semibold"
+                "bg-gray-200"
               }`}
             >
               Shipping & Returns
@@ -557,7 +291,7 @@ const ProductDetails = () => {
         {/* Tab Content */}
         <div className="border border-gray-500 p-4 mt-[-2px]">
           {activeTab === "highlights" && (
-            <ul className="list-disc pl-5">
+            <ul className="list-disc pl-5 text-sm">
               {product.highlights.map((highlight, index) => (
                 <li key={index}>{highlight}</li>
               ))}
@@ -582,7 +316,7 @@ const ProductDetails = () => {
           )}
 
           {activeTab === "shippingAndReturns" && (
-            <ul className="list-disc pl-5">
+            <ul className="list-disc pl-5 text-sm">
               {product.shippingAndReturns.map((info, index) => (
                 <li key={index}>{info}</li>
               ))}
