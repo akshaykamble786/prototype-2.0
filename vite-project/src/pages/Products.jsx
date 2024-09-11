@@ -299,7 +299,7 @@ const HomePage = () => {
         </div>
       </div>
 
-        <h2 className="text-3xl font-medium text-left mt-6">Why Elektra?</h2>
+        <h2 className="text-3xl font-medium text-left mt-6">Why Eleqtra?</h2>
         <div className="bg-gradient-to-b from-gray-200 to-gray-300 rounded-lg mt-4 p-12">
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:flex lg:justify-between lg:gap-12">
             <div className="text-center flex flex-col items-center">

@@ -46,7 +46,7 @@ const Navbar = () => {
               )}
             </button>
             <Link className="text-xl font-bold text-gray-800" to="/">
-              ELEKTRA
+              ELEQTRA
             </Link>
           </div>
 
@@ -157,7 +157,7 @@ const Navbar = () => {
       <div className="hidden lg:flex justify-between items-center">
         {/* Left: Brand Name */}
         <Link className="text-2xl font-bold ml-10 text-gray-800" to="/">
-          ELEKTRA
+          ELEQTRA
         </Link>
 
         {/* Center: Navigation Links */}

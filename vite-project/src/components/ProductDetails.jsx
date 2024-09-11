@@ -386,13 +386,13 @@ const ProductDetails = () => {
         <img
           src={
             selectedColor && product.colors && product.colors[selectedColor]
-              ? product.colors[selectedColor].images[selectedImage] 
+              ? product.colors[selectedColor].images[selectedImage]
               : product.images
               ? product.images[selectedImage]
               : Object.values(product.colors || {})[0]?.images[selectedImage]
           }
           alt={product.title}
-          className="w-full h-96 object-center object-contain rounded-lg mb-4"
+          className="w-full h-96 object-contain rounded-lg mb-4"
         />
 
         <MdCompare className="w-8 h-8 absolute top-5 right-0 text-gray-400" />
@@ -400,20 +400,19 @@ const ProductDetails = () => {
 
         <div className="flex space-x-2">
           {(selectedColor && product.colors && product.colors[selectedColor]
-            ? product.colors[selectedColor].images 
+            ? product.colors[selectedColor].images
             : product.images
-          )
-            .map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                alt={`Thumbnail ${index + 1}`}
-                className={`w-16 h-16 object-cover cursor-pointer rounded-lg border ${
-                  selectedImage === index ? "border-black" : "border-gray-300"
-                }`}
-                onClick={() => handleImageClick(index)}
-              />
-            ))}
+          ).map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`Thumbnail ${index + 1}`}
+              className={`w-16 h-16 object-cover cursor-pointer rounded-lg border ${
+                selectedImage === index ? "border-black" : "border-gray-300"
+              }`}
+              onClick={() => handleImageClick(index)}
+            />
+          ))}
         </div>
       </div>
 

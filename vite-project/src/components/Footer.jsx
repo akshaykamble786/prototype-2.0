@@ -11,7 +11,7 @@ export default function Footer() {
               className="text-4xl flex items-center font-bold text-gray-800 lg:text-2xl"
               to="/"
             >
-              ELEKTRA
+              ELEQTRA
             </Link>
           </div>
 
@@ -23,7 +23,7 @@ export default function Footer() {
               <ul className="text-gray-500 font-medium">
                 <li className="mb-3">
                   <Link to="/" className="hover:underline">
-                    About ELEKTRA
+                    About ELEQTRA
                   </Link>
                 </li>
                 <li className="mb-3">
@@ -130,7 +130,7 @@ export default function Footer() {
         <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center">
-            © 2024 ELEKTRA. All Rights Reserved.
+            © 2024 ELEQTRA. All Rights Reserved.
           </span>
           <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
             <Link to="#" className="text-gray-500 hover:text-gray-900">

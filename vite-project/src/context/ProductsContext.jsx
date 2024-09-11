@@ -24,9 +24,9 @@ export const ProductProvider = ({ children }) => {
           "#414141": {
             images: [
               "https://i.imghippo.com/files/odBsF1722159182.png",
-              "https://i.imghippo.com/files/9xQok1722159207.png",
-              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
-              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/61Jrsu9d3-L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/715zWp1q7rL._SX679_.jpg",
+              "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1708678674/Croma%20Assets/Communication/Mobiles/Images/300823_10_kj9wjc.png?tr=w-360"
             ],
             price: {
               "256 GB": "1,49,990",
@@ -37,9 +37,9 @@ export const ProductProvider = ({ children }) => {
           "#F0F1F2": {
             images: [
               "https://i.imghippo.com/files/9xQok1722159207.png",
-              "https://i.imghippo.com/files/9xQok1722159207.png",
               "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
               "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+              "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1708678648/Croma%20Assets/Communication/Mobiles/Images/300820_10_xheaea.png?tr=w-360"
             ],
             price: {
               "256 GB": "1,69,990",
@@ -50,9 +50,9 @@ export const ProductProvider = ({ children }) => {
           "#273039": {
             images: [
               "https://i.imghippo.com/files/3Aebh1722159154.png",
-              "https://i.imghippo.com/files/9xQok1722159207.png",
-              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
-              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/61HZS-ZSCLL._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71kGvmn-t8L._SX679_.jpg",
+              "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1708678750/Croma%20Assets/Communication/Mobiles/Images/300824_10_pul1r9.png?tr=w-360",
             ],
             price: {
               "256 GB": "1,59,990",
@@ -63,9 +63,9 @@ export const ProductProvider = ({ children }) => {
           "#959188": {
             images: [
               "https://i.imghippo.com/files/d21Iw1722159117.png",
-              "https://i.imghippo.com/files/9xQok1722159207.png",
-              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
-              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/51UtwJ0576L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/71lmRVkniLL._SX679_.jpg",
+              "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1708677748/Croma%20Assets/Communication/Mobiles/Images/300836_10_hnrutz.png?tr=w-360",
             ],
             price: {
               "256 GB": "1,49,990",
@@ -96,9 +96,8 @@ export const ProductProvider = ({ children }) => {
           "#453F57": {
             images: [
               "https://i.imghippo.com/files/z7flt1722158064.png",
-              "https://i.imghippo.com/files/9xQok1722159207.png",
-              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
-              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+              "https://d2xamzlzrdbdbn.cloudfront.net/products/b9869a24-9d53-4167-a21d-8a2e0967f41a24181113.jpg",
+              "https://d2xamzlzrdbdbn.cloudfront.net/products/ded31e03-3ed9-4168-b9c9-bdefe9e3d25924181113.jpg"
             ],
             price: {
               "512 GB": "1,79,990",
@@ -109,9 +108,8 @@ export const ProductProvider = ({ children }) => {
           "#F0E1B9": {
             images: [
               "https://i.imghippo.com/files/DO4I31722158126.png",
-              "https://i.imghippo.com/files/9xQok1722159207.png",
-              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
-              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+              "https://d2xamzlzrdbdbn.cloudfront.net/products/64b6eddf-dce4-4986-b6ae-5da8151a663f24181116.jpg",
+              "https://d2xamzlzrdbdbn.cloudfront.net/products/28b22cea-a34f-40b5-a4d1-9c021d37099824181117.jpg",
             ],
             price: {
               "512 GB": "1,79,990",
@@ -148,12 +146,11 @@ export const ProductProvider = ({ children }) => {
         reviewCount: 33,
         storage: ["128 GB", "256 GB"],
         colors: {
-          "#6C8582": {
+          "#FFE2DA": {
             images: [
-              "https://i.imghippo.com/files/7AUxZ1722158911.png",
-              "https://i.imghippo.com/files/9xQok1722159207.png",
-              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
-              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+              "https://i.imghippo.com/files/rqY7f1726030399.png",
+              "https://m.media-amazon.com/images/I/61Pw0CoYtCL._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/61Yrsm9RCuL._SX679_.jpg",
             ],
             price: {
               "128 GB": "43,990",
@@ -164,9 +161,8 @@ export const ProductProvider = ({ children }) => {
           "#6691B7": {
             images: [
               "https://i.imghippo.com/files/G3iXH1722158879.png",
-              "https://i.imghippo.com/files/9xQok1722159207.png",
-              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
-              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/61nlAS5+y4L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/61I7YQ4fk4L._SX679_.jpg"
             ],
             price: {
               "128 GB": "43,990",
@@ -206,9 +202,8 @@ export const ProductProvider = ({ children }) => {
           "#252525": {
             images: [
               "https://i.imghippo.com/files/HtMIv1722159041.png",
-              "https://i.imghippo.com/files/9xQok1722159207.png",
-              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
-              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+              "https://m.media-amazon.com/images/I/41e2K9w-tOL.jpg",
+              "https://m.media-amazon.com/images/I/21BE5HyeubL.jpg",
             ],
             price: {
               "128 GB": "1,09,990",
@@ -219,9 +214,8 @@ export const ProductProvider = ({ children }) => {
           "#FEDEC9": {
             images: [
               "https://i.imghippo.com/files/1dd6c1722159072.png",
-              "https://i.imghippo.com/files/9xQok1722159207.png",
-              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
-              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+              "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1724318715/Croma%20Assets/Communication/Mobiles/Images/309149_8_havjm1.png?tr=w-360",
+              "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1724318718/Croma%20Assets/Communication/Mobiles/Images/309149_10_gsyxmq.png?tr=w-360",
             ],
             price: {
               "128 GB": "1,09,990",
@@ -261,9 +255,9 @@ export const ProductProvider = ({ children }) => {
           "#465066": {
             images: [
               "https://i.imghippo.com/files/4dDBx1722158230.png",
-              "https://i.imghippo.com/files/9xQok1722159207.png",
-              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
-              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+              "https://d2xamzlzrdbdbn.cloudfront.net/products/eb6424de-a080-482c-bd5f-b4eaacfec1a024111203.jpg",
+              "https://d2xamzlzrdbdbn.cloudfront.net/products/048358d7-b3d8-4591-a3cc-1c7edbb9a12124111203.jpg",
+              "https://d2xamzlzrdbdbn.cloudfront.net/products/b9c08833-2256-44b3-975a-96cb7e4a83da24111203.jpg",
             ],
             price: {
               "512 GB": "1,64,999",
@@ -274,9 +268,9 @@ export const ProductProvider = ({ children }) => {
           "#7E7E7E": {
             images: [
               "https://i.imghippo.com/files/c4TUe1722158339.png",
-              "https://i.imghippo.com/files/9xQok1722159207.png",
-              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
-              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+              "https://d2xamzlzrdbdbn.cloudfront.net/products/5d75cd6e-e85a-4dfc-bf6d-5243da72721724111210.jpg",
+              "https://d2xamzlzrdbdbn.cloudfront.net/products/6ce24670-db11-4ce0-a3b5-299a9947bc5124111210.jpg",
+              "https://d2xamzlzrdbdbn.cloudfront.net/products/d7b41659-9184-4980-a7bd-0cb55a89345b24111210.jpg",
             ],
             price: {
               "512 GB": "1,64,999",
@@ -286,9 +280,9 @@ export const ProductProvider = ({ children }) => {
           "#E9D6DB": {
             images: [
               "https://i.imghippo.com/files/DKtvy1722158286.png",
-              "https://i.imghippo.com/files/9xQok1722159207.png",
-              "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
-              "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
+              "https://d2xamzlzrdbdbn.cloudfront.net/products/80971c7e-2e9a-4971-8c99-a482851873e724111206.jpg",
+              "https://d2xamzlzrdbdbn.cloudfront.net/products/d20e3b7c-545e-44d3-8b42-6daf692896f224111206.jpg",
+              "https://d2xamzlzrdbdbn.cloudfront.net/products/f0595eaf-b5f7-4635-abbd-95ee3b25585b24111206.jpg",
             ],
             price: {
               "512 GB": "1,64,999",
