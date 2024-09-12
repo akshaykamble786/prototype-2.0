@@ -26,7 +26,7 @@ export const ProductProvider = ({ children }) => {
               "https://i.imghippo.com/files/odBsF1722159182.png",
               "https://m.media-amazon.com/images/I/61Jrsu9d3-L._SX679_.jpg",
               "https://m.media-amazon.com/images/I/715zWp1q7rL._SX679_.jpg",
-              "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1708678674/Croma%20Assets/Communication/Mobiles/Images/300823_10_kj9wjc.png?tr=w-360"
+              "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1708678674/Croma%20Assets/Communication/Mobiles/Images/300823_10_kj9wjc.png?tr=w-360",
             ],
             price: {
               "256 GB": "1,49,990",
@@ -39,7 +39,7 @@ export const ProductProvider = ({ children }) => {
               "https://i.imghippo.com/files/9xQok1722159207.png",
               "https://m.media-amazon.com/images/I/51hWMvjCV8L._SX679_.jpg",
               "https://m.media-amazon.com/images/I/71LB1euow1L._SX679_.jpg",
-              "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1708678648/Croma%20Assets/Communication/Mobiles/Images/300820_10_xheaea.png?tr=w-360"
+              "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1708678648/Croma%20Assets/Communication/Mobiles/Images/300820_10_xheaea.png?tr=w-360",
             ],
             price: {
               "256 GB": "1,69,990",
@@ -74,9 +74,21 @@ export const ProductProvider = ({ children }) => {
           },
         },
         specifications: {
-          "In the box": "Handset, Charging Block",
+          "In the box": "iPhone 15 Pro Max 1N, USB-C Charge Cable",
+          "Model Name": "iPhone 15 Pro Max",
+          "Display Size": "17.02 cm (6.7 inch)",
+          "Processor Type": "A17 Pro Chip, 6 Core Processor",
+          "Primary Camera": "48MP + 12MP + 12MP",
+          "Network Type": "5G, 4G VOLTE, 4G, 3G, 2G",
+          "Battery Capacity": "4441 mAh",
         },
-        highlights: ["Fast Charging", "Efficient Performance"],
+        highlights: [
+          "17.02 cm (6.7 inch)",
+          "Super Retina XDR Display",
+          "48MP + 12MP + 12MP | 12MP Front Camera",
+          "A17 Pro Chip",
+          "6 Core Processor Processor",
+        ],
         shippingAndReturns: ["7 days replacement", "30 days exchange"],
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, praesentium.",
@@ -97,7 +109,7 @@ export const ProductProvider = ({ children }) => {
             images: [
               "https://i.imghippo.com/files/z7flt1722158064.png",
               "https://d2xamzlzrdbdbn.cloudfront.net/products/b9869a24-9d53-4167-a21d-8a2e0967f41a24181113.jpg",
-              "https://d2xamzlzrdbdbn.cloudfront.net/products/ded31e03-3ed9-4168-b9c9-bdefe9e3d25924181113.jpg"
+              "https://d2xamzlzrdbdbn.cloudfront.net/products/ded31e03-3ed9-4168-b9c9-bdefe9e3d25924181113.jpg",
             ],
             price: {
               "512 GB": "1,79,990",
@@ -118,12 +130,20 @@ export const ProductProvider = ({ children }) => {
           },
         },
         specifications: {
-          "In the box": "Handset, Charging Block, Earbuds",
+          "In the box": "Galaxy S24 Ultra 5G, USB-C Charge Cable",
+          "Model Name": "Galaxy S24 Ultra 5G",
+          "Display Size": "17.27 cm (6.8 inch)",
+          "Processor Type": "Snapdragon 8 Gen 3",
+          "Primary Camera": "200MP + 50MP + 12MP + 10MP",
+          "Network Type": "5G, 4G, 3G, 2G",
+          "Battery Capacity": "5000 mAh",
         },
         highlights: [
-          "Fast Charging",
-          "Efficient Performance",
-          "Great Gaming Experience",
+          "12 GB RAM | 256 GB ROM",
+          "17.27 cm (6.8 inch) Quad HD+ Display",
+          "200MP + 50MP + 12MP + 10MP | 12MP Front Camera",
+          "5000 mAh Battery",
+          "Snapdragon 8 Gen 3 Processor",
         ],
         shippingAndReturns: ["7 days replacement", "21 days exchange"],
         description:
@@ -162,7 +182,7 @@ export const ProductProvider = ({ children }) => {
             images: [
               "https://i.imghippo.com/files/G3iXH1722158879.png",
               "https://m.media-amazon.com/images/I/61nlAS5+y4L._SX679_.jpg",
-              "https://m.media-amazon.com/images/I/61I7YQ4fk4L._SX679_.jpg"
+              "https://m.media-amazon.com/images/I/61I7YQ4fk4L._SX679_.jpg",
             ],
             price: {
               "128 GB": "43,990",
@@ -171,12 +191,19 @@ export const ProductProvider = ({ children }) => {
           },
         },
         specifications: {
-          "In the box": "Handset, Charging Block, Earbuds",
+          "In the box": "Handset, User Manual, Warranty Card, Sim Eject Tool",
+          "Model Name": "One Plus 12R",
+          "Display Size": "17.22 cm (6.78 inch)",
+          "Processor Type": "Snapdragon 8 Gen 2",
+          "Primary Camera": "50MP Rear Camera",
+          "Network Type": "5G",
+          "Battery Capacity": "5500 mAh",
         },
         highlights: [
-          "Fast Charging",
-          "Efficient Performance",
-          "Great Gaming Experience",
+          "16 GB RAM",
+          "17.22 cm (6.78 inch) Display",
+          "50MP Rear Camera",
+          "5500 mAh Battery",
         ],
         shippingAndReturns: ["7 days replacement", "21 days exchange"],
         description:
@@ -224,12 +251,21 @@ export const ProductProvider = ({ children }) => {
           },
         },
         specifications: {
-          "In the box": "Handset, Charging Block, Earbuds",
+          "In the box":
+            "Handset, 1 m USB-C to USB-C Cable (USB 2.0), Quick Switch Adaptor, Sim Tool",
+          "Model Name": "Google Pixel 8 Pro",
+          "Display Size": "17.02 cm (6.7 inch)",
+          "Processor Type": "Tensor G3",
+          "Primary Camera": "50MP + 48MP + 48MP",
+          "Network Type": "5G, 4G, 3G",
+          "Battery Capacity": "5050 mAh",
         },
         highlights: [
-          "Fast Charging",
-          "Efficient Performance",
-          "Great Gaming Experience",
+          "12 GB RAM",
+          "17.02 cm (6.7 inch) Full HD+ AMOLED Display",
+          "50MP + 48MP + 48MP | 10.5MP Front Camera",
+          "5050 mAh Battery",
+          "Tensor G3 Processor",
         ],
         shippingAndReturns: ["7 days replacement", "21 days exchange"],
         description:
@@ -291,12 +327,20 @@ export const ProductProvider = ({ children }) => {
           },
         },
         specifications: {
-          "In the box": "Handset, Charging Block, Earbuds",
+          "In the box": "Handset, Data Cable (C to C), Sim Ejection Pin, Quick Start Guide, Protection Film (Main Screen Only)",
+          "Model Name": "Samsung Z Fold6",
+          "Display Size": "19.3 cm (7.6 inch)",
+          "Processor Type": "Snapdragon 8 Gen 3",
+          "Primary Camera": "50MP + 12MP + 10MP",
+          "Network Type": "5G, 4G, 3G, 2G",
+          "Battery Capacity": "4400 mAh",
         },
         highlights: [
-          "Fast Charging",
-          "Efficient Performance",
-          "Great Gaming Experience",
+          "12 GB RAM",
+          "19.3 cm (7.6 inch) QXGA+ Display",
+          "50MP + 12MP + 10MP | 10MP Front Camera",
+          "4400 mAh Lithium ion Battery",
+          "Snapdragon 8 Gen 3 Processor",
         ],
         shippingAndReturns: ["7 days replacement", "21 days exchange"],
         description:
@@ -636,7 +680,7 @@ export const ProductProvider = ({ children }) => {
         sale: false,
         rating: 4.9,
         reviewCount: 9,
-        lens: ["RF-S 18-150", "RF-S 18-45", "R10 Body Only"],
+        type: ["RF-S 18-150", "RF-S 18-45", "R10 Body Only"],
         colors: {
           "#2E2C2F": {
             images: [

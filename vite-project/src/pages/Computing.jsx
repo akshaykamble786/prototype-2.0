@@ -9,7 +9,7 @@ const Computing = () => {
   return (
     <>
       <h1 className="text-center font-semibold text-3xl m-2 p-4 ">Computing</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1">
         {products.slice(10,15).map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

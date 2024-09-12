@@ -66,17 +66,6 @@ const ProductDetails = () => {
     return <div>Product not found</div>;
   }
 
-  // const currentCost =
-  //   selectedVariant && product.price && product.price[selectedVariant]
-  //     ? product.price[selectedVariant]
-  //     : selectedColor &&
-  //       product.colors &&
-  //       product.colors[selectedColor] &&
-  //       product.colors[selectedColor].price &&
-  //       selectedVariant
-  //     ? product.colors[selectedColor].price[selectedVariant]
-  //     : product.cost;
-
   const currentCost = (() => {
     if (selectedColor && product.colors && product.colors[selectedColor]) {
       const colorData = product.colors[selectedColor];
@@ -104,8 +93,6 @@ const ProductDetails = () => {
     ? "storage"
     : product.capacity
     ? "capacity"
-    : product.lens
-    ? "lens"
     : product.type
     ? "type"
     : null;
@@ -304,10 +291,10 @@ const ProductDetails = () => {
                 {Object.entries(product.specifications).map(
                   ([key, value], index) => (
                     <tr key={index}>
-                      <td className="px-4 py-2 font-medium text-gray-700">
+                      <td className="px-4 py-2 font-bold text-gray-700">
                         {key}
                       </td>
-                      <td className="px-4 py-2">{value}</td>
+                      <td className="px-4 py-2 font-medium">{value}</td>
                     </tr>
                   )
                 )}
