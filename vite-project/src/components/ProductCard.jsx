@@ -37,8 +37,8 @@ const ProductCard = ({ product }) => {
 
       {/* Content Section */}
       <div className="w-2/3 sm:w-full flex flex-col flex-1 justify-between px-4 py-2">
-        <Wishlist className="size-9 absolute top-4 right-4 cursor-pointer" />
-        <MdCompare className="size-7 absolute top-12 right-4 text-gray-400 hover:text-gray-700" />
+        <Wishlist className="size-9 absolute top-4 right-3 cursor-pointer" />
+        <MdCompare className="size-7 absolute top-12 right-3 text-gray-400 hover:text-gray-700" />
 
         {product.sale && (
           <span className="absolute top-4 -left-2 w-20 transform -rotate-45 bg-custom-darkestblue text-white text-xs font-semibold px-1 py-1 text-center">

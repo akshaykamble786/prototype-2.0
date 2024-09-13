@@ -5,7 +5,7 @@ import useProductsContext from "../hooks/useProductsContext";
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const { products, currency } = useProductsContext();
+  const { products, currency, addToCart } = useProductsContext();
   const [product, setProduct] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedVariant, setSelectedVariant] = useState(null);
@@ -234,7 +234,7 @@ const ProductDetails = () => {
 
         {/* Buttons */}
         <div className="mt-6 flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
-          <button className="w-full md:w-auto px-8 py-2 bg-custom-darkblue text-white rounded-md">
+          <button onClick={()=>addToCart(product.id,selectedVariant, selectedColor)} className="w-full md:w-auto px-8 py-2 bg-custom-darkblue text-white rounded-md">
             Add to Cart
           </button>
           <button className="w-full md:w-auto px-8 py-2 bg-white border border-black text-black rounded-md">

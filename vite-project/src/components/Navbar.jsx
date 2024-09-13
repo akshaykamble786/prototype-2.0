@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { MenuIcon, UserIcon, XIcon } from "@heroicons/react/outline";
 import {
-  ChevronDownIcon,
-  ChevronUpIcon,
   CogIcon,
   HeartIcon,
   ClipboardListIcon,
@@ -11,12 +9,14 @@ import {
 import { ListOrderedIcon, LogOutIcon, ShoppingCart } from "lucide-react";
 import { CiUser, CiSearch } from "react-icons/ci";
 import { NavLink } from "react-router-dom";
+import useProductsContext from "../hooks/useProductsContext";
 
 const Navbar = () => {
   const navigate = useNavigate();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const {getCartCount} = useProductsContext();
 
   const toggleDropdown = () => {
     if (isMenuOpen) setIsMenuOpen(false);
@@ -55,7 +55,7 @@ const Navbar = () => {
             <CiSearch size={30} className="text-gray-600" />
             <Link to="/cart" className="text-gray-600 relative">
               <ShoppingCart strokeWidth={1.25} />
-              <p className="absolute right-[-5px] top-[-5px] w-4 text-center leading-4 bg-custom-darkblue text-white aspect-square rounded-full text-xs">0</p>
+              <p className="absolute right-[-5px] top-[-5px] w-4 text-center leading-4 bg-custom-darkblue text-white aspect-square rounded-full text-xs">{getCartCount()}</p>
             </Link>
             <button
               onClick={toggleDropdown}
@@ -200,7 +200,7 @@ const Navbar = () => {
 
           <Link to="/cart" className="text-gray-700 relative">
             <ShoppingCart strokeWidth={1.25} />
-            <p className="absolute right-[-5px] top-[-5px] w-4 text-center leading-4 bg-custom-darkblue text-white aspect-square rounded-full text-xs">0</p>
+            <p className="absolute right-[-5px] top-[-5px] w-4 text-center leading-4 bg-custom-darkblue text-white aspect-square rounded-full text-xs">{getCartCount()}</p>
           </Link>
 
           <div className="relative z-50">

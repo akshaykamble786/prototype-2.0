@@ -327,7 +327,8 @@ export const ProductProvider = ({ children }) => {
           },
         },
         specifications: {
-          "In the box": "Handset, Data Cable (C to C), Sim Ejection Pin, Quick Start Guide, Protection Film (Main Screen Only)",
+          "In the box":
+            "Handset, Data Cable (C to C), Sim Ejection Pin, Quick Start Guide, Protection Film (Main Screen Only)",
           "Model Name": "Samsung Z Fold6",
           "Display Size": "19.3 cm (7.6 inch)",
           "Processor Type": "Snapdragon 8 Gen 3",
@@ -901,10 +902,102 @@ export const ProductProvider = ({ children }) => {
 
   const currency = "₹";
 
+  const [cartItems, setCartItems] = useState({});
+
+  // const addToCart = (id, color, variant) => {
+  //   let cartData = structuredClone(cartItems);
+
+  //   if (!cartData[id]) {
+  //     cartData[id] = {};
+  //   }
+
+  //   if (!cartData[id][color]) {
+  //     cartData[id][color] = {};
+  //   }
+
+  //   if (!cartData[id][color][variant]) {
+  //     cartData[id][color][variant] = 0;
+  //   }
+
+  //   cartData[id][color][variant] += 1;
+
+  //   setCartItems(cartData);
+  // };
+
+  const addToCart = async (id, color = null, variant = null) => {
+    let cartData = structuredClone(cartItems);
+
+    // Check if the product exists in the cart
+    if (cartData[id]) {
+      // Case 1: Product has both color and variant
+      if (color && variant) {
+        if (cartData[id][color]) {
+          if (cartData[id][color][variant]) {
+            cartData[id][color][variant] += 1;
+          } else {
+            cartData[id][color][variant] = 1;
+          }
+        } else {
+          cartData[id][color] = { [variant]: 1 };
+        }
+      }
+      // Case 2: Product has only color
+      else if (color && !variant) {
+        if (cartData[id][color]) {
+          cartData[id][color] += 1;
+        } else {
+          cartData[id][color] = 1;
+        }
+      }
+      // Case 3: Product has neither color nor variant
+      else if (!color && !variant) {
+        cartData[id] += 1;
+      }
+    }
+    // If the product doesn't exist in the cart yet
+    else {
+      if (color && variant) {
+        cartData[id] = { [color]: { [variant]: 1 } };
+      } else if (color && !variant) {
+        cartData[id] = { [color]: 1 };
+      } else if (!color && !variant) {
+        cartData[id] = 1;
+      }
+    }
+
+    setCartItems(cartData);
+  };
+
+  useEffect(() => {
+    console.log(cartItems);
+  }, [cartItems]);
+
+  const getCartCount = () => {
+    let totalCount = 0;
+
+    for (const productId in cartItems) {
+      for (const color in cartItems[productId]) {
+        for (const variant in cartItems[productId][color]) {
+          totalCount += cartItems[productId][color][variant];
+        }
+      }
+    }
+
+    return totalCount;
+  };
+
+  const value = {
+    products,
+    setProducts,
+    currency,
+    cartItems,
+    setCartItems,
+    addToCart,
+    getCartCount,
+  };
+
   return (
-    <ProductContext.Provider value={{ products, setProducts, currency }}>
-      {children}
-    </ProductContext.Provider>
+    <ProductContext.Provider value={value}>{children}</ProductContext.Provider>
   );
 };
 
