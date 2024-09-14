@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
+import { toast } from "sonner";
 
 const ProductContext = createContext();
 
@@ -927,46 +928,52 @@ export const ProductProvider = ({ children }) => {
   const addToCart = async (id, color = null, variant = null) => {
     let cartData = structuredClone(cartItems);
 
-    // Check if the product exists in the cart
     if (cartData[id]) {
-      // Case 1: Product has both color and variant
-      if (color && variant) {
-        if (cartData[id][color]) {
-          if (cartData[id][color][variant]) {
-            cartData[id][color][variant] += 1;
-          } else {
-            cartData[id][color][variant] = 1;
-          }
-        } else {
-          cartData[id][color] = { [variant]: 1 };
+        if (color && variant) {
+            if (!cartData[id][color]) {
+                cartData[id][color] = { [variant]: 1 };
+            } else if (!cartData[id][color][variant]) {
+                cartData[id][color][variant] = 1;
+            } else {
+                cartData[id][color][variant] += 1;
+            }
+        } 
+        else if (color && !variant) {
+            if (!cartData[id][color]) {
+                cartData[id][color] = 1;
+            } else if (typeof cartData[id][color] === 'number') {
+                cartData[id][color] += 1;
+            }
+        } 
+        else if (!color && variant) {
+            if (!cartData[id][variant]) {
+                cartData[id][variant] = 1;
+            } else {
+                cartData[id][variant] += 1;
+            }
         }
-      }
-      // Case 2: Product has only color
-      else if (color && !variant) {
-        if (cartData[id][color]) {
-          cartData[id][color] += 1;
-        } else {
-          cartData[id][color] = 1;
+        else if (!color && !variant) {
+            if (typeof cartData[id] === 'number') {
+                cartData[id] += 1;
+            } else {
+                cartData[id] = 1;
+            }
         }
-      }
-      // Case 3: Product has neither color nor variant
-      else if (!color && !variant) {
-        cartData[id] += 1;
-      }
-    }
-    // If the product doesn't exist in the cart yet
+    } 
     else {
-      if (color && variant) {
-        cartData[id] = { [color]: { [variant]: 1 } };
-      } else if (color && !variant) {
-        cartData[id] = { [color]: 1 };
-      } else if (!color && !variant) {
-        cartData[id] = 1;
-      }
+        if (color && variant) {
+            cartData[id] = { [color]: { [variant]: 1 } };
+        } else if (color && !variant) {
+            cartData[id] = { [color]: 1 };
+        } else if (!color && variant) {
+            cartData[id] = { [variant]: 1 };
+        } else if (!color && !variant) {
+            cartData[id] = 1;
+        }
     }
 
     setCartItems(cartData);
-  };
+};
 
   useEffect(() => {
     console.log(cartItems);

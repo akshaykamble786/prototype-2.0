@@ -16,6 +16,7 @@ import AdminPanel from "./pages/AdminPanel.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
 import ProductDetails from "./components/ProductDetails.jsx";
+import { Toaster, toast } from 'sonner'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
 function Layout() {
   return (
     <div className="min-h-screen flex flex-col">
+      <Toaster/>
       <Navbar />
       <main className="flex-grow">
         <Routes>
