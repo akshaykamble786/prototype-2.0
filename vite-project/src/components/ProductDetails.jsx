@@ -234,7 +234,12 @@ const ProductDetails = () => {
 
         {/* Buttons */}
         <div className="mt-6 flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
-          <button onClick={()=>addToCart(product.id,selectedVariant, selectedColor)} className="w-full md:w-auto px-8 py-2 bg-custom-darkblue text-white rounded-md">
+          <button
+            onClick={() =>
+              addToCart(product.id, selectedVariant, selectedColor)
+            }
+            className="w-full md:w-auto px-8 py-2 bg-custom-darkblue text-white rounded-md"
+          >
             Add to Cart
           </button>
           <button className="w-full md:w-auto px-8 py-2 bg-white border border-black text-black rounded-md">
@@ -266,8 +271,7 @@ const ProductDetails = () => {
             <button
               onClick={() => setActiveTab("shippingAndReturns")}
               className={`py-3 border border-gray-500 px-2 ${
-                activeTab === "shippingAndReturns" &&
-                "bg-gray-200"
+                activeTab === "shippingAndReturns" && "bg-gray-200"
               }`}
             >
               Shipping & Returns
@@ -279,7 +283,7 @@ const ProductDetails = () => {
         <div className="border border-gray-500 p-4 mt-[-2px]">
           {activeTab === "highlights" && (
             <ul className="list-disc pl-5 text-sm">
-              {product.highlights.map((highlight, index) => (
+              {product.highlights?.map((highlight, index) => (
                 <li key={index}>{highlight}</li>
               ))}
             </ul>

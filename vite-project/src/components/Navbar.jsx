@@ -16,7 +16,7 @@ const Navbar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const {getCartCount} = useProductsContext();
+  const { getCartCount } = useProductsContext();
 
   const toggleDropdown = () => {
     if (isMenuOpen) setIsMenuOpen(false);

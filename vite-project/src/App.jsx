@@ -16,7 +16,7 @@ import AdminPanel from "./pages/AdminPanel.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
 import ProductDetails from "./components/ProductDetails.jsx";
-import { Toaster, toast } from 'sonner'
+import { Toaster } from 'sonner'
 
 function App() {
   return (

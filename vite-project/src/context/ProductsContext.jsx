@@ -6,7 +6,7 @@ const ProductContext = createContext();
 export const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState(() => {
     const storedProducts = localStorage.getItem("products");
-    return storedProducts ? JSON.parse(storedProducts) : []; // Load from localStorage if available
+    return storedProducts ? JSON.parse(storedProducts) : []; 
   });
 
   useEffect(() => {
@@ -905,88 +905,70 @@ export const ProductProvider = ({ children }) => {
 
   const [cartItems, setCartItems] = useState({});
 
-  // const addToCart = (id, color, variant) => {
-  //   let cartData = structuredClone(cartItems);
-
-  //   if (!cartData[id]) {
-  //     cartData[id] = {};
-  //   }
-
-  //   if (!cartData[id][color]) {
-  //     cartData[id][color] = {};
-  //   }
-
-  //   if (!cartData[id][color][variant]) {
-  //     cartData[id][color][variant] = 0;
-  //   }
-
-  //   cartData[id][color][variant] += 1;
-
-  //   setCartItems(cartData);
-  // };
-
   const addToCart = async (id, color = null, variant = null) => {
     let cartData = structuredClone(cartItems);
 
     if (cartData[id]) {
-        if (color && variant) {
-            if (!cartData[id][color]) {
-                cartData[id][color] = { [variant]: 1 };
-            } else if (!cartData[id][color][variant]) {
-                cartData[id][color][variant] = 1;
-            } else {
-                cartData[id][color][variant] += 1;
-            }
-        } 
-        else if (color && !variant) {
-            if (!cartData[id][color]) {
-                cartData[id][color] = 1;
-            } else if (typeof cartData[id][color] === 'number') {
-                cartData[id][color] += 1;
-            }
-        } 
-        else if (!color && variant) {
-            if (!cartData[id][variant]) {
-                cartData[id][variant] = 1;
-            } else {
-                cartData[id][variant] += 1;
-            }
+      if (color && variant) {
+        if (!cartData[id][color]) {
+          cartData[id][color] = { [variant]: 1 };
+        } else if (!cartData[id][color][variant]) {
+          cartData[id][color][variant] = 1;
+        } else {
+          cartData[id][color][variant] += 1;
         }
-        else if (!color && !variant) {
-            if (typeof cartData[id] === 'number') {
-                cartData[id] += 1;
-            } else {
-                cartData[id] = 1;
-            }
+      } else if (color && !variant) {
+        if (!cartData[id][color]) {
+          cartData[id][color] = 1;
+        } else if (typeof cartData[id][color] === "number") {
+          cartData[id][color] += 1;
         }
-    } 
-    else {
-        if (color && variant) {
-            cartData[id] = { [color]: { [variant]: 1 } };
-        } else if (color && !variant) {
-            cartData[id] = { [color]: 1 };
-        } else if (!color && variant) {
-            cartData[id] = { [variant]: 1 };
-        } else if (!color && !variant) {
-            cartData[id] = 1;
+      } else if (!color && variant) {
+        if (!cartData[id][variant]) {
+          cartData[id][variant] = 1;
+        } else {
+          cartData[id][variant] += 1;
         }
+      } else if (!color && !variant) {
+        if (typeof cartData[id] === "number") {
+          cartData[id] += 1;
+        } else {
+          cartData[id] = 1;
+        }
+      }
+    } else {
+      if (color && variant) {
+        cartData[id] = { [color]: { [variant]: 1 } };
+      } else if (color && !variant) {
+        cartData[id] = { [color]: 1 };
+      } else if (!color && variant) {
+        cartData[id] = { [variant]: 1 };
+      } else if (!color && !variant) {
+        cartData[id] = 1;
+      }
     }
 
     setCartItems(cartData);
-};
-
-  useEffect(() => {
-    console.log(cartItems);
-  }, [cartItems]);
+  };
 
   const getCartCount = () => {
     let totalCount = 0;
 
     for (const productId in cartItems) {
-      for (const color in cartItems[productId]) {
-        for (const variant in cartItems[productId][color]) {
-          totalCount += cartItems[productId][color][variant];
+      const product = cartItems[productId];
+
+      if (typeof product === "object") {
+        for (const key in product) {
+          if (typeof product[key] === "object") {
+            for (const variant in product[key]) {
+              totalCount += product[key][variant];
+            }
+          } else {
+            totalCount += product[key];
+          }
         }
+      } else {
+        totalCount += product;
       }
     }
 
