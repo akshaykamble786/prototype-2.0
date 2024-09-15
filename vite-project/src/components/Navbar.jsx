@@ -25,7 +25,7 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     if (isDropdownOpen) setDropdownOpen(false);
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(!isMenuOpen);r
   };
 
   return (

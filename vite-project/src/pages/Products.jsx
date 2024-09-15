@@ -18,18 +18,20 @@ import {
   ShieldCheck,
   CreditCard
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const imacOfferEndTime = new Date().getTime() + 7 * 60 * 60 * 1000;
   const washOfferEndTime = new Date().getTime() + 9 * 60 * 60 * 1000;
+  const navigate = useNavigate();
 
   const electronicsCategories = [
     { name: "Home Theatres", icon: <Home className="text-slate-900" />},
-    { name: "Mobiles", icon: <Tablet className="text-slate-900" /> },
+    { name: "Mobiles", icon: <Tablet className="text-slate-900" onClick={()=>navigate('/mobiles')} /> },
     { name: "Wearables", icon: <Watch className="text-slate-900" /> },
     { name: "Media Players", icon: <Speaker className="text-slate-900" /> },
-    { name: "Appliances", icon: <Refrigerator className="text-slate-900" /> },
-    { name: "Accessories", icon: <Headphones className="text-slate-900" /> },
+    { name: "Appliances", icon: <Refrigerator className="text-slate-900" onClick={()=>navigate('/appliances')} /> },
+    { name: "Accessories", icon: <Headphones className="text-slate-900" onClick={()=>navigate('/accessories')} /> },
     { name: "Fans", icon: <Fan className="text-slate-900" /> },
     { name: "Microwaves", icon: <Microwave className="text-slate-900" /> },
     { name: "Cameras", icon: <Camera className="text-slate-900" /> },
